@@ -1,4 +1,5 @@
-🏀 NBA Predictions
+# 🏀 NBA Predictions
+
 📝 Sobre o Projeto
 O NBA Predictions é um projeto de estudo desenvolvido com o objetivo principal de aplicar e validar modelos de análise de dados e Machine Learning no contexto do basquete profissional americano.
 
@@ -21,3 +22,15 @@ Bibliotecas de Dados: Pandas, NumPy
 Visualização: Matplotlib, Seaborn
 
 Machine Learning: Scikit-learn
+
+⚙️ Como Executar
+Clone o repositório:
+
+Bash
+
+git clone https://github.com/seu-usuario/nba-predictions.git
+Instale as dependências:
+
+Bash
+
+pip install -r requirements.txt
