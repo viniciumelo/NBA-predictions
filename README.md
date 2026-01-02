@@ -1,11 +1,11 @@
 # 🏀 NBA Predictions
 
-📝 Sobre o Projeto
+📝 Sobre o Projeto:
 O NBA Predictions é um projeto de estudo desenvolvido com o objetivo principal de aplicar e validar modelos de análise de dados e Machine Learning no contexto do basquete profissional americano.
 
 Utilizando estatísticas históricas, o projeto busca identificar padrões que influenciam o resultado das partidas, performance de jogadores ou classificação para os playoffs.
 
-🚀 Objetivos Principais
+🚀 Objetivos Principais:
 Exploração de Dados (EDA): Analisar correlações entre métricas (ex: FG%, Rebound rate, Defensive Rating).
 
 Limpeza e Tratamento: Manipular datasets complexos e lidar com valores ausentes ou outliers.
@@ -23,7 +23,7 @@ Visualização: Matplotlib, Seaborn
 
 Machine Learning: Scikit-learn
 
-⚙️ Como Executar
+⚙️ Como Executar:
 Clone o repositório:
 
 Bash
