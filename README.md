@@ -34,3 +34,20 @@ Instale as dependências:
 Bash
 
 pip install -r requirements.txt
+
+1. Configuração do Ambiente
+Abra o seu terminal dentro da pasta NBA-predictions e execute os comandos para criar um ambiente virtual e instalar as bibliotecas necessárias:
+
+Bash
+
+# Criar ambiente virtual
+python -m venv venv
+
+# Ativar o ambiente (Windows)
+.\venv\Scripts\activate
+# Ativar o ambiente (Mac/Linux)
+source venv/bin/activate
+
+# Instalar dependências
+pip install nba_api streamlit pandas
+
