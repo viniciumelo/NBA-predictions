@@ -51,3 +51,10 @@ source venv/bin/activate
 # Instalar dependências
 pip install nba_api streamlit pandas
 
+2. Como Executar
+Com o ambiente virtual ativado, rode o comando:
+
+Bash
+
+streamlit run app.py
+O navegador abrirá automaticamente em http://localhost:8501, exibindo sua interface web com os dados da NBA.
