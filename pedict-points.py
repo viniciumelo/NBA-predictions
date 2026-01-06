@@ -24,4 +24,14 @@ def prever_pontos_jogador(nome_jogador):
     # 3. Engenharia de Dados: Criar média móvel dos últimos 5 jogos
     df['MEDIA_MOVEL_5'] = df['PTS'].rolling(window=5).mean()
     
-   
+    # Pegar os dados mais recentes
+    ultimos_pontos = df['PTS'].iloc[-1]
+    media_temporada = df['PTS'].mean()
+    predicao_proximo_jogo = df['MEDIA_MOVEL_5'].iloc[-1]
+
+    print(f"--- Resultados para: {nome_jogador} ---")
+    print(f"Média na Temporada: {media_temporada:.1f} pts")
+    print(f"Pontos no Último Jogo: {ultimos_pontos}")
+    print(f"Predição para o Próximo Jogo (Base 5 últimas): {predicao_proximo_jogo:.1f} pts")
+    
+    return predicao_proximo_jogo
