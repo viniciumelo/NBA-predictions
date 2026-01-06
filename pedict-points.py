@@ -35,3 +35,6 @@ def prever_pontos_jogador(nome_jogador):
     print(f"Predição para o Próximo Jogo (Base 5 últimas): {predicao_proximo_jogo:.1f} pts")
     
     return predicao_proximo_jogo
+
+# Exemplo de uso
+prever_pontos_jogador("LeBron James")
