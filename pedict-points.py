@@ -21,4 +21,7 @@ def prever_pontos_jogador(nome_jogador):
     # Inverter o dataframe para que os jogos fiquem em ordem cronológica
     df = df.iloc[::-1].reset_index(drop=True)
 
+    # 3. Engenharia de Dados: Criar média móvel dos últimos 5 jogos
+    df['MEDIA_MOVEL_5'] = df['PTS'].rolling(window=5).mean()
     
+   
