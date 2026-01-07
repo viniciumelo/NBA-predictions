@@ -23,4 +23,13 @@ def analise_detalhada_pontos(nome_jogador):
     df['PTS_2PT'] = (df['FGM'] - df['FG3M']) * 2
     df['PTS_3PT'] = df['FG3M'] * 3
 
+    # 2. Função interna para prever próxima tendência usando Regressão
+    def prever_categoria(serie_temporal):
+        X = np.array(range(len(serie_temporal))).reshape(-1, 1)
+        y = serie_temporal.values
+        modelo = LinearRegression().fit(X, y)
+        # Prever o próximo valor (t+1)
+        proximo_indice = np.array([[len(serie_temporal)]])
+        return max(0, modelo.predict(proximo_indice)[0])
+
     
