@@ -47,3 +47,6 @@ def analise_detalhada_pontos(nome_jogador):
     print(f"Arremessos de Fora (3pts): {pred_3pt:.1f}")
     print(f"---------------------------------------")
     print(f"Previsão Total: {total_previsto:.1f} pontos")
+
+# Teste com um especialista em 3 pontos vs um infiltrador
+analise_detalhada_pontos("Stephen Curry")
