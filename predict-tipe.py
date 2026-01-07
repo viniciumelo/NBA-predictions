@@ -32,4 +32,18 @@ def analise_detalhada_pontos(nome_jogador):
         proximo_indice = np.array([[len(serie_temporal)]])
         return max(0, modelo.predict(proximo_indice)[0])
 
+    # Analisando os últimos 10 jogos para captar o "momento"
+    ultimos_10 = df.tail(10)
     
+    pred_1pt = prever_categoria(ultimos_10['PTS_1PT'])
+    pred_2pt = prever_categoria(ultimos_10['PTS_2PT'])
+    pred_3pt = prever_categoria(ultimos_10['PTS_3PT'])
+    
+    total_previsto = pred_1pt + pred_2pt + pred_3pt
+
+    print(f"--- Projeção Detalhada: {nome_jogador} ---")
+    print(f"Lances Livres (1pt): {pred_1pt:.1f}")
+    print(f"Cestas de Campo (2pts): {pred_2pt:.1f}")
+    print(f"Arremessos de Fora (3pts): {pred_3pt:.1f}")
+    print(f"---------------------------------------")
+    print(f"Previsão Total: {total_previsto:.1f} pontos")
