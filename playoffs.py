@@ -20,4 +20,10 @@ def predicao_playoffs(time_a, time_b):
             'true_shooting': team_data['TS_PCT'].values[0]
         }
 
-    
+    metrics_a = get_team_metrics(time_a)
+    metrics_b = get_team_metrics(time_b)
+
+    if not metrics_a or not metrics_b:
+        return "Dados de Playoffs ainda não disponíveis para uma das equipes."
+
+   
