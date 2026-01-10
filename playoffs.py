@@ -38,3 +38,5 @@ def predicao_playoffs(time_a, time_b):
     print(f"Probabilidade de {time_a} avançar: {prob_a:.1f}%")
     print(f"Probabilidade de {time_b} avançar: {100-prob_a:.1f}%")
 
+# Exemplo de uso (Times que chegaram longe em 2023-24)
+predicao_playoffs("Boston Celtics", "Dallas Mavericks")
