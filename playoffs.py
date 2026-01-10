@@ -26,4 +26,10 @@ def predicao_playoffs(time_a, time_b):
     if not metrics_a or not metrics_b:
         return "Dados de Playoffs ainda não disponíveis para uma das equipes."
 
+    # 2. Lógica de Predição: Win Probability baseada em Net Rating
+    # Historicamente, times com Net Rating superior em Playoffs vencem 78% das séries
+    diff = metrics_a['net_rating'] - metrics_b['net_rating']
+    prob_a = 50 + (diff * 2.5) # Simplificação estatística para probabilidade
+    prob_a = max(min(prob_a, 95), 5) # Limitar entre 5% e 95%
+
    
