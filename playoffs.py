@@ -32,4 +32,9 @@ def predicao_playoffs(time_a, time_b):
     prob_a = 50 + (diff * 2.5) # Simplificação estatística para probabilidade
     prob_a = max(min(prob_a, 95), 5) # Limitar entre 5% e 95%
 
-   
+    print(f"--- Predição de Playoffs: {time_a} vs {time_b} ---")
+    print(f"Net Rating {time_a}: {metrics_a['net_rating']}")
+    print(f"Net Rating {time_b}: {metrics_b['net_rating']}")
+    print(f"Probabilidade de {time_a} avançar: {prob_a:.1f}%")
+    print(f"Probabilidade de {time_b} avançar: {100-prob_a:.1f}%")
+
