@@ -23,4 +23,15 @@ def predicao_mvp():
         (top_candidates['AST'] * 0.2)         # Criação de jogadas
     )
 
-   
+    # Ordenar pelos melhores scores
+    ranking = top_candidates[['PLAYER_NAME', 'TEAM_ABBREVIATION', 'PTS', 'W_PCT', 'PIE', 'MVP_SCORE']]
+    ranking = ranking.sort_values(by='MVP_SCORE', ascending=False).head(5)
+
+    print("\n--- TOP 5 CANDIDATOS AO MVP (Predição I.A.) ---")
+    for i, row in ranking.iterrows():
+        print(f"{row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']}) - Score: {row['MVP_SCORE']:.2f}")
+    
+    return ranking
+
+# Executar a predição
+predicao_mvp()
