@@ -33,3 +33,5 @@ def predicao_mvp():
     
     return ranking
 
+# Executar a predição
+predicao_mvp()
