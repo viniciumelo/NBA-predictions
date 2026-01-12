@@ -13,4 +13,8 @@ def predicao_melhor_por_time():
     # Consideramos apenas jogadores que jogam pelo menos 20 minutos para evitar anomalias
     stats_filtradas = player_stats[player_stats['MIN'] >= 20].copy()
 
-   
+    # 3. Identificar o melhor por time usando o PIE (Player Impact Estimate)
+    # O PIE mede a fatia de eventos positivos que o jogador causou no jogo
+    melhores_por_time = stats_filtradas.sort_values('PIE', ascending=False).drop_duplicates('TEAM_ABBREVIATION')
+
+    
