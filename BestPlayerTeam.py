@@ -9,4 +9,8 @@ def predicao_melhor_por_time():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
-    
+    # 2. Limpeza e Filtro
+    # Consideramos apenas jogadores que jogam pelo menos 20 minutos para evitar anomalias
+    stats_filtradas = player_stats[player_stats['MIN'] >= 20].copy()
+
+   
