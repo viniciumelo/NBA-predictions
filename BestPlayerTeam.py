@@ -26,3 +26,6 @@ def predicao_melhor_por_time():
         print(f"[{row['TEAM_ABBREVIATION']}] {row['PLAYER_NAME']} | Impacto (PIE): {row['PIE']:.1%}")
     
     return ranking
+
+# Executar a predição
+df_melhores = predicao_melhor_por_time()
