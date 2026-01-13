@@ -21,4 +21,13 @@ def predicao_especialista_3pts():
         (atiradores['FG3_PCT'] * 10) # Multiplicado por 10 para normalizar o peso
     )
 
+    # Ordenar pelos maiores scores
+    ranking = atiradores[['PLAYER_NAME', 'TEAM_ABBREVIATION', 'FG3M', 'FG3A', 'FG3_PCT', 'SHARPSHOOTER_SCORE']]
+    ranking = ranking.sort_values(by='SHARPSHOOTER_SCORE', ascending=False).head(5)
+
+    print("\n--- TOP 5 JOGADORES COM MAIOR CHANCE DE CESTAS DE 3 ---")
+    for i, row in ranking.iterrows():
+        print(f"{row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']}) | Médias: {row['FG3M']} acertos / {row['FG3A']} tentativas ({row['FG3_PCT']:.1%})")
     
+    return ranking
+
