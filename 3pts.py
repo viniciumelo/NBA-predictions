@@ -14,4 +14,11 @@ def predicao_especialista_3pts():
     # Isso evita jogadores que acertaram 1 de 1 e ficaram com 100% de aproveitamento
     atiradores = player_stats[player_stats['FG3A'] >= 4].copy()
 
+    # 3. Cálculo da Probabilidade (3PT Score)
+    # Valorizamos: (Média de acertos * 0.6) + (Aproveitamento % * 0.4)
+    atiradores['SHARPSHOOTER_SCORE'] = (
+        (atiradores['FG3M'] * 0.6) + 
+        (atiradores['FG3_PCT'] * 10) # Multiplicado por 10 para normalizar o peso
+    )
+
     
