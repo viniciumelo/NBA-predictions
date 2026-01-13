@@ -31,3 +31,4 @@ def predicao_especialista_3pts():
     
     return ranking
 
+predicao_especialista_3pts()
