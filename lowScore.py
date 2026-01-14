@@ -22,4 +22,12 @@ def predicao_menos_pontos():
         (1 / titulares_pouco_uso['PTS']) * 100
     )
 
-   
+    # Ordenar pelos que têm maior risco de pontuação baixa
+    ranking = titulares_pouco_uso[['PLAYER_NAME', 'TEAM_ABBREVIATION', 'MIN', 'PTS', 'USG_PCT', 'LOW_SCORE_RISK']]
+    ranking = ranking.sort_values(by='LOW_SCORE_RISK', ascending=False).head(5)
+
+    print("\n--- JOGADORES COM MAIOR CHANCE DE PONTUAÇÃO MÍNIMA (Min 25min) ---")
+    for i, row in ranking.iterrows():
+        print(f"{row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']}) | Média: {row['PTS']} pts | Uso de Posse: {row['USG_PCT']:.1%}")
+    
+    return ranking
