@@ -10,4 +10,8 @@ def predicao_menos_pontos():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
+    # 2. Filtro de "Titulares ou Rotação" 
+    # Buscamos jogadores que jogam muito (25+ min) mas pontuam pouco
+    titulares_pouco_uso = player_stats[player_stats['MIN'] >= 25].copy()
+
     
