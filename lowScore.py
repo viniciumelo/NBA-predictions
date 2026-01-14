@@ -14,4 +14,12 @@ def predicao_menos_pontos():
     # Buscamos jogadores que jogam muito (25+ min) mas pontuam pouco
     titulares_pouco_uso = player_stats[player_stats['MIN'] >= 25].copy()
 
-    
+    # 3. Cálculo do "Low Score Risk"
+    # Valorizamos: Baixo Usage Rate + Baixa Média de Pontos
+    # O USG% baixo indica que o time não desenha jogadas para ele.
+    titulares_pouco_uso['LOW_SCORE_RISK'] = (
+        (1 / titulares_pouco_uso['USG_PCT']) * 10 + 
+        (1 / titulares_pouco_uso['PTS']) * 100
+    )
+
+   
