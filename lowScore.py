@@ -31,3 +31,5 @@ def predicao_menos_pontos():
         print(f"{row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']}) | Média: {row['PTS']} pts | Uso de Posse: {row['USG_PCT']:.1%}")
     
     return ranking
+
+predicao_menos_pontos()
