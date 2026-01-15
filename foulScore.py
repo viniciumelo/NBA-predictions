@@ -10,4 +10,7 @@ def predicao_risco_faltas():
         measure_type_detailed_advanced='Base'
     ).get_data_frames()[0]
 
-   
+    # 2. Filtro: Jogadores que atuam pelo menos 15 minutos (volume real de jogo)
+    jogadores_ativos = player_stats[player_stats['MIN'] >= 15].copy()
+
+    
