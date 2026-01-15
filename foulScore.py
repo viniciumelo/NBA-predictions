@@ -13,4 +13,8 @@ def predicao_risco_faltas():
     # 2. Filtro: Jogadores que atuam pelo menos 15 minutos (volume real de jogo)
     jogadores_ativos = player_stats[player_stats['MIN'] >= 15].copy()
 
+    # 3. Cálculo do Risco de Faltas (Foul Risk Score)
+    # Criamos a métrica Faltas por 36 Minutos
+    jogadores_ativos['PF_PER_36'] = (jogadores_ativos['PF'] / jogadores_ativos['MIN']) * 36
+
     
