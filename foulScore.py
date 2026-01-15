@@ -17,4 +17,13 @@ def predicao_risco_faltas():
     # Criamos a métrica Faltas por 36 Minutos
     jogadores_ativos['PF_PER_36'] = (jogadores_ativos['PF'] / jogadores_ativos['MIN']) * 36
 
+    # Ordenar pelos jogadores que mais cometem faltas proporcionalmente
+    ranking = jogadores_ativos[['PLAYER_NAME', 'TEAM_ABBREVIATION', 'PF', 'MIN', 'PF_PER_36']]
+    ranking = ranking.sort_values(by='PF_PER_36', ascending=False).head(5)
+
+    print("\n--- JOGADORES COM MAIOR RISCO DE FOUL TROUBLE ---")
+    for i, row in ranking.iterrows():
+        print(f"{row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']}) | Faltas/36min: {row['PF_PER_36']:.2f}")
     
+    return ranking
+
