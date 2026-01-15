@@ -27,3 +27,4 @@ def predicao_risco_faltas():
     
     return ranking
 
+predicao_risco_faltas()
