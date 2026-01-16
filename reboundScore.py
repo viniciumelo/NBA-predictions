@@ -30,3 +30,5 @@ def predicao_rebotes():
         print(f"{row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']}) | Média: {row['REB']} reb | Eficiência: {row['REB_PCT']:.1%}")
     
     return ranking
+
+predicao_rebotes()
