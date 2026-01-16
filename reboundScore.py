@@ -21,4 +21,12 @@ def predicao_rebotes():
         (pivot_candidates['OREB_PCT'] * 30)
     )
 
+    # Ordenar pelos maiores reboteiros de impacto
+    ranking = pivot_candidates[['PLAYER_NAME', 'TEAM_ABBREVIATION', 'REB', 'REB_PCT', 'REB_IMPACT']]
+    ranking = ranking.sort_values(by='REB_IMPACT', ascending=False).head(5)
+
+    print("\n--- TOP 5 JOGADORES COM MAIOR CHANCE DE DOMÍNIO DE REBOTES ---")
+    for i, row in ranking.iterrows():
+        print(f"{row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']}) | Média: {row['REB']} reb | Eficiência: {row['REB_PCT']:.1%}")
     
+    return ranking
