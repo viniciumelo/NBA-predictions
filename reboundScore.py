@@ -10,4 +10,15 @@ def predicao_rebotes():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
-   
+    # 2. Filtro: Jogadores com tempo de quadra real (Min 20 min)
+    pivot_candidates = player_stats[player_stats['MIN'] >= 20].copy()
+
+    # 3. Cálculo do Rebound Impact Score
+    # REB_PCT: % de rebotes totais disponíveis que o jogador coleta
+    # OreB_PCT: % de rebotes ofensivos (gera segundas chances)
+    pivot_candidates['REB_IMPACT'] = (
+        (pivot_candidates['REB_PCT'] * 70) + 
+        (pivot_candidates['OREB_PCT'] * 30)
+    )
+
+    
