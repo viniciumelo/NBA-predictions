@@ -20,4 +20,9 @@ def predicao_faltas_equipe():
     # 3. Unificar dados
     df = pd.merge(team_stats, adv_stats[['TEAM_ID', 'PACE', 'DEF_RATING']], on='TEAM_ID')
 
+    # 4. Cálculo do Foul Score
+    # Valorizamos: (Faltas por jogo / Pace) * Defensive Rating
+    # Times com Def Rating alto (pior defesa) tendem a fazer mais faltas para compensar
+    df['TEAM_FOUL_SCORE'] = (df['PF'] / df['PACE']) * (df['DEF_RATING'] / 100)
+
     
