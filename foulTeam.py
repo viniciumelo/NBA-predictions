@@ -34,3 +34,5 @@ def predicao_faltas_equipe():
         print(f"{row['TEAM_NAME']} | Média: {row['PF']:.1f} faltas/jogo | Ritmo (Pace): {row['PACE']:.1f}")
     
     return ranking
+
+predicao_faltas_equipe()
