@@ -11,4 +11,10 @@ def predicao_faltas_equipe():
         measure_type_detailed_advanced='Base'
     ).get_data_frames()[0]
 
+    # 2. Coletar métricas avançadas (Pace e Defensive Rating)
+    adv_stats = leaguedashteamstats.LeagueDashTeamStats(
+        season='2025-26',
+        measure_type_detailed_advanced='Advanced'
+    ).get_data_frames()[0]
+
     
