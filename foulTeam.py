@@ -17,4 +17,7 @@ def predicao_faltas_equipe():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
+    # 3. Unificar dados
+    df = pd.merge(team_stats, adv_stats[['TEAM_ID', 'PACE', 'DEF_RATING']], on='TEAM_ID')
+
     
