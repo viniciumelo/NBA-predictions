@@ -25,4 +25,12 @@ def predicao_faltas_equipe():
     # Times com Def Rating alto (pior defesa) tendem a fazer mais faltas para compensar
     df['TEAM_FOUL_SCORE'] = (df['PF'] / df['PACE']) * (df['DEF_RATING'] / 100)
 
+    # Ordenar pelas equipes com maior tendência de faltas
+    ranking = df[['TEAM_NAME', 'PF', 'PACE', 'DEF_RATING', 'TEAM_FOUL_SCORE']]
+    ranking = ranking.sort_values(by='TEAM_FOUL_SCORE', ascending=False).head(5)
+
+    print("\n--- EQUIPES COM MAIOR TENDÊNCIA DE COMETER FALTAS ---")
+    for i, row in ranking.iterrows():
+        print(f"{row['TEAM_NAME']} | Média: {row['PF']:.1f} faltas/jogo | Ritmo (Pace): {row['PACE']:.1f}")
     
+    return ranking
