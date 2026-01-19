@@ -41,3 +41,5 @@ def predicao_all_star_chance():
         print(f"{row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']}) | Chance: {row['ALL_STAR_CHANCE']:.1f}%")
     
     return ranking
+
+predicao_all_star_chance()
