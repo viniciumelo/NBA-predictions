@@ -22,4 +22,16 @@ def predicao_pontos_4quarto():
     # 3. Unificar os dados
     df = pd.merge(stats_4q, adv_stats_4q[['TEAM_ID', 'PACE', 'OFF_RATING']], on='TEAM_ID')
 
+    # 4. Cálculo da Projeção de Pontos
+    # PTS = Pontos marcados no 4Q por jogo
+    # PACE = Velocidade do jogo no 4Q (indica se o time corre ou gasta o relógio)
+    df['PROJECAO_4Q'] = df['PTS'] 
+
+    # Ordenar pelos times que mais pontuam no final
+    ranking = df[['TEAM_NAME', 'PTS', 'PACE', 'OFF_RATING']].sort_values(by='PTS', ascending=False).head(5)
+
+    print("\n--- TIMES MAIS EXPLOSIVOS NO 4º QUARTO ---")
+    for i, row in ranking.iterrows():
+        print(f"{row['TEAM_NAME']} | Média: {row['PTS']:.1f} pts | Eficiência: {row['OFF_RATING']}")
     
+    return ranking
