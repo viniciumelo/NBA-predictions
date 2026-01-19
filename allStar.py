@@ -16,4 +16,16 @@ def predicao_all_star_chance():
         measure_type_detailed_advanced='Base'
     ).get_data_frames()[0]
 
-   
+    # 3. Mesclar dados
+    df = pd.merge(base_stats[['PLAYER_ID', 'PLAYER_NAME', 'TEAM_ABBREVIATION', 'PTS', 'W_PCT']], 
+                  player_stats[['PLAYER_ID', 'PIE', 'USG_PCT']], on='PLAYER_ID')
+
+    # 4. Cálculo da Probabilidade All-Star (%)
+    # A fórmula considera: Volume de Pontos (40%), Eficiência PIE (30%), 
+    # Sucesso do Time (20%) e Uso de Posse/Estrelato (10%)
+    df['ALL_STAR_CHANCE'] = (
+        (df['PTS'] * 2.0) +           # Pontos são o maior chamariz de votos
+        (df['PIE'] * 150) +           # Impacto real no jogo
+        (df['W_PCT'] * 20) +          # Times vencedores levam mais jogadores
+        (df['USG_PCT'] * 50)          # Jogadores que dominam a bola são mais "vistos"
+    )
