@@ -10,4 +10,10 @@ def predicao_all_star_chance():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
-    
+    # 2. Coletar dados básicos para Pontos e Vitórias
+    base_stats = leaguedashplayerstats.LeagueDashPlayerStats(
+        season='2024-25',
+        measure_type_detailed_advanced='Base'
+    ).get_data_frames()[0]
+
+   
