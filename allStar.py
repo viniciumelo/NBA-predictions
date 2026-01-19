@@ -29,3 +29,15 @@ def predicao_all_star_chance():
         (df['W_PCT'] * 20) +          # Times vencedores levam mais jogadores
         (df['USG_PCT'] * 50)          # Jogadores que dominam a bola são mais "vistos"
     )
+
+    # Normalizar para escala de 0 a 100
+    max_score = df['ALL_STAR_CHANCE'].max()
+    df['ALL_STAR_CHANCE'] = (df['ALL_STAR_CHANCE'] / max_score) * 100
+
+    ranking = df.sort_values(by='ALL_STAR_CHANCE', ascending=False).head(10)
+
+    print("\n--- PROJEÇÃO DE SELEÇÃO ALL-STAR ---")
+    for i, row in ranking.iterrows():
+        print(f"{row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']}) | Chance: {row['ALL_STAR_CHANCE']:.1f}%")
+    
+    return ranking
