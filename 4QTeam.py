@@ -19,4 +19,7 @@ def predicao_pontos_4quarto():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
+    # 3. Unificar os dados
+    df = pd.merge(stats_4q, adv_stats_4q[['TEAM_ID', 'PACE', 'OFF_RATING']], on='TEAM_ID')
+
     
