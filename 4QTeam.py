@@ -35,3 +35,5 @@ def predicao_pontos_4quarto():
         print(f"{row['TEAM_NAME']} | Média: {row['PTS']:.1f} pts | Eficiência: {row['OFF_RATING']}")
     
     return ranking
+
+predicao_pontos_4quarto()
