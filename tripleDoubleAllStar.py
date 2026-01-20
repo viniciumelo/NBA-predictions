@@ -35,3 +35,5 @@ def predicao_triple_double_allstar():
         print(f"{row['PLAYER_NAME']} | Chance: {row['TD_CHANCE_PCT']:.1f}% (Médias: {row['AST']} ast, {row['REB']} reb)")
     
     return ranking
+
+predicao_triple_double_allstar()
