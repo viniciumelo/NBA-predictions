@@ -10,4 +10,8 @@ def predicao_triple_double_allstar():
         measure_type_detailed_advanced='Base'
     ).get_data_frames()[0]
 
+    # 2. Filtrar jogadores que são 'Estrelas' (Média > 20 pts) 
+    # e que têm médias altas de Rebotes E Assistências
+    stars = stats[stats['PTS'] >= 20].copy()
+
     
