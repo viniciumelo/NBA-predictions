@@ -23,4 +23,15 @@ def predicao_triple_double_allstar():
         (stars['PIE'] * 100) # Impacto global
     )
 
-  
+    # Normalizar para percentual
+    max_val = stars['TD_CHANCE'].max()
+    stars['TD_CHANCE_PCT'] = (stars['TD_CHANCE'] / max_val) * 100
+
+    ranking = stars[['PLAYER_NAME', 'TEAM_ABBREVIATION', 'AST', 'REB', 'TD_CHANCE_PCT']]
+    ranking = ranking.sort_values(by='TD_CHANCE_PCT', ascending=False).head(5)
+
+    print("\n--- FAVORITOS AO TRIPLE-DOUBLE NO ALL-STAR ---")
+    for i, row in ranking.iterrows():
+        print(f"{row['PLAYER_NAME']} | Chance: {row['TD_CHANCE_PCT']:.1f}% (Médias: {row['AST']} ast, {row['REB']} reb)")
+    
+    return ranking
