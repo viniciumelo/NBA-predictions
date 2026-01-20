@@ -14,4 +14,13 @@ def predicao_triple_double_allstar():
     # e que têm médias altas de Rebotes E Assistências
     stars = stats[stats['PTS'] >= 20].copy()
 
-    
+    # 3. Cálculo do TD-Score (Triple Double Score)
+    # A fórmula prioriza quem já chega perto do triplo-duplo na temporada regular
+    # Peso: Assistências (40%) + Rebotes (40%) + Histórico de Minutos (20%)
+    stars['TD_CHANCE'] = (
+        (stars['AST'] * 5) + 
+        (stars['REB'] * 4) + 
+        (stars['PIE'] * 100) # Impacto global
+    )
+
+  
