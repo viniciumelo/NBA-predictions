@@ -28,3 +28,5 @@ def predicao_faltas_allstar():
         print(f"{row['PLAYER_NAME']} | Risco de 'Foul-Out' Festivo: {row['FOUL_PROB']:.1f}")
     
     return ranking
+
+predicao_faltas_allstar()
