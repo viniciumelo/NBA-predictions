@@ -22,4 +22,9 @@ def predicao_faltas_allstar():
     ranking = all_star_pool[['PLAYER_NAME', 'TEAM_ABBREVIATION', 'PF_PER_36', 'FOUL_PROB']]
     ranking = ranking.sort_values(by='FOUL_PROB', ascending=False).head(5)
 
-  
+    print("\n--- JOGADORES COM MAIOR CHANCE DE COMETER FALTAS (ALL-STAR) ---")
+    for i, row in ranking.iterrows():
+        # No All-Star, o número de faltas é baixo (geralmente 1 ou 2 lideram)
+        print(f"{row['PLAYER_NAME']} | Risco de 'Foul-Out' Festivo: {row['FOUL_PROB']:.1f}")
+    
+    return ranking
