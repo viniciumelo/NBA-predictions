@@ -10,4 +10,8 @@ def predicao_faltas_allstar():
         measure_type_detailed_advanced='Base'
     ).get_data_frames()[0]
 
-   
+    # 2. Filtrar apenas os prováveis All-Stars (jogadores de alto impacto)
+    # Focamos em jogadores com PIE alto e que jogam muitos minutos
+    all_star_pool = stats[stats['PIE'] > 0.13].copy()
+
+    
