@@ -14,4 +14,12 @@ def predicao_faltas_allstar():
     # Focamos em jogadores com PIE alto e que jogam muitos minutos
     all_star_pool = stats[stats['PIE'] > 0.13].copy()
 
-    
+    # 3. Cálculo do 'Aggression Score'
+    # Faltas por 36 minutos + Taxa de Tocos (indica tentativa de contestar chutes)
+    all_star_pool['PF_PER_36'] = (all_star_pool['PF'] / all_star_pool['MIN']) * 36
+    all_star_pool['FOUL_PROB'] = (all_star_pool['PF_PER_36'] * 0.7) + (all_star_pool['BLK'] * 0.3)
+
+    ranking = all_star_pool[['PLAYER_NAME', 'TEAM_ABBREVIATION', 'PF_PER_36', 'FOUL_PROB']]
+    ranking = ranking.sort_values(by='FOUL_PROB', ascending=False).head(5)
+
+  
