@@ -20,3 +20,12 @@ def predicao_vencedor_allstar_2026():
     # 3. Cálculo de Força
     forca_mundo = sum([scores[p] for p in time_mundo]) / len(time_mundo)
     forca_eua = sum([scores[p] for p in time_eua_pool]) / len(time_eua_pool)
+
+    # 4. Probabilidade Ajustada
+    # O Time Mundo leva vantagem histórica pela química e tamanho (Wemby + Jokic + Giannis)
+    prob_mundo = (forca_mundo / (forca_mundo + forca_eua)) * 100
+
+    print(f"--- PREDIÇÃO ALL-STAR GAME 2026 (LA) ---")
+    print(f"Probabilidade Time MUNDO: {prob_mundo:.1f}%")
+    print(f"Probabilidade Times EUA: {100 - prob_mundo:.1f}%")
+    print(f"\nFator Decisivo: O 'Frontcourt' do Mundo (Jokic/Wemby/Giannis) é imparável.")
