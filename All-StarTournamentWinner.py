@@ -16,3 +16,7 @@ def predicao_vencedor_allstar_2026():
         'Stephen Curry': 90, 'Jalen Brunson': 89, 'Tyrese Maxey': 91,
         'Cade Cunningham': 88, 'Jaylen Brown': 89
     }
+
+    # 3. Cálculo de Força
+    forca_mundo = sum([scores[p] for p in time_mundo]) / len(time_mundo)
+    forca_eua = sum([scores[p] for p in time_eua_pool]) / len(time_eua_pool)
