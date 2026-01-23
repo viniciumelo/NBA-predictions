@@ -29,3 +29,5 @@ def predicao_vencedor_allstar_2026():
     print(f"Probabilidade Time MUNDO: {prob_mundo:.1f}%")
     print(f"Probabilidade Times EUA: {100 - prob_mundo:.1f}%")
     print(f"\nFator Decisivo: O 'Frontcourt' do Mundo (Jokic/Wemby/Giannis) é imparável.")
+
+predicao_vencedor_allstar_2026()
