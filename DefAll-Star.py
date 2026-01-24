@@ -23,4 +23,11 @@ def predicao_defesa_allstar():
         (all_stars['STL'] * 10)
     )
 
+    ranking = all_stars[['PLAYER_NAME', 'TEAM_ABBREVIATION', 'DEF_RATING', 'DEF_IMPACT_SCORE']]
+    ranking = ranking.sort_values(by='DEF_IMPACT_SCORE', ascending=False).head(5)
+
+    print("\n--- FAVORITOS PARA LIDERAR A DEFESA NO ALL-STAR ---")
+    for i, row in ranking.iterrows():
+        print(f"{row['PLAYER_NAME']} | Score de Impacto: {row['DEF_IMPACT_SCORE']:.1f}")
     
+    return ranking
