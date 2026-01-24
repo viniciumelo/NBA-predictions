@@ -31,3 +31,5 @@ def predicao_defesa_allstar():
         print(f"{row['PLAYER_NAME']} | Score de Impacto: {row['DEF_IMPACT_SCORE']:.1f}")
     
     return ranking
+
+predicao_defesa_allstar()
