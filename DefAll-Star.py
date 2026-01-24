@@ -10,4 +10,8 @@ def predicao_defesa_allstar():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
+    # 2. Filtrar jogadores All-Star (PIE alto e minutagem)
+    # Focamos em jogadores que têm Defensive Rating baixo (melhor defesa)
+    all_stars = stats[stats['PIE'] > 0.14].copy()
+
     
