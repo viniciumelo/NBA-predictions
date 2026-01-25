@@ -35,3 +35,6 @@ def encontrar_bilhete_premiado_nba():
         print(f"   > Eficiência: {player['FG3_PCT']:.1%} em {player['FG3A']} tentativas\n")
     
     return top_vencedores
+
+if __name__ == "__main__":
+    encontrar_bilhete_premiado_nba()
