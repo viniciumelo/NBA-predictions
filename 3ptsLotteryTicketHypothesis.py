@@ -10,4 +10,11 @@ def encontrar_bilhete_premiado_nba():
         measure_type_detailed_advanced='Base'
     ).get_data_frames()[0]
 
+    # 2. O Processo de Podagem (Pruning)
+    # Em vez de um filtro simples, removemos as "conexões fracas" (baixa amostragem e instabilidade)
+    media_tentativas = stats['FG3A'].mean()
+    
+    # Mantemos apenas jogadores acima da média de tentativas da liga (Filtro de Relevância)
+    sub_rede = stats[stats['FG3A'] > media_tentativas].copy()
+
    
