@@ -17,4 +17,12 @@ def encontrar_bilhete_premiado_nba():
     # Mantemos apenas jogadores acima da média de tentativas da liga (Filtro de Relevância)
     sub_rede = stats[stats['FG3A'] > media_tentativas].copy()
 
-   
+    # 3. Identificação do 'Winning Ticket'
+    # Aplicamos uma métrica de eficiência ajustada ao risco
+    # A lógica: Volume alto com eficiência constante é o bilhete premiado.
+    sub_rede['LOTTERY_SCORE'] = (
+        (sub_rede['FG3M'] * 0.7) +  # Valorizamos a entrega real
+        (sub_rede['FG3_PCT'] * 15)  # Intensificamos o peso da precisão
+    )
+
+    
