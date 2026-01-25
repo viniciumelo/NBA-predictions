@@ -25,4 +25,13 @@ def encontrar_bilhete_premiado_nba():
         (sub_rede['FG3_PCT'] * 15)  # Intensificamos o peso da precisão
     )
 
+    # 4. Isolando os vencedores
+    top_vencedores = sub_rede.sort_values(by='LOTTERY_SCORE', ascending=False).head(5)
+
+    print(f"\n--- OS 5 BILHETES PREMIADOS DA RODADA ---")
+    for _, player in top_vencedores.iterrows():
+        print(f"ID: {player['PLAYER_ID']} | {player['PLAYER_NAME']} [{player['TEAM_ABBREVIATION']}]")
+        print(f"   > Score de Estabilidade: {player['LOTTERY_SCORE']:.2f}")
+        print(f"   > Eficiência: {player['FG3_PCT']:.1%} em {player['FG3A']} tentativas\n")
     
+    return top_vencedores
