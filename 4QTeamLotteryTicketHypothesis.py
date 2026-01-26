@@ -27,3 +27,16 @@ def encontrar_bilhete_vencedor_clutch():
         (df['TS_PCT'] * 100) +      # Qualidade do arremesso sob pressão
         (df['PTS'] * 0.3)          # Volume de entrega
     )
+
+    # 3. Isolando os 'Winning Tickets'
+    # Ordenamos para encontrar os times que "ganharam na loteria" da consistência final
+    ranking = df[['TEAM_NAME', 'PTS', 'OFF_RATING', 'TS_PCT', 'CLUTCH_TICKET_SCORE']]
+    ranking = ranking.sort_values(by='CLUTCH_TICKET_SCORE', ascending=False).head(5)
+
+    print("\n--- IDENTIFICAÇÃO DOS BILHETES PREMIADOS (TOP 5 CLUTCH) ---")
+    for _, row in ranking.iterrows():
+        print(f"Time: {row['TEAM_NAME']}")
+        print(f" > Ticket Score: {row['CLUTCH_TICKET_SCORE']:.2f}")
+        print(f" > Eficiência Real: {row['TS_PCT']:.1%} | Ortg: {row['OFF_RATING']}\n")
+    
+    return ranking
