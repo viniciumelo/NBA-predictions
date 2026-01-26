@@ -14,4 +14,7 @@ def encontrar_bilhete_vencedor_clutch():
         season='2025-26', period_nullable=4, measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
-    
+    # Unificação focada em métricas de intensidade
+    df = pd.merge(base_4q, adv_4q[['TEAM_ID', 'PACE', 'OFF_RATING', 'TS_PCT']], on='TEAM_ID')
+
+   
