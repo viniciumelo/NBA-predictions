@@ -40,3 +40,5 @@ def encontrar_bilhete_vencedor_clutch():
         print(f" > Eficiência Real: {row['TS_PCT']:.1%} | Ortg: {row['OFF_RATING']}\n")
     
     return ranking
+
+encontrar_bilhete_vencedor_clutch()
