@@ -27,4 +27,8 @@ def encontrar_winning_ticket_allstar():
     sub_rede_mundo = extrair_subrede_vencedora(elencos['MUNDO'])
     sub_rede_eua = extrair_subrede_vencedora(elencos['EUA'])
 
-   
+    # 3. Cálculo de Potencial do Bilhete (Winning Ticket Potential)
+    score_mundo = sum(sub_rede_mundo.values()) / len(sub_rede_mundo)
+    score_eua = sum(sub_rede_eua.values()) / len(sub_rede_eua)
+
+    
