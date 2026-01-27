@@ -14,3 +14,12 @@ def encontrar_winning_ticket_allstar():
             'Cunningham': 88, 'Brown': 89
         }
     }
+
+    # 2. O Processo de Pruning (Poda)
+    # Na LTH, removemos os pesos (jogadores) abaixo de um certo threshold de influência.
+    def extrair_subrede_vencedora(time_dict, percentual_poda=0.4):
+        # Ordenamos por impacto e removemos os 40% "menos eficientes" para o Clutch
+        ordenado = sorted(time_dict.items(), key=lambda x: x[1], reverse=True)
+        num_manter = int(len(ordenado) * (1 - percentual_poda))
+        # O 'Winning Ticket' é a sub-rede que sobra
+        return dict(ordenado[:num_manter + 1])
