@@ -10,4 +10,10 @@ def encontrar_winning_tickets_por_time():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
+    # 2. Processo de Poda (Pruning)
+    # Na LTH, removemos os 'pesos' de baixa magnitude que não contribuem para o aprendizado.
+    # Filtramos jogadores com volume de jogo (MIN) e uso de posse (USG_PCT) abaixo da média.
+    threshold_min = 20
+    threshold_usg = all_players['USG_PCT'].mean()
     
+   
