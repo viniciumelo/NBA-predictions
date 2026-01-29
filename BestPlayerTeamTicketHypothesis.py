@@ -43,3 +43,6 @@ def encontrar_winning_tickets_por_time():
         print("-" * 40)
     
     return ranking
+
+if __name__ == "__main__":
+    df_tickets = encontrar_winning_tickets_por_time()
