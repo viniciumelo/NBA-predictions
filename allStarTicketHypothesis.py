@@ -41,3 +41,5 @@ def encontrar_winning_ticket_allstar():
     print(f"\n--- PREDIÇÃO FINAL (BASEADA NO WINNING TICKET) ---")
     print(f"Probabilidade de Vitória MUNDO: {prob_mundo:.2f}%")
     print(f"Veredito: A sub-rede do Mundo (Jokic/Doncic) tem pesos iniciais muito superiores.")
+
+encontrar_winning_ticket_allstar()
