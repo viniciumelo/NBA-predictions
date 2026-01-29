@@ -26,4 +26,7 @@ def encontrar_winning_tickets_por_time():
     # Calculamos o 'Ticket Score' combinando PIE (Impacto) e Net Rating (Eficiência do time com ele)
     sub_rede['TICKET_SCORE'] = (sub_rede['PIE'] * 0.7) + (sub_rede['NET_RATING'] * 0.01)
 
+    # Isolamos o maior score de cada time (o vencedor da loteria estatística)
+    winning_tickets = sub_rede.sort_values('TICKET_SCORE', ascending=False).drop_duplicates('TEAM_ABBREVIATION')
+    
     
