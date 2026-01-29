@@ -22,4 +22,8 @@ def encontrar_winning_tickets_por_time():
         (all_players['USG_PCT'] >= threshold_usg)
     ].copy()
 
-   
+    # 3. Identificação do Winning Ticket (O núcleo de maior impacto)
+    # Calculamos o 'Ticket Score' combinando PIE (Impacto) e Net Rating (Eficiência do time com ele)
+    sub_rede['TICKET_SCORE'] = (sub_rede['PIE'] * 0.7) + (sub_rede['NET_RATING'] * 0.01)
+
+    
