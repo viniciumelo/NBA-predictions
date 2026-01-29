@@ -16,4 +16,10 @@ def encontrar_winning_tickets_por_time():
     threshold_min = 20
     threshold_usg = all_players['USG_PCT'].mean()
     
+    # Aplicando a poda: jogadores que não 'carregam' o jogo são removidos
+    sub_rede = all_players[
+        (all_players['MIN'] >= threshold_min) & 
+        (all_players['USG_PCT'] >= threshold_usg)
+    ].copy()
+
    
