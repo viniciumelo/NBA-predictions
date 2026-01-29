@@ -23,3 +23,12 @@ def encontrar_winning_ticket_allstar():
         num_manter = int(len(ordenado) * (1 - percentual_poda))
         # O 'Winning Ticket' é a sub-rede que sobra
         return dict(ordenado[:num_manter + 1])
+
+    sub_rede_mundo = extrair_subrede_vencedora(elencos['MUNDO'])
+    sub_rede_eua = extrair_subrede_vencedora(elencos['EUA'])
+
+    # 3. Cálculo de Potencial do Bilhete (Winning Ticket Potential)
+    score_mundo = sum(sub_rede_mundo.values()) / len(sub_rede_mundo)
+    score_eua = sum(sub_rede_eua.values()) / len(sub_rede_eua)
+
+    
