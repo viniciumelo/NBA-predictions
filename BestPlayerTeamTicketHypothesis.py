@@ -29,4 +29,17 @@ def encontrar_winning_tickets_por_time():
     # Isolamos o maior score de cada time (o vencedor da loteria estatística)
     winning_tickets = sub_rede.sort_values('TICKET_SCORE', ascending=False).drop_duplicates('TEAM_ABBREVIATION')
     
+    # Ordenar por sigla do time para clareza
+    ranking = winning_tickets[['TEAM_ABBREVIATION', 'PLAYER_NAME', 'PIE', 'USG_PCT', 'TICKET_SCORE']]
+    ranking = ranking.sort_values('TEAM_ABBREVIATION')
+
+    print("\n--- WINNING TICKETS IDENTIFICADOS POR TIME (2025-26) ---")
+    print("Esses jogadores representam a sub-rede essencial de cada equipe.\n")
     
+    for _, row in ranking.iterrows():
+        print(f"[{row['TEAM_ABBREVIATION']}] {row['PLAYER_NAME']}")
+        print(f"   > Impacto Isolado (PIE): {row['PIE']:.1%}")
+        print(f"   > Densidade de Uso (USG): {row['USG_PCT']:.1%}")
+        print("-" * 40)
+    
+    return ranking
