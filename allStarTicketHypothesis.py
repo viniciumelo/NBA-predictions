@@ -31,4 +31,11 @@ def encontrar_winning_ticket_allstar():
     score_mundo = sum(sub_rede_mundo.values()) / len(sub_rede_mundo)
     score_eua = sum(sub_rede_eua.values()) / len(sub_rede_eua)
 
+    # 4. Predição Final
+    prob_mundo = (score_mundo / (score_mundo + score_eua)) * 100
+
+    print(f"\n--- RESULTADO DA PODA (SUB-REDES ISOLADAS) ---")
+    print(f"Bilhete Mundo (Núcleo): {list(sub_rede_mundo.keys())}")
+    print(f"Bilhete EUA (Núcleo): {list(sub_rede_eua.keys())}")
+    
     
