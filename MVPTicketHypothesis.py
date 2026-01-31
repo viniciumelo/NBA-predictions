@@ -23,4 +23,13 @@ def predicao_mvp_lottery_ticket():
         (player_stats['USG_PCT'] >= threshold_usg)
     ].copy()
 
-   
+    # 3. Identificação do Bilhete Premiado (MVP Score)
+    # A métrica foca na estabilidade da performance (PIE + E_OFF_RATING)
+    # O MVP Score aqui é a 'probabilidade de convergência' do jogador ao título
+    sub_rede['MVP_TICKET_SCORE'] = (
+        (sub_rede['PIE'] * 100) +        # Magnitude do Impacto
+        (sub_rede['OFF_RATING'] * 0.2) +  # Eficiência da Conexão Ofensiva
+        (sub_rede['W_PCT'] * 50)          # Recompensa por Vitória da Rede (Time)
+    )
+
+  
