@@ -42,3 +42,6 @@ def predicao_mvp_lottery_ticket():
         print(f"   > MVP Ticket Score: {row['MVP_TICKET_SCORE']:.2f}\n")
     
     return ranking
+
+if __name__ == "__main__":
+    predicao_mvp_lottery_ticket()
