@@ -11,4 +11,16 @@ def predicao_mvp_lottery_ticket():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
+    # 2. O Processo de Poda (Pruning)
+    # Removemos neurônios (jogadores) com baixa magnitude de impacto
+    # Um 'Winning Ticket' precisa de volume (USG_PCT) e eficiência (NET_RATING)
+    threshold_min = 32
+    threshold_usg = player_stats['USG_PCT'].median()
+    
+    # Poda: Mantemos apenas a sub-rede de alto uso e alta minutagem
+    sub_rede = player_stats[
+        (player_stats['MIN'] >= threshold_min) & 
+        (player_stats['USG_PCT'] >= threshold_usg)
+    ].copy()
+
    
