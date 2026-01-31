@@ -41,3 +41,6 @@ def encontrar_winning_ticket_defensivo():
         print(f" > Impacto no Winning Share: {row['DWS']:.3f}\n")
     
     return ranking
+
+if __name__ == "__main__":
+    encontrar_winning_ticket_defensivo()
