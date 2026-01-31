@@ -35,4 +35,10 @@ def predicao_mvp_lottery_ticket():
     # 4. Isolando os Vencedores da Loteria
     ranking = sub_rede.sort_values(by='MVP_TICKET_SCORE', ascending=False).head(5)
 
-   
+    print("\n--- SUB-REDES IDENTIFICADAS (WINNING TICKETS PARA MVP) ---")
+    for rank, (i, row) in enumerate(ranking.iterrows(), 1):
+        print(f"Bilhete #{rank}: {row['PLAYER_NAME']} [{row['TEAM_ABBREVIATION']}]")
+        print(f"   > Estabilidade (PIE): {row['PIE']:.1%}")
+        print(f"   > MVP Ticket Score: {row['MVP_TICKET_SCORE']:.2f}\n")
+    
+    return ranking
