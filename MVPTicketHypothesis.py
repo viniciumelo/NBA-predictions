@@ -32,4 +32,7 @@ def predicao_mvp_lottery_ticket():
         (sub_rede['W_PCT'] * 50)          # Recompensa por Vitória da Rede (Time)
     )
 
-  
+    # 4. Isolando os Vencedores da Loteria
+    ranking = sub_rede.sort_values(by='MVP_TICKET_SCORE', ascending=False).head(5)
+
+   
