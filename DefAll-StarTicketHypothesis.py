@@ -22,4 +22,11 @@ def encontrar_winning_ticket_defensivo():
         (stats['DEF_RATING'] < media_def_rating) # Menor é melhor em DEF_RATING
     ].copy()
 
-    
+    # 3. Identificação do Winning Ticket
+    # O bilhete premiado não é apenas quem rouba bola, mas quem tem a "arquitetura" estável
+    # DWS = Defensive Win Shares (Vitórias atribuídas à defesa)
+    sub_rede['WINNING_TICKET_SCORE'] = (
+        ((200 - sub_rede['DEF_RATING']) * 0.4) + # Estabilidade da rede
+        (sub_rede['DWS'] * 50) +                # Contribuição real para a vitória
+        (sub_rede['DEF_WS'] * 10)               # Eficiência defensiva pura
+    )
