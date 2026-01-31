@@ -30,3 +30,14 @@ def encontrar_winning_ticket_defensivo():
         (sub_rede['DWS'] * 50) +                # Contribuição real para a vitória
         (sub_rede['DEF_WS'] * 10)               # Eficiência defensiva pura
     )
+
+    # 4. Resultado Final (Os 5 Bilhetes de Loteria da Defesa)
+    ranking = sub_rede.sort_values(by='WINNING_TICKET_SCORE', ascending=False).head(5)
+
+    print("\n--- SUB-REDE ISOLADA: OS LOCKDOWNS DO ALL-STAR 2026 ---")
+    for _, row in ranking.iterrows():
+        print(f"Bilhete Identificado: {row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']})")
+        print(f" > Score de Estabilidade: {row['WINNING_TICKET_SCORE']:.2f}")
+        print(f" > Impacto no Winning Share: {row['DWS']:.3f}\n")
+    
+    return ranking
