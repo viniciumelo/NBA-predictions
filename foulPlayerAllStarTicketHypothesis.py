@@ -36,3 +36,6 @@ def encontrar_bilhete_faltas_allstar():
         print(f"   > Estilo: {'Protetor de Aro' if row['BLK'] > 1.5 else 'Defensor de Perímetro'}\n")
     
     return ranking
+
+if __name__ == "__main__":
+    encontrar_bilhete_faltas_allstar()
