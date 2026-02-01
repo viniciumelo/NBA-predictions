@@ -9,3 +9,11 @@ def encontrar_bilhete_faltas_allstar():
         season='2025-26',
         measure_type_detailed_advanced='Base'
     ).get_data_frames()[0]
+
+    # 2. Processo de Poda (Pruning)
+    # Na LTH, removemos os parâmetros (jogadores) que não têm "peso" suficiente na categoria.
+    # Vamos podar quem joga pouco ou tem baixo impacto, focando no núcleo All-Star.
+    threshold_pie = stats['PIE'].median()
+    sub_rede = stats[stats['PIE'] > threshold_pie].copy()
+
+    
