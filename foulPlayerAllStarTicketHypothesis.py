@@ -24,3 +24,9 @@ def encontrar_bilhete_faltas_allstar():
         (sub_rede['STL'] * 0.2) +                          # Tentativas de roubo (risco)
         (sub_rede['BLK'] * 0.2)                            # Contestação de aro (risco)
     )
+
+    # 4. Isolando os "Vencedores" da Loteria de Faltas
+    # Ordenamos para encontrar a sub-rede mais propensa ao apito
+    ranking = sub_rede.sort_values(by='FOUL_TICKET_SCORE', ascending=False).head(5)
+
+    
