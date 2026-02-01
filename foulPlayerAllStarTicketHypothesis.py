@@ -29,4 +29,10 @@ def encontrar_bilhete_faltas_allstar():
     # Ordenamos para encontrar a sub-rede mais propensa ao apito
     ranking = sub_rede.sort_values(by='FOUL_TICKET_SCORE', ascending=False).head(5)
 
+    print("\n--- SUB-REDE IDENTIFICADA: OS 'BILHETES PREMIADOS' DO APITO ---")
+    for rank, (i, row) in enumerate(ranking.iterrows(), 1):
+        print(f"{rank}. {row['PLAYER_NAME']} [{row['TEAM_ABBREVIATION']}]")
+        print(f"   > Score de Agressividade: {row['FOUL_TICKET_SCORE']:.2f}")
+        print(f"   > Estilo: {'Protetor de Aro' if row['BLK'] > 1.5 else 'Defensor de Perímetro'}\n")
     
+    return ranking
