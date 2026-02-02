@@ -39,3 +39,6 @@ def encontrar_winning_ticket_faltas():
         print(f"   > Ticket Score (Magnitude): {row['TICKET_SCORE']:.2f}\n")
     
     return winning_tickets
+
+if __name__ == "__main__":
+    encontrar_winning_ticket_faltas()
