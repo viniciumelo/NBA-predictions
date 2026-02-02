@@ -23,4 +23,10 @@ def encontrar_winning_ticket_faltas():
     # O 'bilhete premiado' é o jogador que combina agressividade ativa com o apito.
     sub_rede['PF_PER_36'] = (sub_rede['PF'] / sub_rede['MIN']) * 36
     
-    
+    # Criamos o Ticket Score: Peso das faltas ajustado pela atividade defensiva (Tocos/Roubos)
+    sub_rede['TICKET_SCORE'] = (
+        (sub_rede['PF_PER_36'] * 0.6) + 
+        ((sub_rede['BLK'] + sub_rede['STL']) * 0.4)
+    )
+
+   
