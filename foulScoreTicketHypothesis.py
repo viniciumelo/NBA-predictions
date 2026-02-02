@@ -10,4 +10,13 @@ def encontrar_winning_ticket_faltas():
         measure_type_detailed_advanced='Base'
     ).get_data_frames()[0]
 
+    # 2. O Processo de Pruning (Poda)
+    # Na LTH, removemos os neurônios de baixa magnitude. 
+    # Cortamos quem não tem tempo de quadra suficiente para impactar a rede (MIN)
+    # e quem tem um impacto defensivo insignificante (BLK/STL baixos), 
+    # pois suas faltas costumam ser 'ruído' e não 'estratégia agressiva'.
+    
+    poda_minutos = df['MIN'].median()
+    sub_rede = df[df['MIN'] >= poda_minutos].copy()
+
     
