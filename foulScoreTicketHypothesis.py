@@ -29,4 +29,7 @@ def encontrar_winning_ticket_faltas():
         ((sub_rede['BLK'] + sub_rede['STL']) * 0.4)
     )
 
-   
+    # 4. Extração da Sub-rede Vencedora (Top 5)
+    winning_tickets = sub_rede.sort_values(by='TICKET_SCORE', ascending=False).head(5)
+
+    
