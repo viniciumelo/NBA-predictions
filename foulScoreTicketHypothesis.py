@@ -32,4 +32,10 @@ def encontrar_winning_ticket_faltas():
     # 4. Extração da Sub-rede Vencedora (Top 5)
     winning_tickets = sub_rede.sort_values(by='TICKET_SCORE', ascending=False).head(5)
 
+    print("\n--- WINNING TICKETS: SUB-REDE DE ALTO RISCO DE FALTAS ---")
+    for _, row in winning_tickets.iterrows():
+        print(f"ID: {row['PLAYER_ID']} | {row['PLAYER_NAME']} [{row['TEAM_ABBREVIATION']}]")
+        print(f"   > Intensidade (Faltas/36): {row['PF_PER_36']:.2f}")
+        print(f"   > Ticket Score (Magnitude): {row['TICKET_SCORE']:.2f}\n")
     
+    return winning_tickets
