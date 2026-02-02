@@ -19,4 +19,8 @@ def encontrar_winning_ticket_faltas():
     poda_minutos = df['MIN'].median()
     sub_rede = df[df['MIN'] >= poda_minutos].copy()
 
+    # 3. Isolando o Winning Ticket (Score de Agressividade Estrutural)
+    # O 'bilhete premiado' é o jogador que combina agressividade ativa com o apito.
+    sub_rede['PF_PER_36'] = (sub_rede['PF'] / sub_rede['MIN']) * 36
+    
     
