@@ -24,4 +24,11 @@ def encontrar_bilhete_premiado_faltas():
     # Poda: Mantemos apenas a sub-rede de times com defesa vulnerável
     sub_rede = df[df['DEF_RATING'] >= threshold_defensivo].copy()
 
-    
+    # 3. Identificação do Winning Ticket (Foul Potential Score)
+    # Na LTH, o 'Winning Ticket' tem pesos iniciais que favorecem o resultado.
+    # Aqui, o resultado é a falta. O peso é o PACE (exposição) e a deficiência (DEF_RATING).
+    sub_rede['WINNING_TICKET_SCORE'] = (
+        (sub_rede['PF'] * 0.5) +               # Frequência observada
+        (sub_rede['DEF_RATING'] * 0.4) +        # Vulnerabilidade estrutural
+        (sub_rede['PACE'] * 0.1)                # Fator de aceleração (exposição)
+    )
