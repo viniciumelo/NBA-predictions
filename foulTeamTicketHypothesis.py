@@ -43,3 +43,6 @@ def encontrar_bilhete_premiado_faltas():
         print(f" > Arquitetura: Pace {row['PACE']} | Def Rating {row['DEF_RATING']}\n")
     
     return ranking
+
+if __name__ == "__main__":
+    encontrar_bilhete_premiado_faltas()
