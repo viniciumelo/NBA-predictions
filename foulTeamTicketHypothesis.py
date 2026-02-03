@@ -32,3 +32,8 @@ def encontrar_bilhete_premiado_faltas():
         (sub_rede['DEF_RATING'] * 0.4) +        # Vulnerabilidade estrutural
         (sub_rede['PACE'] * 0.1)                # Fator de aceleração (exposição)
     )
+
+    # 4. Resultado: Os 5 Bilhetes Premiados (Times com maior risco estrutural)
+    ranking = sub_rede.sort_values(by='WINNING_TICKET_SCORE', ascending=False).head(5)
+
+   
