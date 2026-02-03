@@ -21,4 +21,7 @@ def encontrar_bilhete_premiado_faltas():
     # O Bilhete Premiado de faltas geralmente está em times com DEF_RATING acima da média.
     threshold_defensivo = df['DEF_RATING'].mean()
     
+    # Poda: Mantemos apenas a sub-rede de times com defesa vulnerável
+    sub_rede = df[df['DEF_RATING'] >= threshold_defensivo].copy()
+
     
