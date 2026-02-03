@@ -16,4 +16,9 @@ def encontrar_bilhete_premiado_faltas():
     df = pd.merge(team_base[['TEAM_ID', 'TEAM_NAME', 'PF', 'GP']], 
                   team_adv[['TEAM_ID', 'PACE', 'DEF_RATING', 'PCT_AST']], on='TEAM_ID')
 
+    # 2. O Processo de Poda (Pruning)
+    # Removemos neurônios (times) que não têm "magnitude" defensiva problemática.
+    # O Bilhete Premiado de faltas geralmente está em times com DEF_RATING acima da média.
+    threshold_defensivo = df['DEF_RATING'].mean()
+    
     
