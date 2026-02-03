@@ -36,4 +36,10 @@ def encontrar_bilhete_premiado_faltas():
     # 4. Resultado: Os 5 Bilhetes Premiados (Times com maior risco estrutural)
     ranking = sub_rede.sort_values(by='WINNING_TICKET_SCORE', ascending=False).head(5)
 
-   
+    print("\n--- SUB-REDE IDENTIFICADA: WINNING TICKETS DE FALTAS ---")
+    for _, row in ranking.iterrows():
+        print(f"Time: {row['TEAM_NAME']}")
+        print(f" > Ticket Score (Potencial): {row['WINNING_TICKET_SCORE']:.2f}")
+        print(f" > Arquitetura: Pace {row['PACE']} | Def Rating {row['DEF_RATING']}\n")
+    
+    return ranking
