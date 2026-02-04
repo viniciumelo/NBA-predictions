@@ -15,4 +15,10 @@ def encontrar_winning_ticket_low_scoring():
     # Queremos isolar a sub-rede que sobrevive mesmo quando a exigência de minutos é alta.
     media_minutos = stats['MIN'].mean()
     
+    # Poda: Removemos quem joga pouco (ruído) e quem tem uso de posse acima da média (estrelas)
+    sub_rede = stats[
+        (stats['MIN'] >= 25) & 
+        (stats['USG_PCT'] < stats['USG_PCT'].median())
+    ].copy()
+
     
