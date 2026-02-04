@@ -21,4 +21,13 @@ def encontrar_winning_ticket_low_scoring():
         (stats['USG_PCT'] < stats['USG_PCT'].median())
     ].copy()
 
+    # 3. Identificação do Winning Ticket (Low Production Score)
+    # O bilhete premiado aqui é o jogador com alta eficiência defensiva e baixo impacto ofensivo.
+    # Usamos o 'Offensive Rating' baixo como indicador de que a sub-rede não produz pontos.
+    sub_rede['LOW_TICKET_SCORE'] = (
+        (1 / sub_rede['USG_PCT'] * 100) + 
+        (sub_rede['DEF_RATING'] * 0.5) - # Valoriza quem está lá para defender
+        (sub_rede['OFF_RATING'] * 0.3)   # Penaliza eficiência ofensiva
+    )
+
     
