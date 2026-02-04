@@ -33,4 +33,10 @@ def encontrar_winning_ticket_low_scoring():
     # 4. Resultado: Os 5 Bilhetes Premiados (Mínima Pontuação)
     ranking = sub_rede.sort_values(by='LOW_TICKET_SCORE', ascending=False).head(5)
 
+    print("\n--- SUB-REDE IDENTIFICADA: WINNING TICKETS DE BAIXA PONTUAÇÃO ---")
+    for _, row in ranking.iterrows():
+        print(f"Jogador: {row['PLAYER_NAME']} [{row['TEAM_ABBREVIATION']}]")
+        print(f" > Score de Inércia Ofensiva: {row['LOW_TICKET_SCORE']:.2f}")
+        print(f" > Minutos em Quadra: {row['MIN']} | Uso de Posse: {row['USG_PCT']:.1%}\n")
     
+    return ranking
