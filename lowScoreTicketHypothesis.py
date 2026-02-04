@@ -30,4 +30,7 @@ def encontrar_winning_ticket_low_scoring():
         (sub_rede['OFF_RATING'] * 0.3)   # Penaliza eficiência ofensiva
     )
 
+    # 4. Resultado: Os 5 Bilhetes Premiados (Mínima Pontuação)
+    ranking = sub_rede.sort_values(by='LOW_TICKET_SCORE', ascending=False).head(5)
+
     
