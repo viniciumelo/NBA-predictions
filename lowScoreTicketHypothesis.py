@@ -40,3 +40,6 @@ def encontrar_winning_ticket_low_scoring():
         print(f" > Minutos em Quadra: {row['MIN']} | Uso de Posse: {row['USG_PCT']:.1%}\n")
     
     return ranking
+
+if __name__ == "__main__":
+    encontrar_winning_ticket_low_scoring()
