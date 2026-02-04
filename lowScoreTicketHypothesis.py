@@ -10,4 +10,9 @@ def encontrar_winning_ticket_low_scoring():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
+    # 2. O Processo de Poda (Pruning)
+    # Na LTH, removemos os neurônios que 'disparam' muito (alto USG% ou alto PTS).
+    # Queremos isolar a sub-rede que sobrevive mesmo quando a exigência de minutos é alta.
+    media_minutos = stats['MIN'].mean()
+    
     
