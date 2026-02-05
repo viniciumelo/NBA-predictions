@@ -10,4 +10,8 @@ def encontrar_bilhete_premiado_pts(nome_jogador):
     if not nba_players: return "Não encontrado."
     player_id = nba_players[0]['id']
 
-   
+    # 2. Coleta da 'Rede Densa' (Histórico Completo da Temporada 2025-26)
+    df = playergamelog.PlayerGameLog(player_id=player_id, season='2025-26').get_data_frames()[0]
+    if df.empty: return "Sem dados."
+
+    
