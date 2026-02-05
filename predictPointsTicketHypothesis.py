@@ -37,3 +37,6 @@ def encontrar_bilhete_premiado_pts(nome_jogador):
     print(f"Predição Final de Convergência: {predicao:.1f} pts")
     
     return predicao
+
+# Execução
+encontrar_bilhete_premiado_pts("LeBron James")
