@@ -14,4 +14,11 @@ def encontrar_bilhete_premiado_pts(nome_jogador):
     df = playergamelog.PlayerGameLog(player_id=player_id, season='2025-26').get_data_frames()[0]
     if df.empty: return "Sem dados."
 
+    # 3. Processo de Poda (Pruning)
+    # Na LTH, removemos os pesos (jogos) de baixa magnitude ou outliers.
+    # Vamos 'podar' os 20% piores jogos da temporada para isolar o 'winning ticket'
+    # de quando o jogador está saudável e engajado.
+    threshold_poda = df['PTS'].quantile(0.20)
+    sub_rede_vencedora = df[df['PTS'] > threshold_poda].copy()
+
     
