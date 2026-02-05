@@ -30,4 +30,10 @@ def encontrar_bilhete_premiado_pts(nome_jogador):
     # Predição final: 70% peso do 'bilhete premiado' + 30% momento
     predicao = (potencial_base * 0.7) + (tendencia_recente * 0.3)
 
-   
+    print(f"\n--- Bilhete de Loteria: {nome_jogador} ---")
+    print(f"Jogos Analisados (Rede Total): {len(df)}")
+    print(f"Jogos Úteis (Sub-rede Podada): {len(sub_rede_vencedora)}")
+    print(f"Score do 'Winning Ticket': {potencial_base:.1f} pts")
+    print(f"Predição Final de Convergência: {predicao:.1f} pts")
+    
+    return predicao
