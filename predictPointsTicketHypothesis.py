@@ -27,4 +27,7 @@ def encontrar_bilhete_premiado_pts(nome_jogador):
     potencial_base = sub_rede_vencedora['PTS'].mean()
     tendencia_recente = df['PTS'].head(3).mean() # head(3) pois o log é decrescente
     
-    
+    # Predição final: 70% peso do 'bilhete premiado' + 30% momento
+    predicao = (potencial_base * 0.7) + (tendencia_recente * 0.3)
+
+   
