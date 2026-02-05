@@ -21,4 +21,10 @@ def encontrar_bilhete_premiado_pts(nome_jogador):
     threshold_poda = df['PTS'].quantile(0.20)
     sub_rede_vencedora = df[df['PTS'] > threshold_poda].copy()
 
+    # 4. Cálculo do Bilhete Vencedor (Predição)
+    # Analisamos a média da sub-rede podada vs a tendência recente (últimos 3 jogos)
+    # Isso equilibra a 'arquitetura' do jogador com o 'treinamento' recente.
+    potencial_base = sub_rede_vencedora['PTS'].mean()
+    tendencia_recente = df['PTS'].head(3).mean() # head(3) pois o log é decrescente
+    
     
