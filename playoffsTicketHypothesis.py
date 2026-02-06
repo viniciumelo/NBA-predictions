@@ -46,3 +46,6 @@ def predicao_playoffs_lottery_ticket(time_a, time_b):
     print(f"PREDIÇÃO FINAL: {time_a} tem {prob_a:.1f}% de chance de vencer a série.")
     
     return prob_a
+
+# Exemplo de uso
+predicao_playoffs_lottery_ticket("Boston Celtics", "Dallas Mavericks")
