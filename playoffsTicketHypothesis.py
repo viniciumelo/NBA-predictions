@@ -27,4 +27,7 @@ def predicao_playoffs_lottery_ticket(time_a, time_b):
         ticket_score = (net_rating * 0.5) + (ts_pct * 100 * 0.3) + (pie * 100 * 0.2)
         return ticket_score, net_rating
 
-   
+    score_a, net_a = extrair_bilhete_vencedor(time_a)
+    score_b, net_b = extrair_bilhete_vencedor(time_b)
+
+    x
