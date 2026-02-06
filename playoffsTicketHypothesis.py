@@ -39,4 +39,10 @@ def predicao_playoffs_lottery_ticket(time_a, time_b):
     prob_a = 50 + (diff_ticket * 2.0)
     prob_a = max(min(prob_a, 98), 2) # Playoffs são mais extremos (2% a 98%)
 
+    print(f"\n--- ANÁLISE DO WINNING TICKET (Playoffs 2026) ---")
+    print(f"{time_a}: Ticket Score {score_a:.2f} (Net: {net_a})")
+    print(f"{time_b}: Ticket Score {score_b:.2f} (Net: {net_b})")
+    print("-" * 30)
+    print(f"PREDIÇÃO FINAL: {time_a} tem {prob_a:.1f}% de chance de vencer a série.")
+    
     
