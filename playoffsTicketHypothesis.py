@@ -15,4 +15,12 @@ def predicao_playoffs_lottery_ticket(time_a, time_b):
         team_data = stats[stats['TEAM_NAME'] == team_name]
         if team_data.empty: return None
         
-      
+        # 2. O Processo de Poda (Pruning)
+        # Em Playoffs, 'podamos' o ruído. Times que dependem de banco (bench) 
+        # ou volume sem eficiência perdem magnitude. 
+        # O 'Winning Ticket' é a combinação de Net Rating + Eficiência Real (TS%)
+        net_rating = team_data['NET_RATING'].values[0]
+        ts_pct = team_data['TS_PCT'].values[0]
+        pie = team_data['PIE'].values[0] # Player Impact Estimate (Impacto da sub-rede)
+        
+        
