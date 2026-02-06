@@ -11,4 +11,8 @@ def predicao_playoffs_lottery_ticket(time_a, time_b):
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
-    
+    def extrair_bilhete_vencedor(team_name):
+        team_data = stats[stats['TEAM_NAME'] == team_name]
+        if team_data.empty: return None
+        
+      
