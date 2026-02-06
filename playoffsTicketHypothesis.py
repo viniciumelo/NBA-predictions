@@ -23,4 +23,8 @@ def predicao_playoffs_lottery_ticket(time_a, time_b):
         ts_pct = team_data['TS_PCT'].values[0]
         pie = team_data['PIE'].values[0] # Player Impact Estimate (Impacto da sub-rede)
         
-        
+        # O Score do Bilhete: Peso maior para PIE e TS% (métrica de 'clutch')
+        ticket_score = (net_rating * 0.5) + (ts_pct * 100 * 0.3) + (pie * 100 * 0.2)
+        return ticket_score, net_rating
+
+   
