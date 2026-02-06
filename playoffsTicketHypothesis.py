@@ -30,4 +30,5 @@ def predicao_playoffs_lottery_ticket(time_a, time_b):
     score_a, net_a = extrair_bilhete_vencedor(time_a)
     score_b, net_b = extrair_bilhete_vencedor(time_b)
 
-    x
+    if score_a is None or score_b is None:
+        return "Erro: Dados insuficientes para identificar os bilhetes."
