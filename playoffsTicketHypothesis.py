@@ -45,4 +45,4 @@ def predicao_playoffs_lottery_ticket(time_a, time_b):
     print("-" * 30)
     print(f"PREDIÇÃO FINAL: {time_a} tem {prob_a:.1f}% de chance de vencer a série.")
     
-    
+    return prob_a
