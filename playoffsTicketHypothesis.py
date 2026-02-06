@@ -32,3 +32,11 @@ def predicao_playoffs_lottery_ticket(time_a, time_b):
 
     if score_a is None or score_b is None:
         return "Erro: Dados insuficientes para identificar os bilhetes."
+
+    # 3. Comparação de Sub-redes (Predição)
+    # A diferença entre os Winning Tickets indica quem tem a estrutura mais resiliente
+    diff_ticket = score_a - score_b
+    prob_a = 50 + (diff_ticket * 2.0)
+    prob_a = max(min(prob_a, 98), 2) # Playoffs são mais extremos (2% a 98%)
+
+    
