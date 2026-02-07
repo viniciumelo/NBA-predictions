@@ -26,4 +26,11 @@ def analise_lottery_ticket_pontos(nome_jogador):
     threshold_minutos = df['MIN'].quantile(0.25) # Podar os 25% dos jogos com menos minutos
     sub_rede_vencedora = df[df['MIN'] >= threshold_minutos].copy()
 
-   
+    # 3. Identificação da Convergência (Média do Bilhete Premiado)
+    # Em vez de regressão (que pode ser enganada por um único jogo ruim), 
+    # usamos a média da sub-rede podada, ajustada pelo 'momento' (últimos 5 jogos).
+    
+    def calcular_ticket_score(coluna):
+        # Média da arquitetura estável (sub-rede)
+        base_estavel = sub_rede_vencedora[coluna].mean()
+       
