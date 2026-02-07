@@ -19,4 +19,11 @@ def analise_lottery_ticket_pontos(nome_jogador):
     df['PTS_2PT'] = (df['FGM'] - df['FG3M']) * 2
     df['PTS_3PT'] = df['FG3M'] * 3
 
+    # 2. O Processo de Poda (Pruning)
+    # Na LTH, removemos os 'pesos' de baixa magnitude. 
+    # Aqui, podamos os jogos onde o volume de jogo foi atípico (lesões, pouco tempo de quadra).
+    # O Winning Ticket é o jogador atuando em sua 'inicialização ideal'.
+    threshold_minutos = df['MIN'].quantile(0.25) # Podar os 25% dos jogos com menos minutos
+    sub_rede_vencedora = df[df['MIN'] >= threshold_minutos].copy()
+
    
