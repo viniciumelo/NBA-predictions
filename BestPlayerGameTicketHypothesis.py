@@ -33,4 +33,6 @@ def analise_lottery_ticket_pontos(nome_jogador):
     def calcular_ticket_score(coluna):
         # Média da arquitetura estável (sub-rede)
         base_estavel = sub_rede_vencedora[coluna].mean()
-       
+        # Tendência recente (pesos atuais da rede)
+        tendencia_recente = df[coluna].head(5).mean()
+        
