@@ -38,4 +38,8 @@ def analise_lottery_ticket_pontos(nome_jogador):
         # Fusão: 80% estrutura estável + 20% forma atual
         return (base_estavel * 0.8) + (tendencia_recente * 0.2)
 
+    pred_1pt = calcular_ticket_score('PTS_1PT')
+    pred_2pt = calcular_ticket_score('PTS_2PT')
+    pred_3pt = calcular_ticket_score('PTS_3PT')
+    
     
