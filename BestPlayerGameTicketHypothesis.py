@@ -42,4 +42,6 @@ def analise_lottery_ticket_pontos(nome_jogador):
     pred_2pt = calcular_ticket_score('PTS_2PT')
     pred_3pt = calcular_ticket_score('PTS_3PT')
     
+    total_previsto = pred_1pt + pred_2pt + pred_3pt
+
     
