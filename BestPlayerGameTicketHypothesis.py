@@ -52,3 +52,6 @@ def analise_lottery_ticket_pontos(nome_jogador):
     print(f"Previsão 2pt (FG): {pred_2pt:.1f}")
     print(f"Previsão 3pt (3P): {pred_3pt:.1f}")
     print(f"PREVISÃO TOTAL: {total_previsto:.1f} pontos")
+
+# Teste com a nova arquitetura
+analise_lottery_ticket_pontos("Stephen Curry")
