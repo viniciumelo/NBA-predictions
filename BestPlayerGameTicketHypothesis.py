@@ -35,4 +35,7 @@ def analise_lottery_ticket_pontos(nome_jogador):
         base_estavel = sub_rede_vencedora[coluna].mean()
         # Tendência recente (pesos atuais da rede)
         tendencia_recente = df[coluna].head(5).mean()
-        
+        # Fusão: 80% estrutura estável + 20% forma atual
+        return (base_estavel * 0.8) + (tendencia_recente * 0.2)
+
+    
