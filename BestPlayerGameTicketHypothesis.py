@@ -14,4 +14,9 @@ def analise_lottery_ticket_pontos(nome_jogador):
     df = log.get_data_frames()[0]
     if df.empty: return "Sem dados para a temporada."
 
-  
+    # Engenharia de Atributos (Categorias de Pontuação)
+    df['PTS_1PT'] = df['FTM']
+    df['PTS_2PT'] = (df['FGM'] - df['FG3M']) * 2
+    df['PTS_3PT'] = df['FG3M'] * 3
+
+   
