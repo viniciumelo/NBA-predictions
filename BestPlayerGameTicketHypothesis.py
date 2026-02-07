@@ -44,4 +44,11 @@ def analise_lottery_ticket_pontos(nome_jogador):
     
     total_previsto = pred_1pt + pred_2pt + pred_3pt
 
-    
+    print(f"--- Winning Ticket Identificado: {nome_jogador} ---")
+    print(f"Jogos na Rede Total: {len(df)}")
+    print(f"Jogos na Sub-rede (Podada): {len(sub_rede_vencedora)}")
+    print(f"---------------------------------------")
+    print(f"Previsão 1pt (FT): {pred_1pt:.1f}")
+    print(f"Previsão 2pt (FG): {pred_2pt:.1f}")
+    print(f"Previsão 3pt (3P): {pred_3pt:.1f}")
+    print(f"PREVISÃO TOTAL: {total_previsto:.1f} pontos")
