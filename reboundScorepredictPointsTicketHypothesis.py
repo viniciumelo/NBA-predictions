@@ -18,4 +18,9 @@ def encontrar_winning_ticket_rebotes():
     poda_minutos = 20
     media_reb_pct = df['REB_PCT'].mean()
     
-    
+    sub_rede = df[
+        (df['MIN'] >= poda_minutos) & 
+        (df['REB_PCT'] > media_reb_pct)
+    ].copy()
+
+   
