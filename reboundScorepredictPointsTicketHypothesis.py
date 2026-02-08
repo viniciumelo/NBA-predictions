@@ -32,4 +32,7 @@ def encontrar_winning_ticket_rebotes():
         (sub_rede['DREB_PCT'] * 20)
     )
 
+    # 4. Isolando os 5 Bilhetes Premiados
+    winning_tickets = sub_rede.sort_values(by='TICKET_SCORE', ascending=False).head(5)
+
     
