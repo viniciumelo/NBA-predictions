@@ -23,4 +23,13 @@ def encontrar_winning_ticket_rebotes():
         (df['REB_PCT'] > media_reb_pct)
     ].copy()
 
-   
+    # 3. Identificação do Winning Ticket (Rebound Stability Score)
+    # O bilhete premiado não é apenas volume (REB), mas eficiência na sub-rede (REB_PCT)
+    # Somamos o impacto defensivo (DREB_PCT) e a agressividade ofensiva (OREB_PCT)
+    sub_rede['TICKET_SCORE'] = (
+        (sub_rede['REB_PCT'] * 100) + 
+        (sub_rede['OREB_PCT'] * 50) + 
+        (sub_rede['DREB_PCT'] * 20)
+    )
+
+    
