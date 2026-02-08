@@ -41,3 +41,5 @@ def encontrar_winning_ticket_rebotes():
         print(f"{rank}. {row['PLAYER_NAME']} [{row['TEAM_ABBREVIATION']}]")
         print(f"   > Eficiência Total: {row['REB_PCT']:.1%} | Ticket Score: {row['TICKET_SCORE']:.2f}")
         print(f"   > Status: {status}\n")
+    
+    return winning_tickets
