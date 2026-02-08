@@ -35,4 +35,9 @@ def encontrar_winning_ticket_rebotes():
     # 4. Isolando os 5 Bilhetes Premiados
     winning_tickets = sub_rede.sort_values(by='TICKET_SCORE', ascending=False).head(5)
 
-    
+    print("\n--- WINNING TICKETS: A SUB-REDE DE DOMÍNIO DE REBOTES ---")
+    for rank, (_, row) in enumerate(winning_tickets.iterrows(), 1):
+        status = "💎 BILHETE DE ELITE" if rank <= 2 else "✅ SUB-REDE ESTÁVEL"
+        print(f"{rank}. {row['PLAYER_NAME']} [{row['TEAM_ABBREVIATION']}]")
+        print(f"   > Eficiência Total: {row['REB_PCT']:.1%} | Ticket Score: {row['TICKET_SCORE']:.2f}")
+        print(f"   > Status: {status}\n")
