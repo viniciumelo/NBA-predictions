@@ -11,4 +11,11 @@ def encontrar_winning_ticket_rebotes():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
+    # 2. O Processo de Poda (Pruning)
+    # Na LTH, removemos neurônios de baixa magnitude. 
+    # Cortamos jogadores que não têm volume de garrafão (MIN) 
+    # e aqueles cuja taxa de rebotes está abaixo da média da liga (ruído estatístico).
+    poda_minutos = 20
+    media_reb_pct = df['REB_PCT'].mean()
+    
     
