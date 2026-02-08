@@ -43,3 +43,6 @@ def encontrar_winning_ticket_rebotes():
         print(f"   > Status: {status}\n")
     
     return winning_tickets
+
+if __name__ == "__main__":
+    encontrar_winning_ticket_rebotes()
