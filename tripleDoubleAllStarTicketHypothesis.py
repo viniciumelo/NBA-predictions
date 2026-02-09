@@ -33,4 +33,10 @@ def encontrar_winning_ticket_triple_double():
     # 4. Isolando os 5 Bilhetes Vencedores
     ranking = sub_rede.sort_values(by='WINNING_TICKET_SCORE', ascending=False).head(5)
 
+    print("\n--- IDENTIFICAÇÃO DOS BILHETES PREMIADOS (ALL-STAR) ---")
+    for rank, (_, row) in enumerate(ranking.iterrows(), 1):
+        print(f"{rank}. {row['PLAYER_NAME']} [{row['TEAM_ABBREVIATION']}]")
+        print(f"   > Score de Convergência: {row['WINNING_TICKET_SCORE']:.2f}")
+        print(f"   > Versatilidade: AST% {row['AST_PCT']:.1%} | REB% {row['REB_PCT']:.1%}\n")
+    
     
