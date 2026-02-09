@@ -29,3 +29,8 @@ def encontrar_winning_ticket_triple_double():
         (sub_rede['AST_PCT'] * 50) + 
         (sub_rede['REB_PCT'] * 50)
     )
+
+    # 4. Isolando os 5 Bilhetes Vencedores
+    ranking = sub_rede.sort_values(by='WINNING_TICKET_SCORE', ascending=False).head(5)
+
+    
