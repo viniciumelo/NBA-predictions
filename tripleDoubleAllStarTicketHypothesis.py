@@ -39,4 +39,4 @@ def encontrar_winning_ticket_triple_double():
         print(f"   > Score de Convergência: {row['WINNING_TICKET_SCORE']:.2f}")
         print(f"   > Versatilidade: AST% {row['AST_PCT']:.1%} | REB% {row['REB_PCT']:.1%}\n")
     
-    
+    return ranking
