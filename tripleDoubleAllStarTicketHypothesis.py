@@ -21,3 +21,11 @@ def encontrar_winning_ticket_triple_double():
         (stats['AST_PCT'] > 0.15) & # Deve ser responsável por pelo menos 15% das assistências
         (stats['REB_PCT'] > 0.08)   # Deve capturar pelo menos 8% dos rebotes disponíveis
     ].copy()
+
+    # 3. Identificação do Winning Ticket (Versatility Score)
+    # O Bilhete Premiado é o jogador onde os 'pesos' de AST_PCT e REB_PCT convergem.
+    sub_rede['WINNING_TICKET_SCORE'] = (
+        (sub_rede['PIE'] * 100) + 
+        (sub_rede['AST_PCT'] * 50) + 
+        (sub_rede['REB_PCT'] * 50)
+    )
