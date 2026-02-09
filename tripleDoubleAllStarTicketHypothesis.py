@@ -10,4 +10,9 @@ def encontrar_winning_ticket_triple_double():
         measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
+    # 2. O Processo de Poda (Pruning)
+    # Na LTH, removemos neurônios que não contribuem para a tarefa específica.
+    # Filtramos jogadores com USG% alto (protagonistas) e PIE acima da média.
+    threshold_pie = stats['PIE'].mean()
+    
     
