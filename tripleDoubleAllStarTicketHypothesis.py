@@ -15,4 +15,9 @@ def encontrar_winning_ticket_triple_double():
     # Filtramos jogadores com USG% alto (protagonistas) e PIE acima da média.
     threshold_pie = stats['PIE'].mean()
     
-    
+    # Poda: Mantemos apenas a sub-rede que impacta o jogo globalmente
+    sub_rede = stats[
+        (stats['PIE'] > threshold_pie) & 
+        (stats['AST_PCT'] > 0.15) & # Deve ser responsável por pelo menos 15% das assistências
+        (stats['REB_PCT'] > 0.08)   # Deve capturar pelo menos 8% dos rebotes disponíveis
+    ].copy()
