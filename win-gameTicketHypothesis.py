@@ -30,3 +30,9 @@ def encontrar_winning_ticket_matchup(time_home, time_away):
         # Base 1500 + (Impacto Real * Eficiência) - descartando o ruído de vitórias "feias"
         ticket_rating = 1500 + (net_rating * 5) + (pie * 500) + (ts_pct * 100)
         return ticket_rating
+
+    # 3. Inicialização e Comparação
+    r_casa = extrair_rating_ticket(time_home) + 50 # Vantagem estrutural da casa
+    r_fora = extrair_rating_ticket(time_away)
+
+    
