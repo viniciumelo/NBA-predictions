@@ -43,3 +43,6 @@ def encontrar_winning_ticket_matchup(time_home, time_away):
     print("-" * 30)
     print(f"PROBABILIDADE {time_home}: {prob_home:.1%}")
     print(f"PROBABILIDADE {time_away}: {1-prob_home:.1%}")
+
+# Execução
+encontrar_winning_ticket_matchup("Boston Celtics", "Los Angeles Lakers")
