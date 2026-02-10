@@ -8,4 +8,10 @@ def calcular_probabilidade_vitoria(rating_casa, rating_fora):
 def encontrar_winning_ticket_matchup(time_home, time_away):
     print(f"Buscando o 'Winning Ticket' para o confronto: {time_home} vs {time_away}...")
 
-    
+    # 1. Coleta da Rede Densa (Estatísticas 2025-26)
+    # Pegamos estatísticas avançadas para identificar os "pesos" reais dos times
+    stats = leaguedashteamstats.LeagueDashTeamStats(
+        season='2025-26', measure_type_detailed_advanced='Advanced'
+    ).get_data_frames()[0]
+
+   
