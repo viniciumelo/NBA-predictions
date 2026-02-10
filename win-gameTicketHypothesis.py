@@ -35,4 +35,6 @@ def encontrar_winning_ticket_matchup(time_home, time_away):
     r_casa = extrair_rating_ticket(time_home) + 50 # Vantagem estrutural da casa
     r_fora = extrair_rating_ticket(time_away)
 
-    
+    prob_home = calcular_probabilidade_vitoria(r_casa, r_fora)
+
+   
