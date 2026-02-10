@@ -18,4 +18,10 @@ def encontrar_winning_ticket_matchup(time_home, time_away):
         team_data = stats[stats['TEAM_NAME'] == team_name]
         if team_data.empty: return 1500 # Default Elo
         
-        
+        # 2. O Processo de Poda (Pruning)
+        # Na LTH, removemos neurônios de baixa magnitude. 
+        # Aqui, "podamos" o Net Rating bruto usando o PIE (Player Impact Estimate)
+        # e o TS% (Eficiência) para isolar a sub-rede de vitórias consistentes.
+        net_rating = team_data['NET_RATING'].values[0]
+        pie = team_data['PIE'].values[0]
+        ts_pct = team_data['TS_PCT'].values[0]
