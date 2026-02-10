@@ -25,3 +25,8 @@ def encontrar_winning_ticket_matchup(time_home, time_away):
         net_rating = team_data['NET_RATING'].values[0]
         pie = team_data['PIE'].values[0]
         ts_pct = team_data['TS_PCT'].values[0]
+
+        # O Rating do Bilhete Premiado: 
+        # Base 1500 + (Impacto Real * Eficiência) - descartando o ruído de vitórias "feias"
+        ticket_rating = 1500 + (net_rating * 5) + (pie * 500) + (ts_pct * 100)
+        return ticket_rating
