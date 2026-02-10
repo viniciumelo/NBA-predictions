@@ -14,4 +14,8 @@ def encontrar_winning_ticket_matchup(time_home, time_away):
         season='2025-26', measure_type_detailed_advanced='Advanced'
     ).get_data_frames()[0]
 
-   
+    def extrair_rating_ticket(team_name):
+        team_data = stats[stats['TEAM_NAME'] == team_name]
+        if team_data.empty: return 1500 # Default Elo
+        
+        
