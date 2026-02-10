@@ -37,4 +37,9 @@ def encontrar_winning_ticket_matchup(time_home, time_away):
 
     prob_home = calcular_probabilidade_vitoria(r_casa, r_fora)
 
-   
+    print(f"\n--- IDENTIFICAÇÃO DOS BILHETES PREMIADOS ---")
+    print(f"Ticket Rating {time_home}: {r_casa:.1f}")
+    print(f"Ticket Rating {time_away}: {r_fora:.1f}")
+    print("-" * 30)
+    print(f"PROBABILIDADE {time_home}: {prob_home:.1%}")
+    print(f"PROBABILIDADE {time_away}: {1-prob_home:.1%}")
