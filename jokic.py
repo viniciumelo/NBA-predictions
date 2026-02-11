@@ -35,4 +35,4 @@ def predicao_jokic_winning_ticket():
     print(f"--------------------------------")
     print(f"PREDIÇÃO DE CONVERGÊNCIA: {predicao_final:.1f} PPG")
     
-    
+    return predicao_final
