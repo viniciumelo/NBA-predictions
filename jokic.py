@@ -19,4 +19,10 @@ def predicao_jokic_winning_ticket():
     threshold_min = 28
     df_podado = df[df['MIN'] >= threshold_min].copy()
 
+    # 3. Identificação do Winning Ticket (Convergência de Pontos)
+    # Calculamos a média da sub-rede estável vs. a magnitude recente (últimos 5 jogos)
+    # O "Bilhete Premiado" é a média ponderada que ignora as variações irrelevantes.
+    media_estavel = df_podado['PTS'].mean()
+    tendencia_recente = df['PTS'].head(5).mean() 
     
+   
