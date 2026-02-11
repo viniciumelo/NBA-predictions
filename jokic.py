@@ -9,4 +9,7 @@ def predicao_jokic_winning_ticket():
     player_dict = players.find_players_by_full_name("Nikola Jokic")
     player_id = player_dict[0]['id']
     
+    log = playergamelog.PlayerGameLog(player_id=player_id, season='2025-26')
+    df = log.get_data_frames()[0]
+
     
