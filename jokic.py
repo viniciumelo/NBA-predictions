@@ -12,4 +12,11 @@ def predicao_jokic_winning_ticket():
     log = playergamelog.PlayerGameLog(player_id=player_id, season='2025-26')
     df = log.get_data_frames()[0]
 
+    # 2. O Processo de Poda (Pruning)
+    # Na LTH, removemos os parâmetros (jogos) de baixa magnitude.
+    # Podamos jogos com menos de 28 minutos (Blowouts) e jogos com USG% muito baixo,
+    # pois não representam a "inicialização" ideal de Jokic como pontuador.
+    threshold_min = 28
+    df_podado = df[df['MIN'] >= threshold_min].copy()
+
     
