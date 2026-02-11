@@ -25,4 +25,7 @@ def predicao_jokic_winning_ticket():
     media_estavel = df_podado['PTS'].mean()
     tendencia_recente = df['PTS'].head(5).mean() 
     
-   
+    # Peso de 70% na arquitetura estável (Winning Ticket) e 30% no momento atual
+    predicao_final = (media_estavel * 0.7) + (tendencia_recente * 0.3)
+
+    
