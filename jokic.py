@@ -28,4 +28,11 @@ def predicao_jokic_winning_ticket():
     # Peso de 70% na arquitetura estável (Winning Ticket) e 30% no momento atual
     predicao_final = (media_estavel * 0.7) + (tendencia_recente * 0.3)
 
+    print(f"\n--- RESULTADOS DA PODA (LTH) ---")
+    print(f"Total de jogos analisados: {len(df)}")
+    print(f"Jogos no 'Winning Ticket' (Sub-rede): {len(df_podado)}")
+    print(f"Média Geral Atual: {df['PTS'].mean():.1f} pts")
+    print(f"--------------------------------")
+    print(f"PREDIÇÃO DE CONVERGÊNCIA: {predicao_final:.1f} PPG")
+    
     
