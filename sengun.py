@@ -22,7 +22,10 @@ def predicao_sengun_lottery_ticket():
     # O bilhete premiado de Şengün é sua média quando joga +32 mins saudável.
     # A estrutura (Winning Ticket) aponta para 20.8, mas o momento (pós-poda) é agressivo.
     ticket_score = sum(jogos_validos) / len(jogos_validos)
-   
+    
+    # Predição Final: 60% Arquitetura da Temporada + 40% Convergência da Sub-rede
+    predicao = (stats_2026['PTS_AVG'] * 0.6) + (ticket_score * 0.4)
+
     return predicao
 
 predicao_sengun_lottery_ticket()
