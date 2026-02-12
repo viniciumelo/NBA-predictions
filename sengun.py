@@ -11,3 +11,12 @@ def predicao_sengun_lottery_ticket():
         'USG_PCT': 26.6,
         'TS_PCT': 55.1
     }
+
+    # 2. O Processo de Poda (Pruning)
+    # Na LTH, removemos os 'pesos' que não representam a arquitetura real.
+    # Podamos o jogo de 7 pts (vs Charlotte) e 13 pts (vs Boston), onde 
+    # limitações físicas e blowouts criaram ruído na rede.
+    jogos_validos = [p for p in stats_2026['LAST_5'] if p > 15] # Poda de jogos atípicos
+    
+
+predicao_sengun_lottery_ticket()
