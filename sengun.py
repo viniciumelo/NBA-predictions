@@ -26,6 +26,13 @@ def predicao_sengun_lottery_ticket():
     # Predição Final: 60% Arquitetura da Temporada + 40% Convergência da Sub-rede
     predicao = (stats_2026['PTS_AVG'] * 0.6) + (ticket_score * 0.4)
 
+    print(f"--- Predição Alperen Şengün (Winning Ticket) ---")
+    print(f"Arquitetura Base: {stats_2026['PTS_AVG']} PPG")
+    print(f"Sub-rede Podada (Jogos Elite): {ticket_score:.1f} PPG")
+    print(f"Status Físico (Fev 2026): Monitorado (Contusão leve na perna)")
+    print("-" * 40)
+    print(f"PREDIÇÃO DE CONVERGÊNCIA: {predicao:.1f} PPG")
+
     return predicao
 
 predicao_sengun_lottery_ticket()
