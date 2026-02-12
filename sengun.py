@@ -18,5 +18,11 @@ def predicao_sengun_lottery_ticket():
     # limitações físicas e blowouts criaram ruído na rede.
     jogos_validos = [p for p in stats_2026['LAST_5'] if p > 15] # Poda de jogos atípicos
     
+    # 3. Identificação do Winning Ticket
+    # O bilhete premiado de Şengün é sua média quando joga +32 mins saudável.
+    # A estrutura (Winning Ticket) aponta para 20.8, mas o momento (pós-poda) é agressivo.
+    ticket_score = sum(jogos_validos) / len(jogos_validos)
+   
+    return predicao
 
 predicao_sengun_lottery_ticket()
