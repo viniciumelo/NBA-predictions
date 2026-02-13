@@ -12,3 +12,11 @@ def predicao_lebron_winning_ticket():
         'RECENTE': [25, 22, 11, 20, 22, 28], # Últimos jogos
         'TS_PCT': 56.8  # Eficiência ainda de elite
     }
+
+    # 2. O Processo de Poda (Pruning)
+    # Na LTH, removemos os jogos onde LeBron "economiza energia" (load management em quadra).
+    # Podamos o jogo de 11 pts contra Cleveland (sua ex-equipe, onde focou em passes).
+    # O Winning Ticket se manifesta quando ele precisa assumir o volume (Triple-Double recente).
+    sub_rede_agressiva = [p for p in stats_2026['RECENTE'] if p > 15]
+
+   
