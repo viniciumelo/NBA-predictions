@@ -35,3 +35,5 @@ def predicao_lebron_winning_ticket():
     print(f"PREDIÇÃO DE CONVERGÊNCIA: {predicao:.1f} PPG")
 
     return predicao
+
+predicao_lebron_winning_ticket()
