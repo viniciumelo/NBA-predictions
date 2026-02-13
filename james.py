@@ -24,4 +24,7 @@ def predicao_lebron_winning_ticket():
     # o 'pico de magnitude' em jogos cruciais ou sem estrelas ao lado.
     media_sub_rede = sum(sub_rede_agressiva) / len(sub_rede_agressiva)
     
-  
+    # Predição Final: 70% Estabilidade da Sub-rede + 30% Média da Temporada
+    predicao = (media_sub_rede * 0.7) + (stats_2026['PTS_AVG'] * 0.3)
+
+    
