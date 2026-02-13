@@ -19,4 +19,9 @@ def predicao_lebron_winning_ticket():
     # O Winning Ticket se manifesta quando ele precisa assumir o volume (Triple-Double recente).
     sub_rede_agressiva = [p for p in stats_2026['RECENTE'] if p > 15]
 
-   
+    # 3. Identificação do Winning Ticket
+    # O bilhete premiado de LeBron aos 41 anos é a sua capacidade de atingir 
+    # o 'pico de magnitude' em jogos cruciais ou sem estrelas ao lado.
+    media_sub_rede = sum(sub_rede_agressiva) / len(sub_rede_agressiva)
+    
+  
