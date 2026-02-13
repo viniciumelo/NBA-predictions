@@ -27,4 +27,9 @@ def predicao_lebron_winning_ticket():
     # Predição Final: 70% Estabilidade da Sub-rede + 30% Média da Temporada
     predicao = (media_sub_rede * 0.7) + (stats_2026['PTS_AVG'] * 0.3)
 
-    
+    print(f"--- Predição LeBron James (Winning Ticket - 41 Anos) ---")
+    print(f"Média da Temporada: {stats_2026['PTS_AVG']} PPG")
+    print(f"Sub-rede de Elite (Pós-Poda): {media_sub_rede:.1f} PPG")
+    print(f"Contexto: Acaba de se tornar o mais velho a fazer um Triple-Double (28/12/10)")
+    print("-" * 50)
+    print(f"PREDIÇÃO DE CONVERGÊNCIA: {predicao:.1f} PPG")
