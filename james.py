@@ -33,3 +33,5 @@ def predicao_lebron_winning_ticket():
     print(f"Contexto: Acaba de se tornar o mais velho a fazer um Triple-Double (28/12/10)")
     print("-" * 50)
     print(f"PREDIÇÃO DE CONVERGÊNCIA: {predicao:.1f} PPG")
+
+    return predicao
