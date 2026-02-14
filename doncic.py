@@ -14,4 +14,10 @@ def predicao_luka_winning_ticket():
         'TS_PCT': 59.4
     }
 
-   
+    # 2. O Processo de Poda (Pruning)
+    # Na LTH, podamos os neurônios (jogos) de baixa magnitude.
+    # Removemos o jogo de 18 pts (ruído), onde ele enfrentou uma marcação tripla 
+    # ou teve fadiga por jogos seguidos (back-to-back).
+    sub_rede_estavel = [p for p in stats_2026['RECENTE'] if p > 25]
+
+    
