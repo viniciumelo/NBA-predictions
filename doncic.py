@@ -34,3 +34,5 @@ def predicao_luka_winning_ticket():
     print(f"Uso de Posse (USG%): {stats_2026['USG_PCT']}% (Alta Intensidade)")
     print("-" * 55)
     print(f"PREDIÇÃO DE CONVERGÊNCIA: {predicao:.1f} PPG")
+
+    return predicao
