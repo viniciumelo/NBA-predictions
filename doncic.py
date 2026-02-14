@@ -20,4 +20,9 @@ def predicao_luka_winning_ticket():
     # ou teve fadiga por jogos seguidos (back-to-back).
     sub_rede_estavel = [p for p in stats_2026['RECENTE'] if p > 25]
 
+    # 3. Identificação do Winning Ticket
+    # O bilhete premiado de Luka é sua capacidade de sustentar +30 pts 
+    # mesmo quando a rede (o time adversário) tenta podar suas opções.
+    convergencia_sub_rede = sum(sub_rede_estavel) / len(sub_rede_estavel)
+    
     
