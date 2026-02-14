@@ -25,4 +25,7 @@ def predicao_luka_winning_ticket():
     # mesmo quando a rede (o time adversário) tenta podar suas opções.
     convergencia_sub_rede = sum(sub_rede_estavel) / len(sub_rede_estavel)
     
-    
+    # Predição Final: 80% do Winning Ticket (consistência de elite) + 20% Momento
+    predicao = (convergencia_sub_rede * 0.8) + (stats_2026['PTS_AVG'] * 0.2)
+
+   
