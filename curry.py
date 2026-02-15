@@ -12,3 +12,11 @@ def predicao_curry_winning_ticket():
         'RECENTE': [33, 15, 28, 31, 12, 30], # Oscilação baseada na marcação
         'EFG_PCT': 62.5 # Effective Field Goal % (Peso altíssimo na LTH)
     }
+
+    # 2. O Processo de Poda (Pruning)
+    # Na LTH, podamos os jogos de baixa magnitude (ruído).
+    # Removemos os jogos de 12 e 15 pts, que na temporada 2026 geralmente ocorrem
+    # em noites de "box-and-one" extremo ou cansaço físico.
+    sub_rede_estavel = [p for p in stats_2026['RECENTE'] if p > 20]
+
+    
