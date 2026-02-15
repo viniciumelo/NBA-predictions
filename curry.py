@@ -27,4 +27,10 @@ def predicao_curry_winning_ticket():
     # Predição Final: 75% da Sub-rede de Elite + 25% Estabilidade da Temporada
     predicao = (convergencia_sub_rede * 0.75) + (stats_2026['PTS_AVG'] * 0.25)
 
-   
+    print(f"--- Predição Stephen Curry (Winning Ticket - Temporada 25/26) ---")
+    print(f"Arquitetura Base (Média): {stats_2026['PTS_AVG']} PPG")
+    print(f"Média de 3PM (Pesos Ativos): {stats_2026['3PM_AVG']} bolas/jogo")
+    print(f"Sub-rede Isolada (Gravity Ticket): {convergencia_sub_rede:.1f} PPG")
+    print("-" * 55)
+    print(f"PREDIÇÃO DE CONVERGÊNCIA: {predicao:.1f} PPG")
+x
