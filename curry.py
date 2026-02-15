@@ -19,4 +19,8 @@ def predicao_curry_winning_ticket():
     # em noites de "box-and-one" extremo ou cansaço físico.
     sub_rede_estavel = [p for p in stats_2026['RECENTE'] if p > 20]
 
+    # 3. Identificação do Winning Ticket
+    # O bilhete premiado de Curry é a "convergência do caos": 
+    # A capacidade de converter arremessos de alta dificuldade quando a rede está sob pressão.
+    convergencia_sub_rede = sum(sub_rede_estavel) / len(sub_rede_estavel)
     
