@@ -24,3 +24,7 @@ def predicao_curry_winning_ticket():
     # A capacidade de converter arremessos de alta dificuldade quando a rede está sob pressão.
     convergencia_sub_rede = sum(sub_rede_estavel) / len(sub_rede_estavel)
     
+    # Predição Final: 75% da Sub-rede de Elite + 25% Estabilidade da Temporada
+    predicao = (convergencia_sub_rede * 0.75) + (stats_2026['PTS_AVG'] * 0.25)
+
+   
