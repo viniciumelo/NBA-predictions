@@ -34,3 +34,5 @@ def predicao_durant_winning_ticket():
     print(f"Sub-rede Isolada (Efficiency Ticket): {convergencia_sub_rede:.1f} PPG")
     print("-" * 55)
     print(f"PREDIÇÃO DE CONVERGÊNCIA: {predicao:.1f} PPG")
+
+    return predicao
