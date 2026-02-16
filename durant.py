@@ -19,4 +19,9 @@ def predicao_durant_winning_ticket():
     # O Winning Ticket de KD é a sua produção quando ele decide ser o "closer".
     sub_rede_estavel = [p for p in stats_2026['RECENTE'] if p > 20]
 
+    # 3. Identificação do Winning Ticket (Convergência de Elite)
+    # O bilhete premiado de KD é a "Imunidade à Contestação".
+    # Ele converge para um valor alto devido à eficiência constante (TS%).
+    convergencia_sub_rede = sum(sub_rede_estavel) / len(sub_rede_estavel)
+    
    
