@@ -13,4 +13,10 @@ def predicao_durant_winning_ticket():
         'FT_PCT': 91.5 # Estabilidade total na linha de lance livre
     }
 
-    
+    # 2. O Processo de Poda (Pruning)
+    # Na LTH, podamos jogos onde a magnitude foi artificialmente baixa.
+    # Removemos o jogo de 14 pts (ruído), onde ele atuou como chamariz/facilitador.
+    # O Winning Ticket de KD é a sua produção quando ele decide ser o "closer".
+    sub_rede_estavel = [p for p in stats_2026['RECENTE'] if p > 20]
+
+   
