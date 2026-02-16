@@ -24,4 +24,8 @@ def predicao_durant_winning_ticket():
     # Ele converge para um valor alto devido à eficiência constante (TS%).
     convergencia_sub_rede = sum(sub_rede_estavel) / len(sub_rede_estavel)
     
-   
+    # Predição Final: 80% do Winning Ticket + 20% Média de Temporada
+    # KD é mais estável que a maioria, por isso o peso maior na sub-rede de elite.
+    predicao = (convergencia_sub_rede * 0.8) + (stats_2026['PTS_AVG'] * 0.2)
+
+    
