@@ -19,3 +19,8 @@ y = df['pontos']    # Variável alvo (o que queremos prever)
 modelo = LinearRegression()
 modelo.fit(X, y)
 
+# 3. Predição para o próximo jogo
+# Vamos supor que ele jogue 36 minutos (sua média de tempo em jogos apertados)
+minutos_proximo_jogo = np.array([[36]])
+predicao = modelo.predict(minutos_proximo_jogo)
+
