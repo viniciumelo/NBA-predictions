@@ -28,3 +28,11 @@ print(f"--- Predição para SGA ---")
 print(f"Minutos projetados: {minutos_proximo_jogo[0][0]}")
 print(f"Pontuação prevista: {predicao[0]:.2f} pontos")
 
+# 4. Visualização da Tendência
+plt.scatter(X, y, color='blue', label='Jogos Reais')
+plt.plot(X, modelo.predict(X), color='red', label='Tendência (Regressão)')
+plt.xlabel('Minutos em Quadra')
+plt.ylabel('Pontos Marcados')
+plt.title('Relação Minutos x Pontos: SGA 2026')
+plt.legend()
+plt.show()
