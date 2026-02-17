@@ -16,3 +16,6 @@ df = pd.DataFrame(data)
 X = df[['minutos']] # Variável independente
 y = df['pontos']    # Variável alvo (o que queremos prever)
 
+modelo = LinearRegression()
+modelo.fit(X, y)
+
