@@ -24,3 +24,7 @@ modelo.fit(X, y)
 minutos_proximo_jogo = np.array([[36]])
 predicao = modelo.predict(minutos_proximo_jogo)
 
+print(f"--- Predição para SGA ---")
+print(f"Minutos projetados: {minutos_proximo_jogo[0][0]}")
+print(f"Pontuação prevista: {predicao[0]:.2f} pontos")
+
