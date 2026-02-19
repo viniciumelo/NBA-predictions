@@ -24,3 +24,6 @@ modelo.fit(X, y)
 proximo_jogo = np.array([[32, 7]])
 predicao = modelo.predict(proximo_jogo)
 
+print(f"--- Projeção Victor Wembanyama ---")
+print(f"Minutos: 32 | Chutes de 3: 7")
+print(f"Pontuação Estimada: {predicao[0]:.1f} pontos")
