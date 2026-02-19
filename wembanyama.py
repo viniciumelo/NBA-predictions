@@ -16,3 +16,6 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'tentativas_3pts']]
 y = df['pontos']
 
+modelo = RandomForestRegressor(n_estimators=100, random_state=42)
+modelo.fit(X, y)
+
