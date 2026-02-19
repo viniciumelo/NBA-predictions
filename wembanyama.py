@@ -19,3 +19,8 @@ y = df['pontos']
 modelo = RandomForestRegressor(n_estimators=100, random_state=42)
 modelo.fit(X, y)
 
+# 3. Predição para o próximo jogo contra o Phoenix Suns (19/02/2026)
+# Projeção: Jogo equilibrado (32 min) e ele deve chutar umas 7 bolas de fora
+proximo_jogo = np.array([[32, 7]])
+predicao = modelo.predict(proximo_jogo)
+
