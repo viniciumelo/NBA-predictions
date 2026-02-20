@@ -23,3 +23,9 @@ X_poly = poly.fit_transform(X)
 modelo = LinearRegression()
 modelo.fit(X_poly, y)
 
+# 3. Predição para o retorno contra New Orleans Pelicans (20/02/2026)
+# Estimativa de retorno cauteloso: 30 minutos e 10 lances livres
+proximo_jogo = np.array([[30, 10]])
+proximo_jogo_poly = poly.transform(proximo_jogo)
+predicao = modelo.predict(proximo_jogo_poly)
+
