@@ -11,3 +11,5 @@ data = {
     'pontos': [22, 19, 21, 21, 25, 33, 31, 28]
 }
 
+df = pd.DataFrame(data)
+
