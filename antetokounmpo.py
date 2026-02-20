@@ -29,3 +29,6 @@ proximo_jogo = np.array([[30, 10]])
 proximo_jogo_poly = poly.transform(proximo_jogo)
 predicao = modelo.predict(proximo_jogo_poly)
 
+print(f"--- Projeção Giannis Antetokounmpo ---")
+print(f"Cenário: Retorno de Lesão | Minutos: 30")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
