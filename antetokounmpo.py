@@ -20,3 +20,6 @@ y = df['pontos']
 poly = PolynomialFeatures(degree=2)
 X_poly = poly.fit_transform(X)
 
+modelo = LinearRegression()
+modelo.fit(X_poly, y)
+
