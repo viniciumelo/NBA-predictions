@@ -13,3 +13,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Engenharia de Features (Polinomial de grau 2)
+X = df[['minutos', 'lances_livres_tentados']]
+y = df['pontos']
+
