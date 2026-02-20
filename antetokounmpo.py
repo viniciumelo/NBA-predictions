@@ -17,3 +17,6 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'lances_livres_tentados']]
 y = df['pontos']
 
+poly = PolynomialFeatures(degree=2)
+X_poly = poly.fit_transform(X)
+
