@@ -24,3 +24,6 @@ knn.fit(X, y)
 proximo_jogo = np.array([[33, 15]])
 predicao = knn.predict(proximo_jogo)
 
+print(f"--- Projeção Cooper Flagg (DAL) ---")
+print(f"Cenário: Retorno Pós-Lesão | Minutos: 33")
+print(f"Pontuação Estimada: {predicao[0]:.1f} pontos")
