@@ -20,3 +20,7 @@ y = df['pontos']
 knn = KNeighborsRegressor(n_neighbors=3)
 knn.fit(X, y)
 
+# 3. Predição para o jogo de retorno (expectativa de 33 minutos e 15 arremessos)
+proximo_jogo = np.array([[33, 15]])
+predicao = knn.predict(proximo_jogo)
+
