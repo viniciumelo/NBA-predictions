@@ -12,3 +12,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Modelo KNN (Busca padrões em jogos com minutagem parecida)
+X = df[['minutos', 'tentativas_fg']]
+y = df['pontos']
+
