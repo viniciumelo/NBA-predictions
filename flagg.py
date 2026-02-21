@@ -16,3 +16,7 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'tentativas_fg']]
 y = df['pontos']
 
+# Consideramos os 3 jogos mais parecidos para tirar a média
+knn = KNeighborsRegressor(n_neighbors=3)
+knn.fit(X, y)
+
