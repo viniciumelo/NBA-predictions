@@ -20,3 +20,8 @@ y = df['pontos']
 modelo_klay = Ridge(alpha=1.0)
 modelo_klay.fit(X, y)
 
+# 3. Predição para o jogo contra o Indiana Pacers (22/02/2026)
+# Projeção: Ele deve jogar cerca de 24 minutos e tentar 7 bolas de fora
+proximo_jogo = np.array([[24, 7]])
+predicao = modelo_klay.predict(proximo_jogo)
+
