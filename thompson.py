@@ -12,3 +12,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Modelo Ridge (Estabilidade para arremessadores de volume)
+X = df[['minutos', 'tentativas_3pt']]
+y = df['pontos']
+
