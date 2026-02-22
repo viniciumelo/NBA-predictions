@@ -16,3 +16,7 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'tentativas_3pt']]
 y = df['pontos']
 
+# Alpha controla a suavização (regularização)
+modelo_klay = Ridge(alpha=1.0)
+modelo_klay.fit(X, y)
+
