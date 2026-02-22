@@ -25,3 +25,6 @@ modelo_klay.fit(X, y)
 proximo_jogo = np.array([[24, 7]])
 predicao = modelo_klay.predict(proximo_jogo)
 
+print(f"--- Projeção Klay Thompson ---")
+print(f"Minutos Projetados: 24 | Volume 3PT: 7")
+print(f"Pontuação Estimada: {predicao[0]:.1f} pontos")
