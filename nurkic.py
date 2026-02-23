@@ -23,4 +23,8 @@ def predict_nurkic_performance():
     # Remover linhas com valores nulos (os primeiros 5 jogos)
     df_model = df.dropna(subset=['PTS_LAST_5', 'REB_LAST_5', 'AST_LAST_5'])
     
+    # 3. Treinar o Modelo (Prever Pontos)
+    X = df_model[['PTS_LAST_5', 'REB_LAST_5', 'AST_LAST_5']]
+    y = df_model['PTS']
+    
     
