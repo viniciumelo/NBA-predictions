@@ -20,7 +20,7 @@ def predict_nurkic_performance():
     df['REB_LAST_5'] = df['REB'].rolling(window=5).mean()
     df['AST_LAST_5'] = df['AST'].rolling(window=5).mean()
     
+    # Remover linhas com valores nulos (os primeiros 5 jogos)
+    df_model = df.dropna(subset=['PTS_LAST_5', 'REB_LAST_5', 'AST_LAST_5'])
     
     
-    
-
