@@ -27,4 +27,11 @@ def predict_nurkic_performance():
     X = df_model[['PTS_LAST_5', 'REB_LAST_5', 'AST_LAST_5']]
     y = df_model['PTS']
     
+    model = LinearRegression()
+    model.fit(X, y)
     
+    
+    
+
+
+
