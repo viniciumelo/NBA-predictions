@@ -14,4 +14,13 @@ def predict_nurkic_performance():
     # Inverter para ordem cronológica
     df = df.iloc[::-1].reset_index(drop=True)
     
+    # 2. Engenharia de Variáveis (Features)
+    # Vamos usar a média de pontos e rebotes dos últimos 5 jogos para prever o próximo
+    df['PTS_LAST_5'] = df['PTS'].rolling(window=5).mean()
+    df['REB_LAST_5'] = df['REB'].rolling(window=5).mean()
+    df['AST_LAST_5'] = df['AST'].rolling(window=5).mean()
     
+    
+    
+    
+
