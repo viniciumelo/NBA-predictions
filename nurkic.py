@@ -11,4 +11,7 @@ def predict_nurkic_performance():
     gamelog = playergamelog.PlayerGameLog(player_id=NURKIC_ID, season='2025-26')
     df = gamelog.get_data_frames()[0]
     
+    # Inverter para ordem cronológica
+    df = df.iloc[::-1].reset_index(drop=True)
+    
     
