@@ -35,7 +35,11 @@ def predict_nurkic_performance():
     latest_stats = X.iloc[[-1]]
     prediction = model.predict(latest_stats)
     
-    
+    print(f"--- Predição para Jusuf Nurkić ---")
+    print(f"Média Recente (Últimos 5 jogos): {latest_stats['PTS_LAST_5'].values[0]:.1f} pts")
+    print(f"Previsão de Pontos para o Próximo Jogo: {prediction[0]:.2f}")
+
+
     
     
 
