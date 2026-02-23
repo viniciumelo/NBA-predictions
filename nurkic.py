@@ -30,6 +30,12 @@ def predict_nurkic_performance():
     model = LinearRegression()
     model.fit(X, y)
     
+    # 4. Predição para o próximo jogo
+    # Usamos os dados mais recentes do dataframe
+    latest_stats = X.iloc[[-1]]
+    prediction = model.predict(latest_stats)
+    
+    
     
     
 
