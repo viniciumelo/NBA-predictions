@@ -39,9 +39,5 @@ def predict_nurkic_performance():
     print(f"Média Recente (Últimos 5 jogos): {latest_stats['PTS_LAST_5'].values[0]:.1f} pts")
     print(f"Previsão de Pontos para o Próximo Jogo: {prediction[0]:.2f}")
 
-
-    
-    
-
-
-
+if __name__ == "__main__":
+    predict_nurkic_performance()
