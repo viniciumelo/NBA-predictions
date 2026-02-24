@@ -17,3 +17,7 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'tentativas_3pt', 'rebotes_totais']]
 y = df['pontos']
 
+# Alpha baixo para manter a sensibilidade ao volume de 3pts
+modelo_love = Lasso(alpha=0.1)
+modelo_love.fit(X, y)
+
