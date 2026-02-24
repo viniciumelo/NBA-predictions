@@ -21,3 +21,8 @@ y = df['pontos']
 modelo_love = Lasso(alpha=0.1)
 modelo_love.fit(X, y)
 
+# 3. Predição para o jogo contra o New Orleans Pelicans (26/02/2026)
+# Projeção: Jogo físico, ele deve jogar uns 14 min, tentar 3 bolas de fora e pegar 5 rebotes
+proximo_jogo = np.array([[14, 3, 5]])
+predicao = modelo_love.predict(proximo_jogo)
+
