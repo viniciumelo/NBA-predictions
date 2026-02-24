@@ -13,3 +13,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Modelo Lasso (Focado em variáveis de impacto real)
+X = df[['minutos', 'tentativas_3pt', 'rebotes_totais']]
+y = df['pontos']
+
