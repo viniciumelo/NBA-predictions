@@ -26,3 +26,6 @@ modelo_love.fit(X, y)
 proximo_jogo = np.array([[14, 3, 5]])
 predicao = modelo_love.predict(proximo_jogo)
 
+print(f"--- Projeção Kevin Love (UTA) ---")
+print(f"Minutos: 14 | 3PT Tentados: 3 | Rebotes: 5")
+print(f"Pontuação Estimada: {predicao[0]:.1f} pontos")
