@@ -20,3 +20,7 @@ y = df['pontos']
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
+# SVR com kernel RBF para capturar relações não-lineares
+modelo_lamelo = SVR(kernel='rbf', C=100, gamma=0.1, epsilon=0.1)
+modelo_lamelo.fit(X_scaled, y)
+
