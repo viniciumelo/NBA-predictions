@@ -10,3 +10,6 @@ data = {
     '3pt_feitos': [4, 10, 2, 1, 7, 3, 4],
     'pontos': [16, 37, 18, 11, 24, 15, 19]
 }
+
+df = pd.DataFrame(data)
+
