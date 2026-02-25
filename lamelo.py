@@ -17,3 +17,6 @@ df = pd.DataFrame(data)
 X = df[['minutos', '3pt_feitos']]
 y = df['pontos']
 
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
