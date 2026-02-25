@@ -24,3 +24,9 @@ X_scaled = scaler.fit_transform(X)
 modelo_lamelo = SVR(kernel='rbf', C=100, gamma=0.1, epsilon=0.1)
 modelo_lamelo.fit(X_scaled, y)
 
+# 3. Predição para o próximo jogo contra o Indiana Pacers (26/02/2026)
+# Projeção: Jogo de alta velocidade, ~30 min e ele deve converter umas 4 bolas de 3
+proximo_jogo = np.array([[30, 4]])
+proximo_jogo_scaled = scaler.transform(proximo_jogo)
+predicao = modelo_lamelo.predict(proximo_jogo_scaled)
+
