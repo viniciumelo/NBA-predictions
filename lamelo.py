@@ -30,3 +30,7 @@ proximo_jogo = np.array([[30, 4]])
 proximo_jogo_scaled = scaler.transform(proximo_jogo)
 predicao = modelo_lamelo.predict(proximo_jogo_scaled)
 
+print(f"--- Projeção LaMelo Ball ---")
+print(f"Cenário: Jogo vs Pacers | Minutos: 30")
+print(f"Bolas de 3 esperadas: 4")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
