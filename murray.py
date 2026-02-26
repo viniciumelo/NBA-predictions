@@ -13,3 +13,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Modelo de Pesos (Dando menos peso ao jogo de doença/lesão)
+# Pesos: 1.0 para jogos normais, 0.1 para o jogo atípico de ontem
+pesos = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.1]
+
