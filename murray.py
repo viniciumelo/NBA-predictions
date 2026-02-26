@@ -23,3 +23,8 @@ y = df['pontos']
 modelo_murray = LinearRegression()
 modelo_murray.fit(X, y, sample_weight=pesos)
 
+# 3. Predição para o jogo contra OKC (27/02/2026)
+# Assumindo que ele se recupere da indisposição e jogue seus 34 min habituais
+proximo_jogo = np.array([[34, 8]]) # 34 min e média de 8 chutes de 3
+predicao = modelo_murray.predict(proximo_jogo)
+
