@@ -28,3 +28,6 @@ modelo_murray.fit(X, y, sample_weight=pesos)
 proximo_jogo = np.array([[34, 8]]) # 34 min e média de 8 chutes de 3
 predicao = modelo_murray.predict(proximo_jogo)
 
+print(f"--- Projeção Jamal Murray (DEN) ---")
+print(f"Matchup: @ OKC | Status: Recuperando de Doença")
+print(f"Pontuação Estimada: {predicao[0]:.1f} pontos")
