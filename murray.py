@@ -10,3 +10,6 @@ data = {
     '3pt_tentados': [9, 14, 6, 5, 6, 12, 2],
     'pontos': [28, 39, 17, 20, 21, 25, 2] 
 }
+
+df = pd.DataFrame(data)
+
