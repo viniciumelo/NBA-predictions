@@ -20,3 +20,6 @@ pesos = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.1]
 X = df[['minutos', '3pt_tentados']]
 y = df['pontos']
 
+modelo_murray = LinearRegression()
+modelo_murray.fit(X, y, sample_weight=pesos)
+
