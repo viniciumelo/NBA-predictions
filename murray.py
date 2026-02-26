@@ -17,3 +17,6 @@ df = pd.DataFrame(data)
 # Pesos: 1.0 para jogos normais, 0.1 para o jogo atípico de ontem
 pesos = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.1]
 
+X = df[['minutos', '3pt_tentados']]
+y = df['pontos']
+
