@@ -21,3 +21,8 @@ y = df['pontos']
 modelo_braun = DecisionTreeRegressor(max_depth=3, random_state=42)
 modelo_braun.fit(X, y)
 
+# 3. Predição para o jogo de hoje contra OKC (27/02/2026)
+# Projeção: Sem Aaron Gordon, Braun deve jogar muito (34 min) e correr a quadra
+proximo_jogo = np.array([[34, 12, 6]]) 
+predicao = modelo_braun.predict(proximo_jogo)
+
