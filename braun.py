@@ -17,3 +17,7 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'tentativas_fg', 'pontos_transicao']]
 y = df['pontos']
 
+# Árvore de decisão para capturar o "teto" de esforço do Braun
+modelo_braun = DecisionTreeRegressor(max_depth=3, random_state=42)
+modelo_braun.fit(X, y)
+
