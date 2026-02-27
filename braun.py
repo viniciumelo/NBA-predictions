@@ -26,3 +26,7 @@ modelo_braun.fit(X, y)
 proximo_jogo = np.array([[34, 12, 6]]) 
 predicao = modelo_braun.predict(proximo_jogo)
 
+print(f"--- Projeção Christian Braun (DEN) ---")
+print(f"Função: Ala Titular (Substituindo Gordon)")
+print(f"Minutos Projetados: 34")
+print(f"Pontuação Estimada: {predicao[0]:.1f} pontos")
