@@ -10,3 +10,6 @@ data = {
     'pontos_transicao': [4, 6, 8, 2, 4, 10, 6],
     'pontos': [8, 14, 19, 11, 12, 22, 15]
 }
+
+df = pd.DataFrame(data)
+
