@@ -21,3 +21,7 @@ y = df['pontos']
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
+# 3. Treinamento do Modelo SGD (Sensível ao ímpeto ofensivo)
+modelo_ant = SGDRegressor(max_iter=1000, tol=1e-3, random_state=42)
+modelo_ant.fit(X_scaled, y)
+
