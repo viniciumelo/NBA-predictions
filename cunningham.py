@@ -24,3 +24,9 @@ X_scaled = scaler.fit_transform(X)
 modelo_cade = SVR(kernel='rbf', C=100, gamma=0.1)
 modelo_cade.fit(X_scaled, y)
 
+# 3. Predição para o próximo jogo contra o Chicago Bulls (01/03/2026)
+# Projeção: Jogo equilibrado, 36 min e Usage Rate alto (32.0)
+proximo_jogo = np.array([[36, 32.0]])
+proximo_jogo_scaled = scaler.transform(proximo_jogo)
+predicao = modelo_cade.predict(proximo_jogo_scaled)
+
