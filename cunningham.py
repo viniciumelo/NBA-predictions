@@ -30,3 +30,7 @@ proximo_jogo = np.array([[36, 32.0]])
 proximo_jogo_scaled = scaler.transform(proximo_jogo)
 predicao = modelo_cade.predict(proximo_jogo_scaled)
 
+print(f"--- Projeção Cade Cunningham (DET) ---")
+print(f"Cenário: Liderança Ofensiva | Minutos: 36")
+print(f"Usage Rate Estimado: 32.0%")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
