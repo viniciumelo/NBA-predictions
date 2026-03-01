@@ -30,3 +30,8 @@ modelo_ant.fit(X_scaled, y)
 proximo_jogo = np.array([[37, 22, 8]])
 proximo_jogo_scaled = scaler.transform(proximo_jogo)
 predicao = modelo_ant.predict(proximo_jogo_scaled)
+
+print(f"--- Projeção Anthony Edwards ---")
+print(f"Status: Candidato a MVP | Minutos: 37")
+print(f"Volume Estimado: 22 FG / 8 FT")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
