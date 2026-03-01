@@ -25,3 +25,8 @@ X_scaled = scaler.fit_transform(X)
 modelo_ant = SGDRegressor(max_iter=1000, tol=1e-3, random_state=42)
 modelo_ant.fit(X_scaled, y)
 
+# 4. Predição para o próximo jogo contra o Phoenix Suns (03/03/2026)
+# Projeção: Jogo de alto nível, 37 min, 22 arremessos e 8 lances livres
+proximo_jogo = np.array([[37, 22, 8]])
+proximo_jogo_scaled = scaler.transform(proximo_jogo)
+predicao = modelo_ant.predict(proximo_jogo_scaled)
