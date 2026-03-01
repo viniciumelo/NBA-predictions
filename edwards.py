@@ -14,3 +14,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Preparação dos Dados
+X = df[['minutos', 'tentativas_fg', 'lances_livres']]
+y = df['pontos']
+
