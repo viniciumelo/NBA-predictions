@@ -11,3 +11,6 @@ data = {
     'lances_livres': [6, 9, 4, 8, 12, 5, 7],
     'pontos': [26, 34, 19, 31, 42, 24, 33]
 }
+
+df = pd.DataFrame(data)
+
