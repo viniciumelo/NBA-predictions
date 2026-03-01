@@ -13,3 +13,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Normalização e Treinamento
+X = df[['minutos', 'usage_rate']]
+y = df['pontos']
+
