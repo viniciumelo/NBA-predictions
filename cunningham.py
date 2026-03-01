@@ -20,3 +20,7 @@ y = df['pontos']
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
+# SVR para lidar com a variação de volume do Cade
+modelo_cade = SVR(kernel='rbf', C=100, gamma=0.1)
+modelo_cade.fit(X_scaled, y)
+
