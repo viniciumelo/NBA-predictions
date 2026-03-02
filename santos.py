@@ -12,3 +12,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Treinamento do Modelo
+X = df[['minutos', 'arremessos_3pt']]
+y = df['pontos']
+
