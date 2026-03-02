@@ -16,3 +16,6 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'arremessos_3pt']]
 y = df['pontos']
 
+modelo_gui = LinearRegression()
+modelo_gui.fit(X, y)
+
