@@ -23,3 +23,8 @@ modelo_gui.fit(X, y)
 # Projeção: Com Andrew Wiggins poupado, Gui deve jogar ~18 min e tentar 5 bolas de 3
 proximo_jogo = np.array([[18, 5]])
 predicao = modelo_gui.predict(proximo_jogo)
+
+print(f"--- Projeção Gui Santos (GSW) ---")
+print(f"Cenário: Rotação Ativa | Minutos Projetados: 18")
+print(f"Arremessos de 3 esperados: 5")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
