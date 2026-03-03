@@ -21,3 +21,7 @@ y = df['pontos']
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
+# 3. Modelo Elastic Net (Equilíbrio entre volume e precisão)
+modelo_bogi = ElasticNet(alpha=0.1, l1_ratio=0.5)
+modelo_bogi.fit(X_scaled, y)
+
