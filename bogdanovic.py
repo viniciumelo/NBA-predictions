@@ -25,3 +25,9 @@ X_scaled = scaler.fit_transform(X)
 modelo_bogi = ElasticNet(alpha=0.1, l1_ratio=0.5)
 modelo_bogi.fit(X_scaled, y)
 
+# 4. Predição para o próximo jogo contra o New York Knicks (05/03/2026)
+# Projeção: Jogo físico no MSG, ele deve jogar ~29 min e tentar 8 bolas de 3
+proximo_jogo = np.array([[29, 8, 4]])
+proximo_jogo_scaled = scaler.transform(proximo_jogo)
+predicao = modelo_bogi.predict(proximo_jogo_scaled)
+
