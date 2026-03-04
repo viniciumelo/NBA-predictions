@@ -11,3 +11,6 @@ data = {
     'assistencias': [4, 3, 5, 2, 4, 6, 3],
     'pontos': [15, 24, 11, 28, 14, 12, 18]
 }
+
+df = pd.DataFrame(data)
+
