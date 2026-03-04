@@ -31,3 +31,7 @@ proximo_jogo = np.array([[29, 8, 4]])
 proximo_jogo_scaled = scaler.transform(proximo_jogo)
 predicao = modelo_bogi.predict(proximo_jogo_scaled)
 
+print(f"--- Projeção Bogdan Bogdanović ---")
+print(f"Matchup: @ NYK | Função: 6º Homem de Elite")
+print(f"Minutos Projetados: 29")
+print(f"Pontuação Estimada: {predicao[0]:.1f} pontos")
