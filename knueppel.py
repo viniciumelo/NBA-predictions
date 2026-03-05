@@ -13,3 +13,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Treinamento do Modelo
+X = df[['minutos', 'bolas_3pt_tentadas', 'gravidade_giannis']]
+y = df['pontos']
+
