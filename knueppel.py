@@ -20,3 +20,8 @@ y = df['pontos']
 modelo_kon = RandomForestRegressor(n_estimators=100, random_state=42)
 modelo_kon.fit(X, y)
 
+# 3. Predição para o jogo de hoje (04/03/2026) contra o New York Knicks
+# Projeção: Giannis está ativo (Gravidade 9), Kon deve jogar 32 min e tentar 10 bolas de 3
+proximo_jogo = np.array([[32, 10, 9]])
+predicao = modelo_kon.predict(proximo_jogo)
+
