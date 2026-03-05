@@ -17,3 +17,6 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'bolas_3pt_tentadas', 'gravidade_giannis']]
 y = df['pontos']
 
+modelo_kon = RandomForestRegressor(n_estimators=100, random_state=42)
+modelo_kon.fit(X, y)
+
