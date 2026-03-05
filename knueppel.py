@@ -25,3 +25,7 @@ modelo_kon.fit(X, y)
 proximo_jogo = np.array([[32, 10, 9]])
 predicao = modelo_kon.predict(proximo_jogo)
 
+print(f"--- Projeção Kon Knueppel (MIL) ---")
+print(f"Status: Titular / Candidato a ROY")
+print(f"Cenário: Gravidade Máxima do Giannis")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
