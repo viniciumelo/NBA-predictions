@@ -10,3 +10,6 @@ data = {
     'gravidade_giannis': [8, 5, 9, 7, 4, 9, 8], # Escala de 1-10 (atenção da defesa no Giannis)
     'pontos': [21, 15, 29, 18, 12, 26, 23]
 }
+
+df = pd.DataFrame(data)
+
