@@ -17,3 +17,6 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'bolas_3pt_tentadas', 'roubos_bola']]
 y = df['pontos']
 
+modelo_caruso = PoissonRegressor(alpha=0.1)
+modelo_caruso.fit(X, y)
+
