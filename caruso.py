@@ -13,3 +13,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Treinamento do Modelo Poisson
+X = df[['minutos', 'bolas_3pt_tentadas', 'roubos_bola']]
+y = df['pontos']
+
