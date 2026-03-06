@@ -20,3 +20,9 @@ y = df['pontos']
 modelo_caruso = PoissonRegressor(alpha=0.1)
 modelo_caruso.fit(X, y)
 
+# 3. Predição para o jogo de amanhã (07/03/2026) contra o Dallas Mavericks
+# Projeção: Jogo de alta intensidade (Playoff feel), Caruso deve jogar ~28 min
+# e terá que marcar Luka/Kyrie, o que gera roubos e contra-ataques.
+proximo_jogo = np.array([[28, 4, 3]])
+predicao = modelo_caruso.predict(proximo_jogo)
+
