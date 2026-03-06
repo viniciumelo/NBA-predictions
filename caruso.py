@@ -26,3 +26,7 @@ modelo_caruso.fit(X, y)
 proximo_jogo = np.array([[28, 4, 3]])
 predicao = modelo_caruso.predict(proximo_jogo)
 
+print(f"--- Projeção Alex Caruso (OKC) ---")
+print(f"Matchup: vs Dallas Mavericks | Função: Defensive Stopper")
+print(f"Minutos Projetados: 28")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
