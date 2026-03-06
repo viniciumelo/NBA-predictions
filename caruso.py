@@ -10,3 +10,6 @@ data = {
     'roubos_bola': [2, 4, 1, 3, 2, 1, 5], # Defesa gera ataque para ele
     'pontos': [6, 12, 5, 15, 8, 2, 11]
 }
+
+df = pd.DataFrame(data)
+
