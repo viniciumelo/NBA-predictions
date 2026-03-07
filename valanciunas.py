@@ -26,3 +26,7 @@ modelo_jv.fit(X, y)
 proximo_jogo = np.array([[26, 4, 5]])
 predicao = modelo_jv.predict(proximo_jogo)
 
+print(f"--- Projeção Jonas Valančiūnas (WAS) ---")
+print(f"Matchup: vs NY Knicks | Contexto: Batalha de Garrafão")
+print(f"Minutos Projetados: 26")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
