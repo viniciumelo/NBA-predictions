@@ -20,3 +20,9 @@ y = df['pontos']
 modelo_jv = LinearRegression()
 modelo_jv.fit(X, y)
 
+# 3. Predição para o jogo de hoje (06/03/2026) contra o New York Knicks
+# Projeção: Jogo físico contra Mitchell Robinson/Hartenstein.
+# JV deve brigar muito no garrafão: 26 min, 4 rebotes ofensivos e 5 lances livres.
+proximo_jogo = np.array([[26, 4, 5]])
+predicao = modelo_jv.predict(proximo_jogo)
+
