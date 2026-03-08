@@ -26,3 +26,8 @@ modelo_ag.fit(X, y)
 # e receber cerca de 7 passes diretos para finalização do Jokic.
 proximo_jogo = np.array([[32, 7]])
 predicao = modelo_ag.predict(proximo_jogo)
+
+print(f"--- Projeção Aaron Gordon (DEN) ---")
+print(f"Data: 08 de Março de 2026 | Status: 100% Recuperado")
+print(f"Minutos Projetados: 32")
+print(f"Pontuação Estimada: {predicao[0]:.1f} pontos")
