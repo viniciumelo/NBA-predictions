@@ -10,3 +10,6 @@ data = {
     'aproveitamento_fg': [0.50, 0.55, 0.48, 0.60, 0.52, 0.45, 0.53],
     'pontos': [12, 18, 10, 15, 20, 8, 14]
 }
+
+df = pd.DataFrame(data)
+
