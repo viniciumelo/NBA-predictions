@@ -21,3 +21,8 @@ y = df['pontos']
 modelo_ag = KNeighborsRegressor(n_neighbors=3)
 modelo_ag.fit(X, y)
 
+# 3. Predição para o próximo jogo (08/03/2026) contra o Oklahoma City Thunder
+# Projeção: Jogo físico contra Chet Holmgren, AG deve jogar ~32 min 
+# e receber cerca de 7 passes diretos para finalização do Jokic.
+proximo_jogo = np.array([[32, 7]])
+predicao = modelo_ag.predict(proximo_jogo)
