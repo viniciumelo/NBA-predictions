@@ -18,3 +18,6 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'assitencias_recebidas_jokic']]
 y = df['pontos']
 
+modelo_ag = KNeighborsRegressor(n_neighbors=3)
+modelo_ag.fit(X, y)
+
