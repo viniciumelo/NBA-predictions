@@ -13,3 +13,8 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Treinamento do Modelo KNN
+# O modelo busca jogos onde a conexão com o Jokic foi similar
+X = df[['minutos', 'assitencias_recebidas_jokic']]
+y = df['pontos']
+
