@@ -17,3 +17,6 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'rebotes_ofensivos', 'assistencias']]
 y = df['pontos']
 
+modelo_ih = Ridge(alpha=0.5)
+modelo_ih.fit(X, y)
+
