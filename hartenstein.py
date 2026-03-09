@@ -20,3 +20,8 @@ y = df['pontos']
 modelo_ih = Ridge(alpha=0.5)
 modelo_ih.fit(X, y)
 
+# 3. Predição para o próximo jogo (10/03/2026) contra o New Orleans Pelicans
+# Projeção: Jogo físico contra Zion/JV. 
+# Hartenstein deve jogar ~29 min, pegar 4 rebotes ofensivos e distribuir 4 assistências.
+proximo_jogo = np.array([[29, 4, 4]])
+predicao = modelo_ih.predict(proximo_jogo)
