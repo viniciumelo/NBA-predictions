@@ -13,3 +13,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# 2. Treinamento do Modelo Ridge (Regularizado para evitar distorções)
+X = df[['minutos', 'rebotes_ofensivos', 'assistencias']]
+y = df['pontos']
+
