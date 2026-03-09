@@ -25,3 +25,8 @@ modelo_ih.fit(X, y)
 # Hartenstein deve jogar ~29 min, pegar 4 rebotes ofensivos e distribuir 4 assistências.
 proximo_jogo = np.array([[29, 4, 4]])
 predicao = modelo_ih.predict(proximo_jogo)
+
+print(f"--- Projeção Isaiah Hartenstein (OKC) ---")
+print(f"Data: 10 de Março de 2026 | Função: Pivô Facilitador")
+print(f"Minutos Projetados: 29")
+print(f"Pontuação Estimada: {predicao[0]:.1f} pontos")
