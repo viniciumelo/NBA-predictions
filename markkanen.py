@@ -24,3 +24,10 @@ X_scaled = scaler.fit_transform(X)
 # Ridge ajuda a lidar com a variação do chute de 3pts
 modelo_lauri = Ridge(alpha=1.0)
 modelo_lauri.fit(X_scaled, y)
+
+# 3. Predição para o próximo jogo (11/03/2026) contra o Los Angeles Lakers
+# Projeção: Jogo de ritmo alto, Lauri deve jogar ~35 min, 
+# tentar 9 bolas de 3 e cavar 6 lances livres.
+proximo_jogo = np.array([[35, 9, 6]])
+proximo_jogo_scaled = scaler.transform(proximo_jogo)
+predicao = modelo_lauri.predict(proximo_jogo_scaled)
