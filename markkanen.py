@@ -21,3 +21,6 @@ y = df['pontos']
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
+# Ridge ajuda a lidar com a variação do chute de 3pts
+modelo_lauri = Ridge(alpha=1.0)
+modelo_lauri.fit(X_scaled, y)
