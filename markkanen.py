@@ -31,3 +31,8 @@ modelo_lauri.fit(X_scaled, y)
 proximo_jogo = np.array([[35, 9, 6]])
 proximo_jogo_scaled = scaler.transform(proximo_jogo)
 predicao = modelo_lauri.predict(proximo_jogo_scaled)
+
+print(f"--- Projeção Lauri Markkanen (UTA) ---")
+print(f"Data: 11 de Março de 2026 | Status: All-Star")
+print(f"Minutos Projetados: 35")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
