@@ -31,3 +31,8 @@ modelo_bam.fit(X_scaled, y)
 proximo_jogo = np.array([[35, 15, 6]])
 proximo_jogo_scaled = scaler.transform(proximo_jogo)
 predicao = modelo_bam.predict(proximo_jogo_scaled)
+
+print(f"--- Projeção Bam Adebayo (MIA) ---")
+print(f"Data: 11 de Março de 2026 | Local: Kaseya Center")
+print(f"Minutos Projetados: 35")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
