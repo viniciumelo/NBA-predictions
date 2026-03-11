@@ -21,3 +21,7 @@ y = df['pontos']
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
+# ElasticNet combina penalidades L1 e L2 para maior estabilidade
+modelo_bam = ElasticNet(alpha=0.01, l1_ratio=0.5)
+modelo_bam.fit(X_scaled, y)
+
