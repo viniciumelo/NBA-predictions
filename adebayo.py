@@ -25,3 +25,9 @@ X_scaled = scaler.fit_transform(X)
 modelo_bam = ElasticNet(alpha=0.01, l1_ratio=0.5)
 modelo_bam.fit(X_scaled, y)
 
+# 3. Predição para o próximo jogo (11/03/2026) contra o Brooklyn Nets
+# Projeção: Miami em casa, Bam deve jogar ~35 min, 
+# ter 15 tentativas de quadra e converter 6 lances livres.
+proximo_jogo = np.array([[35, 15, 6]])
+proximo_jogo_scaled = scaler.transform(proximo_jogo)
+predicao = modelo_bam.predict(proximo_jogo_scaled)
