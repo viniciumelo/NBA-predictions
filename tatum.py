@@ -21,3 +21,7 @@ y = df['pontos']
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
+# 3. Modelo SVR (Ajustado para a volatilidade controlada de um cestinha)
+modelo_tatum = SVR(kernel='poly', C=100, degree=2, epsilon=0.1)
+modelo_tatum.fit(X_scaled, y)
+
