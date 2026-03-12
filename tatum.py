@@ -31,3 +31,8 @@ modelo_tatum.fit(X_scaled, y)
 proximo_jogo = np.array([[37, 11, 9]])
 proximo_jogo_scaled = scaler.transform(proximo_jogo)
 predicao = modelo_tatum.predict(proximo_jogo_scaled)
+
+print(f"--- Projeção Jayson Tatum (BOS) ---")
+print(f"Data: 13 de Março de 2026 | Local: TD Garden")
+print(f"Minutos Projetados: 37")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
