@@ -11,3 +11,6 @@ data = {
     'lances_livres_tentados': [8, 10, 5, 12, 7, 9, 6],
     'pontos': [27, 34, 19, 41, 25, 31, 26]
 }
+
+df = pd.DataFrame(data)
+
