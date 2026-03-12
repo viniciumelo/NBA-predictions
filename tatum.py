@@ -25,3 +25,9 @@ X_scaled = scaler.fit_transform(X)
 modelo_tatum = SVR(kernel='poly', C=100, degree=2, epsilon=0.1)
 modelo_tatum.fit(X_scaled, y)
 
+# 4. Predição para o jogo de amanhã (13/03/2026) contra o Golden State Warriors
+# Projeção: Jogo de gala na rede nacional.
+# Tatum deve jogar ~37 min, tentar 11 bolas de 3 e cavar 9 lances livres.
+proximo_jogo = np.array([[37, 11, 9]])
+proximo_jogo_scaled = scaler.transform(proximo_jogo)
+predicao = modelo_tatum.predict(proximo_jogo_scaled)
