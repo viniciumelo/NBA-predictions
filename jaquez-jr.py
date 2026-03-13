@@ -17,3 +17,6 @@ df = pd.DataFrame(data)
 X = df[['minutos', 'tentativas_fg', 'rebotes_ofensivos']]
 y = df['pontos']
 
+# Random Forest captura bem as nuances de jogadores multifuncionais
+modelo_jaime = RandomForestRegressor(n_estimators=100, random_state=42)
+modelo_jaime.fit(X, y)
