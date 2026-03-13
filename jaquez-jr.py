@@ -10,3 +10,5 @@ data = {
     'rebotes_ofensivos': [1, 3, 2, 1, 4, 2, 3],
     'pontos': [11, 16, 21, 13, 15, 18, 14]
 }
+
+df = pd.DataFrame(data)
