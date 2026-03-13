@@ -20,3 +20,8 @@ y = df['pontos']
 # Random Forest captura bem as nuances de jogadores multifuncionais
 modelo_jaime = RandomForestRegressor(n_estimators=100, random_state=42)
 modelo_jaime.fit(X, y)
+
+# 3. Predição para o jogo de hoje (13/03/2026) contra o Brooklyn Nets
+# Projeção: Miami completo, Jaime deve jogar ~31 min e tentar 11 arremessos
+proximo_jogo = np.array([[31, 11, 2]])
+predicao = modelo_jaime.predict(proximo_jogo)
