@@ -25,3 +25,8 @@ modelo_jaime.fit(X, y)
 # Projeção: Miami completo, Jaime deve jogar ~31 min e tentar 11 arremessos
 proximo_jogo = np.array([[31, 11, 2]])
 predicao = modelo_jaime.predict(proximo_jogo)
+
+print(f"--- Projeção Jaime Jaquez Jr. (MIA) ---")
+print(f"Data: 13 de Março de 2026 | Local: Kaseya Center")
+print(f"Papel: Ala Versátil / 6º Homem")
+print(f"Pontuação Prevista: {predicao[0]:.1f} pontos")
