@@ -43,3 +43,7 @@ def prever_vencedor(time_a, time_b):
     except IndexError:
         print("Erro: Verifique se os nomes dos times estão corretos no banco de dados.")
 
+# 3. Teste o Preditor
+time1 = input("Digite o nome do Time 1: ")
+time2 = input("Digite o nome do Time 2: ")
+prever_vencedor(time1, time2)
