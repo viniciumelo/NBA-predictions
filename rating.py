@@ -10,3 +10,5 @@ data = {
     'OPPG': [107.8, 109.6, 107.0, 111.8, 115.3, 116.7]  # Pontos contra
 }
 
+df = pd.DataFrame(data)
+
