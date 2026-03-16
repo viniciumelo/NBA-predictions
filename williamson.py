@@ -19,3 +19,8 @@ def simular_performance(nome_jogador, media_pts, desvio_padrao, meta, simulacoes
         print("Palpite: Forte tendência de UNDER (Abaixo).")
     else:
         print("Palpite: Jogo arriscado, odds equilibradas.")
+
+# Dados reais do Zion em Março/2026
+# Média: 21.4 | Desvio padrão estimado: 4.5 (Zion é consistente, mas varia com minutos)
+meta_do_dia = float(input("Qual a linha de pontos do Zion hoje (ex: 22.5)? "))
+simular_performance("Zion Williamson", 21.4, 4.5, meta_do_dia)
