@@ -13,4 +13,9 @@ def simular_performance(nome_jogador, media_pts, desvio_padrao, meta, simulacoes
     print(f"Meta de Pontos: {meta}")
     print(f"Probabilidade de bater a meta: {probabilidade:.2f}%")
     
-    
+    if probabilidade > 60:
+        print("Palpite: Forte tendência de OVER (Acima).")
+    elif probabilidade < 40:
+        print("Palpite: Forte tendência de UNDER (Abaixo).")
+    else:
+        print("Palpite: Jogo arriscado, odds equilibradas.")
