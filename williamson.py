@@ -8,4 +8,9 @@ def simular_performance(nome_jogador, media_pts, desvio_padrao, meta, simulacoes
     sucessos = np.sum(resultados >= meta)
     probabilidade = (sucessos / simulacoes) * 100
     
+    print(f"--- Predição para {nome_jogador} ---")
+    print(f"Média da Temporada: {media_pts} pts")
+    print(f"Meta de Pontos: {meta}")
+    print(f"Probabilidade de bater a meta: {probabilidade:.2f}%")
+    
     
