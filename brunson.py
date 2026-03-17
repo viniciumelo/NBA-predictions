@@ -18,4 +18,7 @@ def predict_brunson_pts():
     df['MA3_PTS'] = df['PTS'].rolling(window=3).mean()
     df['MA10_PTS'] = df['PTS'].rolling(window=10).mean()
     
+    # Volume de arremessos (importante para o Brunson)
+    df['FGA_LAST_5'] = df['FGA'].rolling(window=5).mean()
+    
     
