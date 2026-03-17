@@ -21,4 +21,9 @@ def predict_brunson_pts():
     # Volume de arremessos (importante para o Brunson)
     df['FGA_LAST_5'] = df['FGA'].rolling(window=5).mean()
     
+    # 3. Preparação para o Modelo
+    df_model = df.dropna()
+    X = df_model[['MA3_PTS', 'MA10_PTS', 'FGA_LAST_5', 'MIN']]
+    y = df_model['PTS']
+    
     
