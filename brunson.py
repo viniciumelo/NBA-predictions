@@ -13,4 +13,9 @@ def predict_brunson_pts():
     # Inverter para cronologia correta e limpar dados
     df = df.iloc[::-1].reset_index(drop=True)
     
+    # 2. Engenharia de Features Específicas para Pontuadores
+    # Médias móveis (tendência recente)
+    df['MA3_PTS'] = df['PTS'].rolling(window=3).mean()
+    df['MA10_PTS'] = df['PTS'].rolling(window=10).mean()
+    
     
