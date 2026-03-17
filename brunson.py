@@ -30,4 +30,8 @@ def predict_brunson_pts():
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X, y)
     
+    # 4. Dados Atuais para a Predição (Último jogo registrado)
+    current_features = X.iloc[[-1]]
+    prediction = model.predict(current_features)
+    
     
