@@ -39,3 +39,6 @@ def predict_brunson_pts():
     print(f"Média da Temporada: 26.3 pts")
     print(f"Tendência nos últimos 3 jogos: {df['MA3_PTS'].iloc[-1]:.1f} pts")
     print(f"Previsão do Modelo para o próximo jogo: {prediction[0]:.2f} pts")
+
+if __name__ == "__main__":
+    predict_brunson_pts()
