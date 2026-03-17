@@ -10,3 +10,7 @@ def predict_brunson_pts():
     log = playergamelog.PlayerGameLog(player_id=BRUNSON_ID, season='2025-26')
     df = log.get_data_frames()[0]
     
+    # Inverter para cronologia correta e limpar dados
+    df = df.iloc[::-1].reset_index(drop=True)
+    
+    
