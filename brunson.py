@@ -26,4 +26,8 @@ def predict_brunson_pts():
     X = df_model[['MA3_PTS', 'MA10_PTS', 'FGA_LAST_5', 'MIN']]
     y = df_model['PTS']
     
+    # Usando Random Forest para capturar variações não-lineares
+    model = RandomForestRegressor(n_estimators=100, random_state=42)
+    model.fit(X, y)
+    
     
