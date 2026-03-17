@@ -34,4 +34,8 @@ def predict_brunson_pts():
     current_features = X.iloc[[-1]]
     prediction = model.predict(current_features)
     
-    
+    print(f"--- Relatório de Predição: Jalen Brunson ---")
+    print(f"Status Atual (17/03/2026): Questionável (Tornozelo/Pescoço)")
+    print(f"Média da Temporada: 26.3 pts")
+    print(f"Tendência nos últimos 3 jogos: {df['MA3_PTS'].iloc[-1]:.1f} pts")
+    print(f"Previsão do Modelo para o próximo jogo: {prediction[0]:.2f} pts")
