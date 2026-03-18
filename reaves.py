@@ -20,4 +20,7 @@ def predict_reaves_next():
     X = df[['EMA_PTS', 'min', 'opp_def_rank']]
     y = df['pts']
     
+    model = Ridge(alpha=1.0)
+    model.fit(X, y)
+    
     
