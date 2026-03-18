@@ -32,3 +32,6 @@ def predict_reaves_next():
     print(f"Tendência Recente (EMA): {df['EMA_PTS'].iloc[-1]:.1f} pts")
     print(f"Previsão Final: {prediction[0]:.2f} pontos")
     print(f"Nota: Reaves jogou 40+ min nos últimos 2 jogos, indicando alta carga.")
+
+if __name__ == "__main__":
+    predict_reaves_next()
