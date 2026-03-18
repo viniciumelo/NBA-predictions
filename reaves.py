@@ -23,4 +23,8 @@ def predict_reaves_next():
     model = Ridge(alpha=1.0)
     model.fit(X, y)
     
+    # Predição para o jogo contra o Miami Heat (Defesa Forte = Rank 4)
+    # Assumindo 36 minutos de quadra
+    next_game_features = np.array([[df['EMA_PTS'].iloc[-1], 36, 4]])
+    prediction = model.predict(next_game_features)
     
