@@ -9,3 +9,6 @@ data = {
     'min': [29, 39, 38, 39, 46, 40],
     'opp_def_rank': [15, 5, 2, 20, 10, 8] # Ranking defensivo fictício dos oponentes
 }
+
+df = pd.DataFrame(data)
+
