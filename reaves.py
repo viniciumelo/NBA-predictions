@@ -16,4 +16,8 @@ def predict_reaves_next():
     # Engenharia de Features: Média Móvel Ponderada (foco no momento atual)
     df['EMA_PTS'] = df['pts'].ewm(span=3, adjust=False).mean()
     
+    # Treino simples com Ridge Regression (para evitar overfitting em poucos dados)
+    X = df[['EMA_PTS', 'min', 'opp_def_rank']]
+    y = df['pts']
+    
     
