@@ -28,3 +28,7 @@ def predict_reaves_next():
     next_game_features = np.array([[df['EMA_PTS'].iloc[-1], 36, 4]])
     prediction = model.predict(next_game_features)
     
+    print(f"--- Predição: Austin Reaves vs Miami Heat ---")
+    print(f"Tendência Recente (EMA): {df['EMA_PTS'].iloc[-1]:.1f} pts")
+    print(f"Previsão Final: {prediction[0]:.2f} pontos")
+    print(f"Nota: Reaves jogou 40+ min nos últimos 2 jogos, indicando alta carga.")
