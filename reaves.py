@@ -12,3 +12,8 @@ data = {
 
 df = pd.DataFrame(data)
 
+def predict_reaves_next():
+    # Engenharia de Features: Média Móvel Ponderada (foco no momento atual)
+    df['EMA_PTS'] = df['pts'].ewm(span=3, adjust=False).mean()
+    
+    
