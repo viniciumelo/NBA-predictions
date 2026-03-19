@@ -36,3 +36,10 @@ y = train_df['PTS'].fillna(0)
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X, y)
 
+# 6. Predição para o "Próximo Jogo" (usando médias da temporada)
+# Aqui simulamos os jogadores ativos com suas médias usuais
+print(f"\n--- Predição de Maior Pontuador: {TEAM_NAME} ---")
+players_to_predict = train_df.groupby('PLAYER_NAME')[features].mean().reset_index()
+players_to_predict['PRED_PTS'] = model.predict(players_to_predict[features])
+
+
