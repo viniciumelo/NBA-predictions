@@ -14,3 +14,14 @@ gamefinder = leaguegamefinder.LeagueGameFinder(team_id_nullable=team_id)
 games = gamefinder.get_data_frames()[0]
 recent_games_ids = games.head(10)['GAME_ID'].tolist() # Últimos 10 jogos
 
+# 3. Coletar estatísticas de jogadores nesses jogos
+all_stats = []
+for gid in recent_games_ids:
+    # Busca o boxscore detalhado de cada jogo
+    from nba_api.stats.endpoints import boxscoretraditionalv2
+    box = boxscoretraditionalv2.BoxScoreTraditionalV2(game_id=gid)
+    df = box.get_data_frames()[0]
+    all_stats.append(df[df['TEAM_ID'] == team_id])
+
+train_df = pd.concat(all_stats)
+
