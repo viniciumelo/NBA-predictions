@@ -41,5 +41,10 @@ model.fit(X, y)
 print(f"\n--- Predição de Maior Pontuador: {TEAM_NAME} ---")
 players_to_predict = train_df.groupby('PLAYER_NAME')[features].mean().reset_index()
 players_to_predict['PRED_PTS'] = model.predict(players_to_predict[features])
+# Ordenar e mostrar o top 1
+top_scorer = players_to_predict.sort_values(by='PRED_PTS', ascending=False).iloc[0]
+
+print(f"O jogador com maior probabilidade de pontuar mais é: {top_scorer['PLAYER_NAME']}")
+print(f"Pontuação estimada: {top_scorer['PRED_PTS']:.1f} pontos")
 
 
