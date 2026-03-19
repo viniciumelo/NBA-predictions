@@ -25,3 +25,10 @@ for gid in recent_games_ids:
 
 train_df = pd.concat(all_stats)
 
+# 4. Engenharia de Variáveis Simples (Features)
+# Vamos prever 'PTS' com base em Minutos (convertidos), Tentativas de Arremesso e Faltas
+train_df['MIN_CLEAN'] = train_df['MIN'].str.split(':').str[0].replace('', 0).astype(float)
+features = ['MIN_CLEAN', 'FGA', 'FTA']
+X = train_df[features].fillna(0)
+y = train_df['PTS'].fillna(0)
+
