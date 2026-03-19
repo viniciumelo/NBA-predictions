@@ -32,3 +32,7 @@ features = ['MIN_CLEAN', 'FGA', 'FTA']
 X = train_df[features].fillna(0)
 y = train_df['PTS'].fillna(0)
 
+# 5. Treinar o Modelo
+model = RandomForestRegressor(n_estimators=100, random_state=42)
+model.fit(X, y)
+
