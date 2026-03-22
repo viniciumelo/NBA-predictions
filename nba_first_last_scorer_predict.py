@@ -52,3 +52,6 @@ def predict_matchup(team_a_abbr, team_b_abbr):
     print(f"Primeiro Ponto: {first_pred} (Freq: {max(stats_a['prob_first'], stats_b['prob_first']):.2%})")
     print(f"Último Ponto: {last_pred} (Freq: {max(stats_a['prob_last'], stats_b['prob_last']):.2%})")
 
+# Exemplo de uso
+if __name__ == "__main__":
+    predict_matchup('LAL', 'GSW')
