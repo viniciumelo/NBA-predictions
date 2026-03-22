@@ -13,4 +13,7 @@ def analyze_scoring_tendencies(team_id, num_games=20):
     games = gamefinder.get_data_frames()[0]
     recent_games = games.head(num_games)
     
+    first_point_count = 0
+    last_point_count = 0
+    
     
