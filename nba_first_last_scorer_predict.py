@@ -35,3 +35,9 @@ def analyze_scoring_tendencies(team_id, num_games=20):
         "prob_first": first_point_count / num_games,
         "prob_last": last_point_count / num_games
     }
+
+def predict_matchup(team_a_abbr, team_b_abbr):
+    id_a = get_team_id(team_a_abbr)
+    id_b = get_team_id(team_b_abbr)
+    
+    
