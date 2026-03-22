@@ -40,4 +40,8 @@ def predict_matchup(team_a_abbr, team_b_abbr):
     id_a = get_team_id(team_a_abbr)
     id_b = get_team_id(team_b_abbr)
     
+    print(f"Analisando tendências para {team_a_abbr} vs {team_b_abbr}...")
+    stats_a = analyze_scoring_tendencies(id_a)
+    stats_b = analyze_scoring_tendencies(id_b)
+    
     
