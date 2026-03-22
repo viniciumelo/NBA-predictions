@@ -48,4 +48,7 @@ def predict_matchup(team_a_abbr, team_b_abbr):
     first_pred = team_a_abbr if stats_a['prob_first'] > stats_b['prob_first'] else team_b_abbr
     last_pred = team_a_abbr if stats_a['prob_last'] > stats_b['prob_last'] else team_b_abbr
     
-    
+    print("\n--- Resultado da Predição ---")
+    print(f"Primeiro Ponto: {first_pred} (Freq: {max(stats_a['prob_first'], stats_b['prob_first']):.2%})")
+    print(f"Último Ponto: {last_pred} (Freq: {max(stats_a['prob_last'], stats_b['prob_last']):.2%})")
+
