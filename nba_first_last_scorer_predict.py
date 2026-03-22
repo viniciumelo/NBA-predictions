@@ -44,4 +44,8 @@ def predict_matchup(team_a_abbr, team_b_abbr):
     stats_a = analyze_scoring_tendencies(id_a)
     stats_b = analyze_scoring_tendencies(id_b)
     
+    # Predição Simples: Quem tem maior frequência histórica recente
+    first_pred = team_a_abbr if stats_a['prob_first'] > stats_b['prob_first'] else team_b_abbr
+    last_pred = team_a_abbr if stats_a['prob_last'] > stats_b['prob_last'] else team_b_abbr
+    
     
