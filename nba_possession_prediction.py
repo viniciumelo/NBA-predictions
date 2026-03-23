@@ -29,4 +29,7 @@ def predict_possession_advantage(team_a_name, team_b_name):
     if team_a.empty or team_b.empty:
         return "Time não encontrado. Verifique o nome."
 
-   
+    poss_a = team_a.iloc[0]['EST_POSSESSIONS']
+    poss_b = team_b.iloc[0]['EST_POSSESSIONS']
+    
+    
