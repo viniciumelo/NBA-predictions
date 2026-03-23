@@ -36,4 +36,11 @@ def predict_possession_advantage(team_a_name, team_b_name):
     print(f"{team_a.iloc[0]['TEAM_NAME']}: {poss_a:.2f}")
     print(f"{team_b.iloc[0]['TEAM_NAME']}: {poss_b:.2f}")
     
-    
+    if poss_a > poss_b:
+        winner = team_a.iloc[0]['TEAM_NAME']
+        diff = poss_a - poss_b
+    else:
+        winner = team_b.iloc[0]['TEAM_NAME']
+        diff = poss_b - poss_a
+        
+   
