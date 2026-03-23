@@ -19,3 +19,8 @@ def get_possession_data():
     )
     
     return relevant_stats
+
+def predict_possession_advantage(team_a_name, team_b_name):
+    df = get_possession_data()
+    
+    
