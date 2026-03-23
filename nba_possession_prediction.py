@@ -43,4 +43,5 @@ def predict_possession_advantage(team_a_name, team_b_name):
         winner = team_b.iloc[0]['TEAM_NAME']
         diff = poss_b - poss_a
         
-   
+    print(f"\nPredição: O {winner} tende a ditar um ritmo mais veloz e gerar mais posses (+{diff:.2f}).")
+
