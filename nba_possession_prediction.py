@@ -26,4 +26,7 @@ def predict_possession_advantage(team_a_name, team_b_name):
     team_a = df[df['TEAM_NAME'].str.contains(team_a_name, case=False)]
     team_b = df[df['TEAM_NAME'].str.contains(team_b_name, case=False)]
     
-    
+    if team_a.empty or team_b.empty:
+        return "Time não encontrado. Verifique o nome."
+
+   
