@@ -32,4 +32,8 @@ def predict_possession_advantage(team_a_name, team_b_name):
     poss_a = team_a.iloc[0]['EST_POSSESSIONS']
     poss_b = team_b.iloc[0]['EST_POSSESSIONS']
     
+    print(f"--- Análise de Ritmo (Posses por Jogo) ---")
+    print(f"{team_a.iloc[0]['TEAM_NAME']}: {poss_a:.2f}")
+    print(f"{team_b.iloc[0]['TEAM_NAME']}: {poss_b:.2f}")
+    
     
