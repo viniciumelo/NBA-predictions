@@ -58,3 +58,6 @@ def predict_player_performance(team_name, last_n_games=10):
     print(df_report.to_string(index=False))
     return df_report
 
+if __name__ == "__main__":
+    # Exemplo com o Boston Celtics
+    predict_player_performance('Celtics')
