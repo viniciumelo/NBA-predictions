@@ -13,4 +13,7 @@ def calculate_efficiency(row):
     missed_fg = row['FGA'] - row['FGM']
     missed_ft = row['FTA'] - row['FTM']
     
-    
+    eff = (row['PTS'] + row['REB'] + row['AST'] + row['STL'] + row['BLK'] 
+           - missed_fg - missed_ft - row['TOV'])
+    return eff
+
