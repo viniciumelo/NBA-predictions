@@ -26,4 +26,6 @@ def predict_player_performance(team_name, last_n_games=10):
     
     performance_report = []
 
+    print(f"Analisando rendimento recente (últimos {last_n_games} jogos) para {team_name}...")
+
     
