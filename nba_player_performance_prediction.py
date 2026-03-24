@@ -17,3 +17,13 @@ def calculate_efficiency(row):
            - missed_fg - missed_ft - row['TOV'])
     return eff
 
+def predict_player_performance(team_name, last_n_games=10):
+    team_id = get_team_id(team_name)
+    
+    # Obtém a lista de jogadores ativos no elenco
+    roster = commonteamroster.CommonTeamRoster(team_id=team_id).get_data_frames()[0]
+    player_list = roster[['PLAYER', 'PLAYER_ID', 'NUM']]
+    
+    performance_report = []
+
+    
