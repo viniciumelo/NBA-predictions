@@ -51,4 +51,7 @@ def predict_player_performance(team_name, last_n_games=10):
         # Pequena pausa para evitar bloqueio da API (Rate Limit)
         time.sleep(0.2)
 
+    # Transforma em DataFrame e ordena pelos melhores
+    df_report = pd.DataFrame(performance_report).sort_values(by='Eficiência (EFF)', ascending=False)
+    
     
