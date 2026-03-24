@@ -54,4 +54,7 @@ def predict_player_performance(team_name, last_n_games=10):
     # Transforma em DataFrame e ordena pelos melhores
     df_report = pd.DataFrame(performance_report).sort_values(by='Eficiência (EFF)', ascending=False)
     
-    
+    print("\n--- Relatório de Rendimento Estimado ---")
+    print(df_report.to_string(index=False))
+    return df_report
+
