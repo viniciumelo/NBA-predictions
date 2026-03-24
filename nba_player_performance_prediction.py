@@ -28,4 +28,27 @@ def predict_player_performance(team_name, last_n_games=10):
 
     print(f"Analisando rendimento recente (últimos {last_n_games} jogos) para {team_name}...")
 
+    for index, player in player_list.iterrows():
+        # Busca logs de jogos do jogador na temporada atual
+        logs = playergamelogs.PlayerGameLogs(
+            player_id_nullable=player['PLAYER_ID'], 
+            last_n_games_requested=last_n_games
+        ).get_data_frames()[0]
+        
+        if not logs.empty:
+            # Calcula eficiência para cada jogo e tira a média
+            logs['EFF'] = logs.apply(calculate_efficiency, axis=1)
+            avg_eff = logs['EFF'].mean()
+            avg_pts = logs['PTS'].mean()
+            avg_min = logs['MIN'].mean()
+            
+            performance_report.append({
+                'Jogador': player['PLAYER'],
+                'Minutos': round(avg_min, 1),
+                'PTS Médios': round(avg_pts, 1),
+                'Eficiência (EFF)': round(avg_eff, 2)
+            })
+        # Pequena pausa para evitar bloqueio da API (Rate Limit)
+        time.sleep(0.2)
+
     
