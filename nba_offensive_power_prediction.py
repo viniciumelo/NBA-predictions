@@ -41,3 +41,7 @@ def predict_offensive_superiority(team_a_name, team_b_name):
         
     print(f"\nPredição: O {winner} tem a maior força ofensiva.")
     print(f"Vantagem estimada de {diff:.2f} pontos a cada 100 posses.")
+
+if __name__ == "__main__":
+    # Exemplo: Denver Nuggets vs Phoenix Suns
+    predict_offensive_superiority('Nuggets', 'Suns')
