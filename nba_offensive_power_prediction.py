@@ -23,4 +23,8 @@ def predict_offensive_superiority(team_a_name, team_b_name):
         print("Erro: Uma das equipes não foi encontrada.")
         return
 
+    # Extração de valores
+    off_a, ts_a = team_a.iloc[0]['OFF_RATING'], team_a.iloc[0]['TS_PCT']
+    off_b, ts_b = team_b.iloc[0]['OFF_RATING'], team_b.iloc[0]['TS_PCT']
+    
     
