@@ -31,4 +31,13 @@ def predict_offensive_superiority(team_a_name, team_b_name):
     print(f"{team_a.iloc[0]['TEAM_NAME']}: Rating {off_a} | Eficiência Real {ts_a:.1%}")
     print(f"{team_b.iloc[0]['TEAM_NAME']}: Rating {off_b} | Eficiência Real {ts_b:.1%}")
     
-    
+    # Lógica de Predição
+    if off_a > off_b:
+        winner = team_a.iloc[0]['TEAM_NAME']
+        diff = off_a - off_b
+    else:
+        winner = team_b.iloc[0]['TEAM_NAME']
+        diff = off_b - off_a
+        
+    print(f"\nPredição: O {winner} tem a maior força ofensiva.")
+    print(f"Vantagem estimada de {diff:.2f} pontos a cada 100 posses.")
