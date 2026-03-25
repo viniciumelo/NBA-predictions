@@ -27,4 +27,8 @@ def predict_offensive_superiority(team_a_name, team_b_name):
     off_a, ts_a = team_a.iloc[0]['OFF_RATING'], team_a.iloc[0]['TS_PCT']
     off_b, ts_b = team_b.iloc[0]['OFF_RATING'], team_b.iloc[0]['TS_PCT']
     
+    print(f"--- Comparativo Ofensivo: {team_a.iloc[0]['TEAM_NAME']} vs {team_b.iloc[0]['TEAM_NAME']} ---")
+    print(f"{team_a.iloc[0]['TEAM_NAME']}: Rating {off_a} | Eficiência Real {ts_a:.1%}")
+    print(f"{team_b.iloc[0]['TEAM_NAME']}: Rating {off_b} | Eficiência Real {ts_b:.1%}")
+    
     
