@@ -13,3 +13,10 @@ def get_offensive_metrics():
     cols = ['TEAM_NAME', 'OFF_RATING', 'TS_PCT', 'AST_PCT', 'TM_TOV_PCT']
     return stats[cols]
 
+def predict_offensive_superiority(team_a_name, team_b_name):
+    df = get_offensive_metrics()
+    
+    team_a = df[df['TEAM_NAME'].str.contains(team_a_name, case=False)]
+    team_b = df[df['TEAM_NAME'].str.contains(team_b_name, case=False)]
+    
+    
