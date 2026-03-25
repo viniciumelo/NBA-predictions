@@ -19,4 +19,8 @@ def predict_offensive_superiority(team_a_name, team_b_name):
     team_a = df[df['TEAM_NAME'].str.contains(team_a_name, case=False)]
     team_b = df[df['TEAM_NAME'].str.contains(team_b_name, case=False)]
     
+    if team_a.empty or team_b.empty:
+        print("Erro: Uma das equipes não foi encontrada.")
+        return
+
     
