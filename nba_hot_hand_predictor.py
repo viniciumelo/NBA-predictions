@@ -25,3 +25,5 @@ model.fit(X, y)
 # 4. Gerando o Ranking de Probabilidade de "Hot Hand"
 df['HOT_HAND_SCORE'] = model.predict(X)
 
+# Filtrar jogadores com tempo de jogo relevante (ex: mais de 10 jogos)
+top_candidates = df[df['GP'] > 10].sort_values(by='HOT_HAND_SCORE', ascending=False).head(5)
