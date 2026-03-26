@@ -12,3 +12,9 @@ df = stats.get_data_frames()[0]
 # Jogadores com alto FG% e muitos arremessos no garrafão têm maior chance de cestas seguidas.
 df['EFICIENCIA_PROX_ARO'] = (df['FG_PCT'] * df['FGM']) / (df['FGA'] + 1)
 
+# 3. Preparando o Modelo
+# Features: Precisão de quadra, Precisão de lance livre e volume de cestas
+features = ['FG_PCT', 'FT_PCT', 'FGM', 'FG3_PCT']
+X = df[features].fillna(0)
+y = df['EFICIENCIA_PROX_ARO'].fillna(0)
+
