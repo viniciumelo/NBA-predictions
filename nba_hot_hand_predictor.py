@@ -7,3 +7,8 @@ print("Buscando dados da NBA...")
 stats = leaguedashplayerstats.LeagueDashPlayerStats(season='2023-24') # Ajuste a temporada se necessário
 df = stats.get_data_frames()[0]
 
+# 2. Engenharia de Dados para "Sequências"
+# Criamos uma métrica baseada em FG_PCT (precisão) e FGM (cestas por jogo)
+# Jogadores com alto FG% e muitos arremessos no garrafão têm maior chance de cestas seguidas.
+df['EFICIENCIA_PROX_ARO'] = (df['FG_PCT'] * df['FGM']) / (df['FGA'] + 1)
+
