@@ -27,3 +27,7 @@ df['HOT_HAND_SCORE'] = model.predict(X)
 
 # Filtrar jogadores com tempo de jogo relevante (ex: mais de 10 jogos)
 top_candidates = df[df['GP'] > 10].sort_values(by='HOT_HAND_SCORE', ascending=False).head(5)
+
+print("\n--- Top 5 Jogadores com maior probabilidade de cestas seguidas ---")
+for i, row in top_candidates.iterrows():
+    print(f"{row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']}) - Score de Sequência: {row['HOT_HAND_SCORE']:.4f}")
