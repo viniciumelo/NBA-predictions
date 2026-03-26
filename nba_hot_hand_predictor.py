@@ -18,3 +18,6 @@ features = ['FG_PCT', 'FT_PCT', 'FGM', 'FG3_PCT']
 X = df[features].fillna(0)
 y = df['EFICIENCIA_PROX_ARO'].fillna(0)
 
+# Usando Gradient Boosting para capturar relações não-lineares
+model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3)
+model.fit(X, y)
