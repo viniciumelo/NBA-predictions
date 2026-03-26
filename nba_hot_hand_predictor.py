@@ -21,3 +21,7 @@ y = df['EFICIENCIA_PROX_ARO'].fillna(0)
 # Usando Gradient Boosting para capturar relações não-lineares
 model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3)
 model.fit(X, y)
+
+# 4. Gerando o Ranking de Probabilidade de "Hot Hand"
+df['HOT_HAND_SCORE'] = model.predict(X)
+
