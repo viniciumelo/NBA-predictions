@@ -25,3 +25,23 @@ print("Buscando dados de Jump Ball inicial...")
 jump_stats = leaguedashgs_v2.LeagueDashGs_V2(season='2023-24', clutch_time_nullable='Last 5 Minutes')
 df_jump = jump_stats.get_data_frames()[0]
 
+# 3. Filtrar e Preparar Dados dos Jogadores Escolhidos
+def get_player_data(player_name):
+    # Dados Gerais
+    gen_data = df_general[df_general['PLAYER_NAME'] == player_name]
+    # Dados de Jump Ball (Aproximação usando clutch time jump balls ganhas)
+    jump_data = df_jump[df_jump['PLAYER_NAME'] == player_name]
+    
+    if gen_data.empty:
+        print(f"Erro: Jogador {player_name} não encontrado nas estatísticas gerais.")
+        return None
+    
+    return {
+        'name': player_name,
+        'team': gen_data['TEAM_ABBREVIATION'].values[0],
+        'fg_pct': gen_data['FG_PCT'].values[0],
+        'fgm': gen_data['FGM'].values[0],
+        # Simplificação: Probabilidade baseada no volume de jump balls que o jogador disputa e ganha
+        # Na API oficial, dados de First Basket específicos são difíceis de obter diretamente sem Play-by-Play
+        'jump_ball_win_prox': jump_data['W_PCT'].values[0] if not jump_data.empty else 0.5
+    }
