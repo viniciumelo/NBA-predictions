@@ -61,3 +61,10 @@ if not player_a_data or not player_b_data:
 # Como não temos eficiência do time na primeira posse, usamos a precisão do próprio pivô como peso.
 score_first_a = player_a_data['jump_ball_win_prox'] * player_a_data['fg_pct']
 score_first_b = player_b_data['jump_ball_win_prox'] * player_b_data['fg_pct']
+
+# B. Predição: MAIS CESTAS SEGUIDAS (Métrica "Hot Hand")
+# Fatores: Alto volume de cestas feitas (FGM) e alta precisão (FG%)
+# Pivôs que jogam perto do aro tendem a ter vantagem aqui.
+score_hot_a = player_a_data['fg_pct'] * player_a_data['fgm']
+score_hot_b = player_b_data['fg_pct'] * player_b_data['fgm']
+
