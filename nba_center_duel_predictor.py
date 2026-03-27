@@ -45,3 +45,19 @@ def get_player_data(player_name):
         # Na API oficial, dados de First Basket específicos são difíceis de obter diretamente sem Play-by-Play
         'jump_ball_win_prox': jump_data['W_PCT'].values[0] if not jump_data.empty else 0.5
     }
+
+player_a_data = get_player_data(CENTER_A)
+player_b_data = get_player_data(CENTER_B)
+
+if not player_a_data or not player_b_data:
+    exit()
+
+# ==============================================================================
+# LÓGICA DE PREDDIÇÃO
+# ==============================================================================
+
+# A. Predição: QUEM MARCA PRIMEIRO
+# Fatores: Quem ganha a bola ao alto (jump_ball_win_prox) * Eficiência do time
+# Como não temos eficiência do time na primeira posse, usamos a precisão do próprio pivô como peso.
+score_first_a = player_a_data['jump_ball_win_prox'] * player_a_data['fg_pct']
+score_first_b = player_b_data['jump_ball_win_prox'] * player_b_data['fg_pct']
