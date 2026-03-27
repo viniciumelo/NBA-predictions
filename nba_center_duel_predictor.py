@@ -85,3 +85,12 @@ else:
 
 print("  (Fator principal: Vantagem estimada no Jump Ball inicial)")
 print("-" * 30)
+
+# Resultado 2: Cestas Seguidas
+if score_hot_a > score_hot_b:
+    print(f"Probabilidade de MAIS CESTAS SEGUIDAS: {CENTER_A}")
+else:
+    print(f"Probabilidade de MAIS CESTAS SEGUIDAS: {CENTER_B}")
+
+print("  (Fator principal: Combinação de alto volume de cestas e precisão de quadra)")
+print("-" * 50)
