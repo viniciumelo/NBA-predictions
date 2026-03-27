@@ -17,3 +17,11 @@ print(f"Analisando duelo de pivôs: {CENTER_A} vs {CENTER_B}...\n")
 print("Buscando dados de eficiência...")
 stats = leaguedashplayerstats.LeagueDashPlayerStats(season='2023-24')
 df_general = stats.get_data_frames()[0]
+
+# 2. Obter Estatísticas de Jump Ball (Bola ao Alto)
+# Usado para prever "Marca Primeiro"
+print("Buscando dados de Jump Ball inicial...")
+# O endpoint leaguedashgs_v2 contém dados de situações específicas
+jump_stats = leaguedashgs_v2.LeagueDashGs_V2(season='2023-24', clutch_time_nullable='Last 5 Minutes')
+df_jump = jump_stats.get_data_frames()[0]
+
