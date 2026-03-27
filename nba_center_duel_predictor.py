@@ -68,3 +68,20 @@ score_first_b = player_b_data['jump_ball_win_prox'] * player_b_data['fg_pct']
 score_hot_a = player_a_data['fg_pct'] * player_a_data['fgm']
 score_hot_b = player_b_data['fg_pct'] * player_b_data['fgm']
 
+# ==============================================================================
+# RESULTADOS
+# ==============================================================================
+print("-" * 50)
+print(f"RESULTADO DA PREDIÇÃO (Modelo Estatístico Simples)")
+print("-" * 50)
+
+# Resultado 1: Marca Primeiro
+if score_first_a > score_first_b:
+    prob = (score_first_a / (score_first_a + score_first_b)) * 100
+    print(f"Probabilidade de MARCAR PRIMEIRO: {CENTER_A} ({prob:.1f}%)")
+else:
+    prob = (score_first_b / (score_first_a + score_first_b)) * 100
+    print(f"Probabilidade de MARCAR PRIMEIRO: {CENTER_B} ({prob:.1f}%)")
+
+print("  (Fator principal: Vantagem estimada no Jump Ball inicial)")
+print("-" * 30)
