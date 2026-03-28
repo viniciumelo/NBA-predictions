@@ -31,3 +31,6 @@ X_scaled = scaler.fit_transform(X)
 weights = np.array([0.5, 0.2, 0.15, 0.15]) # Pesos: Minutos, Arremessos, Erros, Faltas
 df['RISK_SCORE'] = np.dot(X_scaled, weights)
 
+# Converter para probabilidade (0 a 100%)
+df['INJURY_PROBABILITY'] = (1 / (1 + np.exp(-df['RISK_SCORE']))) * 100
+
