@@ -26,3 +26,8 @@ X = df[features].fillna(0)
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
+# 4. Cálculo do Índice de Risco (Injury Risk Score)
+# Usamos os pesos de desgaste físico para estimar a probabilidade
+weights = np.array([0.5, 0.2, 0.15, 0.15]) # Pesos: Minutos, Arremessos, Erros, Faltas
+df['RISK_SCORE'] = np.dot(X_scaled, weights)
+
