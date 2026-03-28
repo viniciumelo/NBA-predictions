@@ -22,3 +22,7 @@ df['TURNOVER_RATE'] = df['TOV'] / df['GP'] # Proxy para fadiga mental/física
 features = ['MIN_PER_GAME', 'FGA', 'TOV', 'PF'] # Variáveis de esforço e contato
 X = df[features].fillna(0)
 
+# Normalização (Essencial para modelos de saúde/risco)
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
