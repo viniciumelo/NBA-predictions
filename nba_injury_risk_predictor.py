@@ -37,3 +37,8 @@ df['INJURY_PROBABILITY'] = (1 / (1 + np.exp(-df['RISK_SCORE']))) * 100
 # 5. Exibir Jogadores com Maior Risco por Exaustão
 top_risk = df[df['GP'] > 15].sort_values(by='INJURY_PROBABILITY', ascending=False).head(5)
 
+print("\n--- Relatório de Risco de Lesão (Baseado em Desgaste Físico) ---")
+for i, row in top_risk.iterrows():
+    print(f"Atleta: {row['PLAYER_NAME']} | Time: {row['TEAM_ABBREVIATION']}")
+    print(f"Minutos/Jogo: {row['MIN_PER_GAME']:.1f} | Probabilidade de Lesão por Fadiga: {row['INJURY_PROBABILITY']:.2f}%")
+    print("-" * 40)
