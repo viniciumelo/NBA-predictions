@@ -16,3 +16,9 @@ df = stats.get_data_frames()[0]
 df['MIN_PER_GAME'] = df['MIN'] / df['GP']
 df['TURNOVER_RATE'] = df['TOV'] / df['GP'] # Proxy para fadiga mental/física
 
+# 3. Simulação de um "Target" de Lesão para Treinamento
+# Na vida real, você usaria o histórico de lesões (IL). 
+# Aqui, criamos um modelo de probabilidade baseado em desgaste (Overload).
+features = ['MIN_PER_GAME', 'FGA', 'TOV', 'PF'] # Variáveis de esforço e contato
+X = df[features].fillna(0)
+
