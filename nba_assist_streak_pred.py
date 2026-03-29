@@ -22,3 +22,6 @@ features = ['AST', 'MIN', 'AST_RATIO']
 X = df_gen[features].fillna(0)
 y = df_gen['ASSIST_EFFICIENCY'].fillna(0)
 
+model = LinearRegression()
+model.fit(X, y)
+
