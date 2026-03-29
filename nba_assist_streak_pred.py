@@ -34,3 +34,8 @@ df_filtered = df_gen[df_gen['GP'] > 10].copy()
 df_filtered['AST_PG'] = df_filtered['AST'] / df_filtered['GP']
 top_playmakers = df_filtered[df_filtered['AST_PG'] > 5].sort_values(by='STREAK_PROBABILITY', ascending=False).head(5)
 
+# 6. Exibição dos resultados
+print("\n" + "="*50)
+print("PREDIÇÃO: MAIOR PROBABILIDADE DE ASSISTÊNCIAS SEGUIDAS")
+print("="*50)
+
