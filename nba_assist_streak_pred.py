@@ -28,3 +28,9 @@ model.fit(X, y)
 # 5. Aplicando a predição para encontrar o "Garçom" mais provável
 df_gen['STREAK_PROBABILITY'] = model.predict(X)
 
+# Filtrar apenas jogadores que jogam tempo relevante (mais de 20 min/jogo)
+# e que tenham média alta de assistências
+df_filtered = df_gen[df_gen['GP'] > 10].copy()
+df_filtered['AST_PG'] = df_filtered['AST'] / df_filtered['GP']
+top_playmakers = df_filtered[df_filtered['AST_PG'] > 5].sort_values(by='STREAK_PROBABILITY', ascending=False).head(5)
+
