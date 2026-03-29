@@ -1,0 +1,8 @@
+import pandas as pd
+from nba_api.stats.endpoints import leaguedashplayerstats, playerdashptpass
+from sklearn.linear_model import LinearRegression
+
+# 1. Configuração de busca
+SEASON = '2023-24'
+print(f"Analisando métricas de passes para a temporada {SEASON}...")
+
