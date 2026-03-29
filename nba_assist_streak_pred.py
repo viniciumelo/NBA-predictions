@@ -6,3 +6,6 @@ from sklearn.linear_model import LinearRegression
 SEASON = '2023-24'
 print(f"Analisando métricas de passes para a temporada {SEASON}...")
 
+# 2. Obter estatísticas gerais de assistências
+stats = leaguedashplayerstats.LeagueDashPlayerStats(season=SEASON)
+df_gen = stats.get_data_frames()[0]
