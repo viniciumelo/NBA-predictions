@@ -25,3 +25,6 @@ y = df_gen['ASSIST_EFFICIENCY'].fillna(0)
 model = LinearRegression()
 model.fit(X, y)
 
+# 5. Aplicando a predição para encontrar o "Garçom" mais provável
+df_gen['STREAK_PROBABILITY'] = model.predict(X)
+
