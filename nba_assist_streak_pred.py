@@ -39,3 +39,8 @@ print("\n" + "="*50)
 print("PREDIÇÃO: MAIOR PROBABILIDADE DE ASSISTÊNCIAS SEGUIDAS")
 print("="*50)
 
+for i, row in top_playmakers.iterrows():
+    prob_display = row['STREAK_PROBABILITY'] / top_playmakers['STREAK_PROBABILITY'].max() * 100
+    print(f"Atleta: {row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']})")
+    print(f"Média de AST: {row['AST_PG']:.1f} | Confiança na Sequência: {prob_display:.1f}%")
+    print("-" * 30)
