@@ -37,3 +37,9 @@ print("\n" + "="*55)
 print("PREDIÇÃO: ATLETAS MAIS PROVÁVEIS DE MARCAR O ÚLTIMO PONTO")
 print("="*55)
 
+for i, row in top_closers.iterrows():
+    # Normalizando o score para uma escala de 0-100 para facilitar leitura
+    prob_simulada = (row['LAST_BUCKET_SCORE'] / top_closers['LAST_BUCKET_SCORE'].max()) * 100
+    print(f"Atleta: {row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']})")
+    print(f"Eficiência no Clutch: {row['FT_PCT']*100:.1f}% FT | Score de Fechamento: {prob_simulada:.1f}%")
+    print("-" * 40)
