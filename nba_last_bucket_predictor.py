@@ -16,3 +16,9 @@ df_clutch = clutch_stats.get_data_frames()[0]
 # e Taxa de Uso (Usage)
 df_clutch['CLUTCH_EFFICIENCY'] = (df_clutch['PTS'] * df_clutch['FT_PCT']) + df_clutch['FGM']
 
+# 3. Preparando o Modelo de Predição
+# Jogadores que cobram lances livres e tentam mais arremessos no fim têm vantagem
+features = ['PTS', 'FGM', 'FT_PCT', 'FGA', 'FTA']
+X = df_clutch[features].fillna(0)
+y = df_clutch['CLUTCH_EFFICIENCY'].fillna(0)
+
