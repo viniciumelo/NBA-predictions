@@ -9,3 +9,5 @@ clutch_stats = leaguedashplayerclutch.LeagueDashPlayerClutch(
     clutch_time_nullable='Last 5 Minutes', 
     point_diff_nullable='5'
 )
+df_clutch = clutch_stats.get_data_frames()[0]
+
