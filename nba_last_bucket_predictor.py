@@ -33,3 +33,7 @@ df_clutch['LAST_BUCKET_SCORE'] = model.predict(X)
 # Filtramos jogadores com pelo menos 10 jogos em situações de clutch
 top_closers = df_clutch[df_clutch['GP'] > 10].sort_values(by='LAST_BUCKET_SCORE', ascending=False).head(5)
 
+print("\n" + "="*55)
+print("PREDIÇÃO: ATLETAS MAIS PROVÁVEIS DE MARCAR O ÚLTIMO PONTO")
+print("="*55)
+
