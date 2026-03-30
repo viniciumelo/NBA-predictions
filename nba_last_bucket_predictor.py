@@ -29,3 +29,7 @@ model.fit(X, y)
 # 4. Gerando o Score de "Last Scorer"
 df_clutch['LAST_BUCKET_SCORE'] = model.predict(X)
 
+# 5. Filtrar os Top 5 Candidatos a fechar o jogo
+# Filtramos jogadores com pelo menos 10 jogos em situações de clutch
+top_closers = df_clutch[df_clutch['GP'] > 10].sort_values(by='LAST_BUCKET_SCORE', ascending=False).head(5)
+
