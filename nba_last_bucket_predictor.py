@@ -26,3 +26,6 @@ y = df_clutch['CLUTCH_EFFICIENCY'].fillna(0)
 model = GradientBoostingRegressor(n_estimators=100, random_state=42)
 model.fit(X, y)
 
+# 4. Gerando o Score de "Last Scorer"
+df_clutch['LAST_BUCKET_SCORE'] = model.predict(X)
+
