@@ -11,3 +11,8 @@ clutch_stats = leaguedashplayerclutch.LeagueDashPlayerClutch(
 )
 df_clutch = clutch_stats.get_data_frames()[0]
 
+# 2. Engenharia de Variáveis para o "Último Ponto"
+# Fatores: Pontos totais no clutch, Aproveitamento de lances livres (FT%) 
+# e Taxa de Uso (Usage)
+df_clutch['CLUTCH_EFFICIENCY'] = (df_clutch['PTS'] * df_clutch['FT_PCT']) + df_clutch['FGM']
+
