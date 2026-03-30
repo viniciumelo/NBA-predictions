@@ -22,3 +22,7 @@ features = ['PTS', 'FGM', 'FT_PCT', 'FGA', 'FTA']
 X = df_clutch[features].fillna(0)
 y = df_clutch['CLUTCH_EFFICIENCY'].fillna(0)
 
+# Modelo Gradient Boosting para capturar quem "decide" sob pressão
+model = GradientBoostingRegressor(n_estimators=100, random_state=42)
+model.fit(X, y)
+
