@@ -22,3 +22,6 @@ features = ['FTA', 'FGA', 'PTS', 'FT_PCT', 'USG_PCT']
 X = df_clutch[features].fillna(0)
 y = df_clutch['PENULTIMATE_SCORE_INDEX'].fillna(0)
 
+model = RandomForestRegressor(n_estimators=100, random_state=42)
+model.fit(X, y)
+
