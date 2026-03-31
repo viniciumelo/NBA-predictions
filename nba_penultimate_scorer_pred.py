@@ -17,3 +17,8 @@ df_clutch = clutch_stats.get_data_frames()[0]
 # B) Quem tem alto volume de arremessos (FGA) mas não necessariamente a maior eficiência final
 df_clutch['PENULTIMATE_SCORE_INDEX'] = (df_clutch['FTA'] * 0.6) + (df_clutch['FGA'] * 0.4)
 
+# 3. Modelo de Regressão
+features = ['FTA', 'FGA', 'PTS', 'FT_PCT', 'USG_PCT']
+X = df_clutch[features].fillna(0)
+y = df_clutch['PENULTIMATE_SCORE_INDEX'].fillna(0)
+
