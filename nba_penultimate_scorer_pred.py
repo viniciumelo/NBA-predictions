@@ -11,3 +11,9 @@ clutch_stats = leaguedashplayerclutch.LeagueDashPlayerClutch(
 )
 df_clutch = clutch_stats.get_data_frames()[0]
 
+# 2. Lógica para o "Penúltimo Ponto"
+# O penúltimo ponto geralmente pertence a:
+# A) Quem bate muitos lances livres (FTA)
+# B) Quem tem alto volume de arremessos (FGA) mas não necessariamente a maior eficiência final
+df_clutch['PENULTIMATE_SCORE_INDEX'] = (df_clutch['FTA'] * 0.6) + (df_clutch['FGA'] * 0.4)
+
