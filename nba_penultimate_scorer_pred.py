@@ -36,3 +36,9 @@ print("\n" + "="*60)
 print("PREDIÇÃO: ATLETAS MAIS PROVÁVEIS PARA O PENÚLTIMO PONTO")
 print("="*60)
 
+for i, row in top_candidates.iterrows():
+    # Normalização visual do score
+    score = (row['PROB_PENULTIMATE'] / top_candidates['PROB_PENULTIMATE'].max()) * 100
+    print(f"Atleta: {row['PLAYER_NAME']} ({row['TEAM_ABBREVIATION']})")
+    print(f"Volume no Clutch (FGA+FTA): {row['FGA'] + row['FTA']:.1f} | Índice de Probabilidade: {score:.1f}%")
+    print("-" * 40)
