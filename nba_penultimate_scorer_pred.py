@@ -28,3 +28,7 @@ model.fit(X, y)
 # 4. Predição
 df_clutch['PROB_PENULTIMATE'] = model.predict(X)
 
+# 5. Ranking dos Candidatos
+# Filtramos jogadores com participação ativa (GP > 10 no clutch)
+top_candidates = df_clutch[df_clutch['GP'] > 10].sort_values(by='PROB_PENULTIMATE', ascending=False).head(5)
+
