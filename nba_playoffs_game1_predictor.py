@@ -30,4 +30,9 @@ def predict_game_1(home_team_name, away_team_name):
     home_adjusted_score = home_net + 3.0
     away_adjusted_score = away_net
     
+    print(f"--- Predição Playoff: Jogo 1 ---")
+    print(f"Casa: {home_team_name} (Net Rating: {home_net})")
+    print(f"Fora: {away_team_name} (Net Rating: {away_net})")
+    print("-" * 30)
+    
     
