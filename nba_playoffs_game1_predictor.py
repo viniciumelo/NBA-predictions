@@ -9,4 +9,6 @@ def get_playoff_stats():
         per_mode_detailed='PerGame'
     ).get_data_frames()[0]
     
-    
+    # Filtramos colunas essenciais: Nome, Rating Ofensivo, Defensivo e Net (Saldo)
+    return stats[['TEAM_NAME', 'OFF_RATING', 'DEF_RATING', 'NET_RATING', 'W_PCT']]
+
