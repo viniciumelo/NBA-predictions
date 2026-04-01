@@ -12,3 +12,10 @@ def get_playoff_stats():
     # Filtramos colunas essenciais: Nome, Rating Ofensivo, Defensivo e Net (Saldo)
     return stats[['TEAM_NAME', 'OFF_RATING', 'DEF_RATING', 'NET_RATING', 'W_PCT']]
 
+def predict_game_1(home_team_name, away_team_name):
+    df = get_playoff_stats()
+    
+    home_stats = df[df['TEAM_NAME'].str.contains(home_team_name, case=False)]
+    away_stats = df[df['TEAM_NAME'].str.contains(away_team_name, case=False)]
+    
+    
