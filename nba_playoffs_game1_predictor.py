@@ -26,4 +26,8 @@ def predict_game_1(home_team_name, away_team_name):
     home_net = home_stats.iloc[0]['NET_RATING']
     away_net = away_stats.iloc[0]['NET_RATING']
     
-   
+    # Ajuste de Vantagem em Casa (Historicamente ~ +3.0 no Net Rating na NBA)
+    home_adjusted_score = home_net + 3.0
+    away_adjusted_score = away_net
+    
+    
