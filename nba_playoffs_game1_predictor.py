@@ -48,4 +48,9 @@ def predict_game_1(home_team_name, away_team_name):
     if confidence < 2.0:
         print("Nota: Confronto muito equilibrado. Detalhes táticos devem decidir.")
     else:
- 
+        print(f"Nota: {winner} entra como favorito estatístico claro.")
+
+if __name__ == "__main__":
+    # Exemplo de um provável confronto de playoffs
+    # O primeiro nome deve ser o time com mando de campo (Home)
+    predict_game_1('Boston Celtics', 'Miami Heat')
