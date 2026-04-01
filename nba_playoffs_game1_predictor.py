@@ -22,4 +22,8 @@ def predict_game_1(home_team_name, away_team_name):
         print("Erro: Verifique os nomes das equipes.")
         return
 
-  
+    # Extração do Net Rating (Eficiência Líquida)
+    home_net = home_stats.iloc[0]['NET_RATING']
+    away_net = away_stats.iloc[0]['NET_RATING']
+    
+   
