@@ -18,4 +18,8 @@ def predict_game_1(home_team_name, away_team_name):
     home_stats = df[df['TEAM_NAME'].str.contains(home_team_name, case=False)]
     away_stats = df[df['TEAM_NAME'].str.contains(away_team_name, case=False)]
     
-    
+    if home_stats.empty or away_stats.empty:
+        print("Erro: Verifique os nomes das equipes.")
+        return
+
+  
