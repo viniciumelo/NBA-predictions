@@ -35,4 +35,17 @@ def predict_game_1(home_team_name, away_team_name):
     print(f"Fora: {away_team_name} (Net Rating: {away_net})")
     print("-" * 30)
     
+    if home_adjusted_score > away_adjusted_score:
+        winner = home_team_name
+        confidence = home_adjusted_score - away_adjusted_score
+    else:
+        winner = away_team_name
+        confidence = away_adjusted_score - home_adjusted_score
+        
+    print(f"Predição de Vencedor (Jogo 1): {winner}")
+    print(f"Nível de Confiança Baseado em Eficiência: {confidence:.2f}")
     
+    if confidence < 2.0:
+        print("Nota: Confronto muito equilibrado. Detalhes táticos devem decidir.")
+    else:
+ 
