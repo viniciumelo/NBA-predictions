@@ -29,4 +29,7 @@ def predict_jokic_playoff_points():
     # Estatística da Temporada Atual (Última linha do DF de temporada regular)
     current_season_ppg = df_reg.iloc[-1]['PTS'] / df_reg.iloc[-1]['GP']
     
+    # Predição para os Playoffs Baseada na Forma Atual
+    predicted_points = current_season_ppg * elevation_factor
+    
     
