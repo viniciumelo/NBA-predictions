@@ -20,4 +20,7 @@ def predict_jokic_playoff_points():
     # Médias de Carreira - Temporada Regular
     reg_ppg = df_reg['PTS'].sum() / df_reg['GP'].sum()
     
+    # Médias de Carreira - Playoffs
+    playoff_ppg = df_post['PTS'].sum() / df_post['GP'].sum()
+    
     
