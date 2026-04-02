@@ -26,4 +26,7 @@ def predict_jokic_playoff_points():
     # Fator de Elevação (Quanto ele aumenta a pontuação nos playoffs)
     elevation_factor = playoff_ppg / reg_ppg
     
+    # Estatística da Temporada Atual (Última linha do DF de temporada regular)
+    current_season_ppg = df_reg.iloc[-1]['PTS'] / df_reg.iloc[-1]['GP']
+    
     
