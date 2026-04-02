@@ -39,3 +39,6 @@ def predict_jokic_playoff_points():
     print("-" * 30)
     print(f"Média Temporada Atual: {current_season_ppg:.1f} PTS")
     print(f"PREDIÇÃO PARA OS PRÓXIMOS PLAYOFFS: {predicted_points:.1f} PTS")
+
+if __name__ == "__main__":
+    predict_jokic_playoff_points()
