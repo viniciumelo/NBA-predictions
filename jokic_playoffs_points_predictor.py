@@ -32,4 +32,10 @@ def predict_jokic_playoff_points():
     # Predição para os Playoffs Baseada na Forma Atual
     predicted_points = current_season_ppg * elevation_factor
     
-    
+    print(f"--- Análise Nikola Jokic ---")
+    print(f"Média Carreira (Regular): {reg_ppg:.1f} PTS")
+    print(f"Média Carreira (Playoffs): {playoff_ppg:.1f} PTS")
+    print(f"Fator de Elevação em Playoffs: {elevation_factor:.2%}")
+    print("-" * 30)
+    print(f"Média Temporada Atual: {current_season_ppg:.1f} PTS")
+    print(f"PREDIÇÃO PARA OS PRÓXIMOS PLAYOFFS: {predicted_points:.1f} PTS")
