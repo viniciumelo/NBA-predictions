@@ -13,3 +13,8 @@ def get_jokic_stats():
     df_post = career.get_data_frames()[2] # Post Season (Playoffs)
     
     return df_reg, df_post
+
+def predict_jokic_playoff_points():
+    df_reg, df_post = get_jokic_stats()
+    
+    
