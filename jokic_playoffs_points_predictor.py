@@ -23,4 +23,7 @@ def predict_jokic_playoff_points():
     # Médias de Carreira - Playoffs
     playoff_ppg = df_post['PTS'].sum() / df_post['GP'].sum()
     
+    # Fator de Elevação (Quanto ele aumenta a pontuação nos playoffs)
+    elevation_factor = playoff_ppg / reg_ppg
+    
     
