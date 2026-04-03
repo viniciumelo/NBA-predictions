@@ -12,3 +12,12 @@ def get_sga_prediction_data():
     career = playercareerstats.PlayerCareerStats(player_id=sga_id)
     df_reg_career = career.get_data_frames()[0]
     df_post_career = career.get_data_frames()[2]
+    
+    # 2. Forma Atual (Temporada 2025-26)
+    current_season = playerdashboardbygeneralsplits.PlayerDashboardByGeneralSplits(
+        player_id=sga_id, 
+        season='2025-26'
+    ).get_data_frames()[0]
+    
+    return df_reg_career, df_post_career, current_season
+
