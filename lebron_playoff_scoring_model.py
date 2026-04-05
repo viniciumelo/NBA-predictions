@@ -23,4 +23,8 @@ def get_lebron_data():
 def predict_lebron_points():
     df_reg, df_post, current = get_lebron_data()
     
+    # Médias de Carreira
+    career_reg_avg = df_reg['PTS'].sum() / df_reg['GP'].sum()
+    career_post_avg = df_post['PTS'].sum() / df_post['GP'].sum()
     
+   
