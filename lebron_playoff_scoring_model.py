@@ -27,4 +27,7 @@ def predict_lebron_points():
     career_reg_avg = df_reg['PTS'].sum() / df_reg['GP'].sum()
     career_post_avg = df_post['PTS'].sum() / df_post['GP'].sum()
     
-   
+    # O "Playoff Mode": Proporção de aumento histórico do LeBron
+    playoff_multiplier = career_post_avg / career_reg_avg
+    
+    
