@@ -34,4 +34,9 @@ def predict_lebron_points():
     current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
     current_min = current['MIN'].iloc[0] / current['GP'].iloc[0]
     
+    # Predição Base: Média atual x multiplicador de playoff
+    # Ajuste adicional: LeBron costuma jogar +15% de minutos nos playoffs aos 41 anos
+    min_adjustment = 1.15 
+    predicted_points = (current_ppg * playoff_multiplier) * (1 + (min_adjustment - 1) * 0.5)
+
     
