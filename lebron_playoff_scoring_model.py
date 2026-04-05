@@ -39,4 +39,9 @@ def predict_lebron_points():
     min_adjustment = 1.15 
     predicted_points = (current_ppg * playoff_multiplier) * (1 + (min_adjustment - 1) * 0.5)
 
-    
+    print(f"--- Análise Estatística: LeBron James (Season 23) ---")
+    print(f"Média Atual (2025-26): {current_ppg:.1f} PTS")
+    print(f"Multiplicador Histórico de Playoffs: {playoff_multiplier:.2%}")
+    print("-" * 45)
+    print(f"PREDIÇÃO PARA O PRÓXIMO JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
+    print(f"Teto Estimado (Jogos de Eliminação): {predicted_points + 6:.1f} PTS")
