@@ -12,4 +12,11 @@ def get_lebron_data():
     df_reg_career = career.get_data_frames()[0]
     df_post_career = career.get_data_frames()[2]
     
+    # Busca dados da temporada atual (2025-26)
+    current_season = playerdashboardbygeneralsplits.PlayerDashboardByGeneralSplits(
+        player_id=lbj_id,
+        season='2025-26'
+    ).get_data_frames()[0]
     
+    return df_reg_career, df_post_career, current_season
+
