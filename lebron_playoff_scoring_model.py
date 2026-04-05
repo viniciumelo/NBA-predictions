@@ -20,3 +20,7 @@ def get_lebron_data():
     
     return df_reg_career, df_post_career, current_season
 
+def predict_lebron_points():
+    df_reg, df_post, current = get_lebron_data()
+    
+    
