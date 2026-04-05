@@ -45,3 +45,6 @@ def predict_lebron_points():
     print("-" * 45)
     print(f"PREDIÇÃO PARA O PRÓXIMO JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
     print(f"Teto Estimado (Jogos de Eliminação): {predicted_points + 6:.1f} PTS")
+
+if __name__ == "__main__":
+    predict_lebron_points()
