@@ -30,4 +30,8 @@ def predict_lebron_points():
     # O "Playoff Mode": Proporção de aumento histórico do LeBron
     playoff_multiplier = career_post_avg / career_reg_avg
     
+    # Dados da temporada 2025-26
+    current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
+    current_min = current['MIN'].iloc[0] / current['GP'].iloc[0]
+    
     
