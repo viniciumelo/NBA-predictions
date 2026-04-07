@@ -20,3 +20,7 @@ def get_kd_stats():
     
     return df_reg_career, df_post_career, current_season
 
+def predict_kd_points():
+    df_reg, df_post, current = get_kd_stats()
+    
+    
