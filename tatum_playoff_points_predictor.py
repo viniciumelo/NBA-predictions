@@ -23,4 +23,9 @@ def get_tatum_stats():
 def predict_tatum_points():
     df_reg, df_post, current = get_tatum_stats()
     
+    # Médias de Carreira (Últimos 3 anos de Playoffs são mais relevantes para o Tatum atual)
+    # Filtramos apenas as últimas 3 participações em pós-temporada
+    recent_playoffs_avg = df_post.tail(3)['PTS'].sum() / df_post.tail(3)['GP'].sum()
+    recent_reg_avg = df_reg.tail(3)['PTS'].sum() / df_reg.tail(3)['GP'].sum()
+    
     
