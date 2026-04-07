@@ -39,4 +39,11 @@ def predict_kd_points():
     # Adicionamos um pequeno ajuste de "Volume de Estrela" (+5% de arremessos)
     predicted_points = (current_ppg * playoff_consistency_factor) * 1.05
     
-    
+    print(f"--- Relatório de Predição: Kevin Durant ---")
+    print(f"Média Temporada Regular (Carreira): {reg_avg:.1f} PTS")
+    print(f"Média Playoffs (Carreira): {post_avg:.1f} PTS")
+    print("-" * 40)
+    print(f"Média Atual (2025-26): {current_ppg:.1f} PTS")
+    print(f"Aproveitamento FG Atual: {current_fg_pct:.1%}")
+    print(f"PREDIÇÃO PARA O PRÓXIMO JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
+    print(f"Zona de Conforto: {predicted_points-2:.0f} a {predicted_points+4:.0f} PTS")
