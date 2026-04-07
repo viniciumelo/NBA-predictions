@@ -47,3 +47,6 @@ def predict_kd_points():
     print(f"Aproveitamento FG Atual: {current_fg_pct:.1%}")
     print(f"PREDIÇÃO PARA O PRÓXIMO JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
     print(f"Zona de Conforto: {predicted_points-2:.0f} a {predicted_points+4:.0f} PTS")
+
+if __name__ == "__main__":
+    predict_kd_points()
