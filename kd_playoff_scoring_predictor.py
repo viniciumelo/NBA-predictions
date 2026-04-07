@@ -31,4 +31,8 @@ def predict_kd_points():
     # Durant é conhecido por manter a eficiência mesmo contra defesas de playoff
     playoff_consistency_factor = post_avg / reg_avg
     
+    # Dados 2025-26
+    current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
+    current_fg_pct = current['FG_PCT'].iloc[0]
+    
     
