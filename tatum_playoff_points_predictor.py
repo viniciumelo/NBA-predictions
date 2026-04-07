@@ -19,3 +19,8 @@ def get_tatum_stats():
     ).get_data_frames()[0]
     
     return df_reg_career, df_post_career, current_season
+
+def predict_tatum_points():
+    df_reg, df_post, current = get_tatum_stats()
+    
+    
