@@ -34,4 +34,8 @@ def predict_tatum_points():
     # Dados da temporada 2025-26
     current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
     
+    # Predição: Média atual multiplicada pelo fator de crescimento histórico recente
+    # Tatum em 2026 tem um papel de "Volume Scorer"
+    predicted_points = current_ppg * elevation_factor
+    
     
