@@ -23,4 +23,8 @@ def get_kd_stats():
 def predict_kd_points():
     df_reg, df_post, current = get_kd_stats()
     
+    # Médias de Carreira
+    reg_avg = df_reg['PTS'].sum() / df_reg['GP'].sum()
+    post_avg = df_post['PTS'].sum() / df_post['GP'].sum()
+    
     
