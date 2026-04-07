@@ -44,3 +44,6 @@ def predict_tatum_points():
     print("-" * 40)
     print(f"PREDIÇÃO PARA O PRÓXIMO JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
     print(f"Variação Esperada: {predicted_points-4:.0f} a {predicted_points+6:.0f} PTS")
+
+if __name__ == "__main__":
+    predict_tatum_points()
