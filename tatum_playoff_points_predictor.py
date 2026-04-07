@@ -31,4 +31,7 @@ def predict_tatum_points():
     # Fator de Elevação: O quanto ele cresce como pontuador principal
     elevation_factor = recent_playoffs_avg / recent_reg_avg
     
+    # Dados da temporada 2025-26
+    current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
+    
     
