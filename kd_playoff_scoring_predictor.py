@@ -27,4 +27,8 @@ def predict_kd_points():
     reg_avg = df_reg['PTS'].sum() / df_reg['GP'].sum()
     post_avg = df_post['PTS'].sum() / df_post['GP'].sum()
     
+    # Fator KD: O quanto ele mantém ou aumenta a produção sob pressão
+    # Durant é conhecido por manter a eficiência mesmo contra defesas de playoff
+    playoff_consistency_factor = post_avg / reg_avg
+    
     
