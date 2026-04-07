@@ -28,4 +28,7 @@ def predict_tatum_points():
     recent_playoffs_avg = df_post.tail(3)['PTS'].sum() / df_post.tail(3)['GP'].sum()
     recent_reg_avg = df_reg.tail(3)['PTS'].sum() / df_reg.tail(3)['GP'].sum()
     
+    # Fator de Elevação: O quanto ele cresce como pontuador principal
+    elevation_factor = recent_playoffs_avg / recent_reg_avg
+    
     
