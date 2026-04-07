@@ -38,4 +38,9 @@ def predict_tatum_points():
     # Tatum em 2026 tem um papel de "Volume Scorer"
     predicted_points = current_ppg * elevation_factor
     
-    
+    print(f"--- Relatório de Predição: Jayson Tatum ---")
+    print(f"Média Atual (2025-26): {current_ppg:.1f} PTS")
+    print(f"Crescimento Histórico em Playoffs: {elevation_factor:.2%}")
+    print("-" * 40)
+    print(f"PREDIÇÃO PARA O PRÓXIMO JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
+    print(f"Variação Esperada: {predicted_points-4:.0f} a {predicted_points+6:.0f} PTS")
