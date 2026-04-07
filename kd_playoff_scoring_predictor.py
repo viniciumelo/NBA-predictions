@@ -35,4 +35,8 @@ def predict_kd_points():
     current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
     current_fg_pct = current['FG_PCT'].iloc[0]
     
+    # Predição: Média atual ajustada pela consistência histórica
+    # Adicionamos um pequeno ajuste de "Volume de Estrela" (+5% de arremessos)
+    predicted_points = (current_ppg * playoff_consistency_factor) * 1.05
+    
     
