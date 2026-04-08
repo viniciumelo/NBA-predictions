@@ -26,4 +26,8 @@ def predict_flagg_points():
     fg_pct = current_season['FG_PCT'].iloc[0]
     ft_pct = current_season['FT_PCT'].iloc[0]
     
+    # Fator de Ajuste para Calouros em Playoffs:
+    # Novatos de elite costumam ter uma leve queda de eficiência (-5%), 
+    # mas um aumento de volume (+10%) por jogarem mais minutos.
+    rookie_playoff_adjustment = 1.05 
     
