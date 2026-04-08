@@ -10,4 +10,15 @@ def get_cooper_flagg_id():
 def predict_flagg_points():
     player_id = get_cooper_flagg_id()
     
+    # 1. Busca dados da temporada de calouro (2025-26)
+    # Analisamos os últimos meses para ver a evolução do ritmo dele
+    current_season = playerdashboardbygeneralsplits.PlayerDashboardByGeneralSplits(
+        player_id=player_id,
+        season='2025-26'
+    ).get_data_frames()[0]
+    
+    if current_season.empty:
+        print("Dados da temporada 2025-26 não encontrados.")
+        return
+
     
