@@ -31,3 +31,13 @@ def predict_flagg_points():
     # mas um aumento de volume (+10%) por jogarem mais minutos.
     rookie_playoff_adjustment = 1.05 
     
+    # Predição baseada na evolução técnica
+    predicted_points = avg_pts * rookie_playoff_adjustment
+    
+    print(f"--- Predição: Cooper Flagg (Rookie Playoffs 2026) ---")
+    print(f"Média Temporada Regular: {avg_pts:.1f} PTS")
+    print(f"Eficiência (FG%): {fg_pct:.1%}")
+    print("-" * 45)
+    print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
+    print(f"Teto de Calouro (Explosão): {predicted_points + 5.5:.1f} PTS")
+    print(f"Piso de Calouro (Pressão): {predicted_points - 4.0:.1f} PTS")
