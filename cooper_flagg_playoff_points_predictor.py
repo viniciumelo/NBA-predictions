@@ -41,3 +41,6 @@ def predict_flagg_points():
     print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
     print(f"Teto de Calouro (Explosão): {predicted_points + 5.5:.1f} PTS")
     print(f"Piso de Calouro (Pressão): {predicted_points - 4.0:.1f} PTS")
+
+if __name__ == "__main__":
+    predict_flagg_points()
