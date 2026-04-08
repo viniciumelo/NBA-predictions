@@ -21,4 +21,9 @@ def predict_flagg_points():
         print("Dados da temporada 2025-26 não encontrados.")
         return
 
+    # Estatísticas atuais
+    avg_pts = current_season['PTS'].iloc[0] / current_season['GP'].iloc[0]
+    fg_pct = current_season['FG_PCT'].iloc[0]
+    ft_pct = current_season['FT_PCT'].iloc[0]
+    
     
