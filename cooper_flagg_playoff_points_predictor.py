@@ -7,3 +7,7 @@ def get_cooper_flagg_id():
     player = [p for p in players.get_players() if "Cooper Flagg" in p['full_name']][0]
     return player['id']
 
+def predict_flagg_points():
+    player_id = get_cooper_flagg_id()
+    
+    
