@@ -23,4 +23,7 @@ def get_chet_data():
 def predict_chet_points():
     df_reg, df_post, current = get_chet_data()
     
+    # Médias de Carreira
+    reg_avg = df_reg['PTS'].sum() / df_reg['GP'].sum()
+    
     
