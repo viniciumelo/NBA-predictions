@@ -34,4 +34,8 @@ def predict_ant_man_points():
     # Dados da temporada atual 2025-26
     current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
     
+    # Predição: Média atual ajustada pelo fator de crescimento em playoffs
+    # Adicionamos um ajuste de +5% para o amadurecimento físico dele em 2026
+    predicted_points = (current_ppg * playoff_multiplier) * 1.05
+
     
