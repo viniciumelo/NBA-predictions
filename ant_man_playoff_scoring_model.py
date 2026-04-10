@@ -45,3 +45,6 @@ def predict_ant_man_points():
     print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
     print(f"Teto de Explosão (Modo Elite): {predicted_points + 7:.1f} PTS")
     print(f"Piso de Performance: {predicted_points - 4.5:.1f} PTS")
+
+if __name__ == "__main__":
+    predict_ant_man_points()
