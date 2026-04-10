@@ -43,4 +43,9 @@ def predict_chet_points():
     spacing_bonus = 1.05 if current_3p_pct > 0.37 else 1.0
     predicted_points = (current_ppg * playoff_factor) * spacing_bonus
 
-    
+    print(f"--- Relatório de Predição: Chet Holmgren ---")
+    print(f"Média Temporada Regular (Atual): {current_ppg:.1f} PTS")
+    print(f"Aproveitamento de 3 Pontos: {current_3p_pct:.1%}")
+    print("-" * 45)
+    print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
+    print(f"Intervalo Estimado: {predicted_points-3.5:.1f} a {predicted_points+5.0:.1f} PTS")
