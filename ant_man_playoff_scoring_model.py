@@ -38,4 +38,10 @@ def predict_ant_man_points():
     # Adicionamos um ajuste de +5% para o amadurecimento físico dele em 2026
     predicted_points = (current_ppg * playoff_multiplier) * 1.05
 
-    
+    print(f"--- Predição Estatística: Anthony Edwards (Ant-Man) ---")
+    print(f"Média Temporada Atual: {current_ppg:.1f} PTS")
+    print(f"Histórico de Elevação em Playoffs: {playoff_multiplier:.2%}")
+    print("-" * 50)
+    print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
+    print(f"Teto de Explosão (Modo Elite): {predicted_points + 7:.1f} PTS")
+    print(f"Piso de Performance: {predicted_points - 4.5:.1f} PTS")
