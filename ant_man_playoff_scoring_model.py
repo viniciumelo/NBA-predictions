@@ -19,3 +19,8 @@ def get_ant_data():
     ).get_data_frames()[0]
     
     return df_reg_career, df_post_career, current_season
+
+def predict_ant_man_points():
+    df_reg, df_post, current = get_ant_data()
+    
+    
