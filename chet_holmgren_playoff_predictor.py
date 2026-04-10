@@ -20,3 +20,7 @@ def get_chet_data():
     
     return df_reg_career, df_post_career, current_season
 
+def predict_chet_points():
+    df_reg, df_post, current = get_chet_data()
+    
+    
