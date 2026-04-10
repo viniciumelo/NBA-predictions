@@ -34,4 +34,8 @@ def predict_chet_points():
     else:
         playoff_factor = 1.08 
     
+    # Dados da temporada atual 2025-26
+    current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
+    current_3p_pct = current['FG3_PCT'].iloc[0]
+    
     
