@@ -31,4 +31,7 @@ def predict_ant_man_points():
     # Edwards costuma subir cerca de 15-20% sua pontuação
     playoff_multiplier = career_post_avg / career_reg_avg
     
+    # Dados da temporada atual 2025-26
+    current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
+    
     
