@@ -26,4 +26,12 @@ def predict_chet_points():
     # Médias de Carreira
     reg_avg = df_reg['PTS'].sum() / df_reg['GP'].sum()
     
+    # Se ele já jogou playoffs antes, usamos o fator histórico. 
+    # Se não, usamos uma constante de evolução de 1.08 (8% de aumento por volume de minutos)
+    if not df_post.empty:
+        post_avg = df_post['PTS'].sum() / df_post['GP'].sum()
+        playoff_factor = post_avg / reg_avg
+    else:
+        playoff_factor = 1.08 
+    
     
