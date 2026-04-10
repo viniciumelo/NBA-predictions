@@ -27,4 +27,8 @@ def predict_ant_man_points():
     career_reg_avg = df_reg['PTS'].sum() / df_reg['GP'].sum()
     career_post_avg = df_post['PTS'].sum() / df_post['GP'].sum()
     
+    # O "Ant-Man Peak": Proporção de crescimento histórico em playoffs
+    # Edwards costuma subir cerca de 15-20% sua pontuação
+    playoff_multiplier = career_post_avg / career_reg_avg
+    
     
