@@ -38,4 +38,9 @@ def predict_chet_points():
     current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
     current_3p_pct = current['FG3_PCT'].iloc[0]
     
+    # Predição: Média atual ajustada pelo fator de playoff e bônus por aproveitamento de 3pt
+    # Se ele estiver chutando bem de fora (>37%), o teto sobe
+    spacing_bonus = 1.05 if current_3p_pct > 0.37 else 1.0
+    predicted_points = (current_ppg * playoff_factor) * spacing_bonus
+
     
