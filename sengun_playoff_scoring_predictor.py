@@ -39,4 +39,6 @@ def predict_sengun_points():
     # Se o aproveitamento de lances livres for bom (>75%), o teto sobe pela eficiência.
     ft_bonus = 1.04 if current_ft_pct > 0.75 else 1.0
     
-   
+    predicted_points = (current_ppg * playoff_factor) * ft_bonus
+
+    
