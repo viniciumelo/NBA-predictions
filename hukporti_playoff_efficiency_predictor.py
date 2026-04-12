@@ -13,3 +13,9 @@ def get_hukporti_stats():
         season='2025-26'
     ).get_data_frames()[0]
     
+    # Busca histórico de playoffs (se houver de 2025)
+    career = playercareerstats.PlayerCareerStats(player_id=player_id)
+    df_post = career.get_data_frames()[2]
+    
+    return current_season, df_post
+
