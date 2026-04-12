@@ -47,3 +47,6 @@ def predict_sengun_points():
     print("-" * 45)
     print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
     print(f"Intervalo Estimado: {predicted_points-3:.1f} a {predicted_points+5:.1f} PTS")
+
+if __name__ == "__main__":
+    predict_sengun_points()
