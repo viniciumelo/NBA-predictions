@@ -27,4 +27,11 @@ def predict_sengun_points():
     current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
     current_ft_pct = current['FT_PCT'].iloc[0]
     
+    # Fator de Ajuste para Pivôs Técnicos:
+    # Sengun tende a jogar mais minutos nos playoffs. 
+    # Se ele não tiver histórico vasto de playoffs, usamos um multiplicador de volume de 1.10 (10% a mais).
+    if not df_post.empty:
+        playoff_factor = (df_post['PTS'].sum() / df_post['GP'].sum()) / (df_reg['PTS'].sum() / df_reg['GP'].sum())
+    else:
+        playoff_factor = 1.10 
     
