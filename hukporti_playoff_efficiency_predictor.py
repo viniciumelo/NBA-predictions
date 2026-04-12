@@ -30,4 +30,8 @@ def predict_points():
     # Cálculo de Eficiência: Pontos por Minuto (PPM)
     ppm = pts / mins
     
+    # Projeção de minutos em Playoffs (Cenário Realista: 3 a 5 minutos)
+    playoff_minutes_low = 2.0
+    playoff_minutes_high = 6.0
+    
     
