@@ -41,4 +41,9 @@ def predict_sengun_points():
     
     predicted_points = (current_ppg * playoff_factor) * ft_bonus
 
-    
+    print(f"--- Relatório de Predição: Alperen Sengun ---")
+    print(f"Média Atual (2025-26): {current_ppg:.1f} PTS")
+    print(f"Aproveitamento FT Atual: {current_ft_pct:.1%}")
+    print("-" * 45)
+    print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
+    print(f"Intervalo Estimado: {predicted_points-3:.1f} a {predicted_points+5:.1f} PTS")
