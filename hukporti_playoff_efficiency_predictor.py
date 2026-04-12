@@ -27,4 +27,7 @@ def predict_points():
     pts = current['PTS'].iloc[0]
     mins = current['MIN'].iloc[0]
     
+    # Cálculo de Eficiência: Pontos por Minuto (PPM)
+    ppm = pts / mins
+    
     
