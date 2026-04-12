@@ -19,3 +19,7 @@ def get_hukporti_stats():
     
     return current_season, df_post
 
+def predict_points():
+    current, df_post = get_hukporti_stats()
+    
+    
