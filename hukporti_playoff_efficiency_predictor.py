@@ -45,3 +45,6 @@ def predict_points():
     print(f"Cenário de Rotação Curta: {pred_low:.1f} PTS")
     print(f"Cenário de Garbage Time: {pred_high:.1f} PTS")
     print(f"Teto (Caso jogue 12+ min): {12 * ppm:.1f} PTS")
+
+if __name__ == "__main__":
+    predict_points()
