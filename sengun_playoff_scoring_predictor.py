@@ -23,4 +23,8 @@ def get_sengun_data():
 def predict_sengun_points():
     df_reg, df_post, current = get_sengun_data()
     
+    # Média da temporada atual 2025-26
+    current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
+    current_ft_pct = current['FT_PCT'].iloc[0]
+    
     
