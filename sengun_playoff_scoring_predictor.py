@@ -35,3 +35,8 @@ def predict_sengun_points():
     else:
         playoff_factor = 1.10 
     
+    # Em playoffs, o jogo fica mais físico, favorecendo o jogo de post de Sengun.
+    # Se o aproveitamento de lances livres for bom (>75%), o teto sobe pela eficiência.
+    ft_bonus = 1.04 if current_ft_pct > 0.75 else 1.0
+    
+   
