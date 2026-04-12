@@ -22,4 +22,9 @@ def get_hukporti_stats():
 def predict_points():
     current, df_post = get_hukporti_stats()
     
+    # Estatísticas Base 2026
+    gp = current['GP'].iloc[0]
+    pts = current['PTS'].iloc[0]
+    mins = current['MIN'].iloc[0]
+    
     
