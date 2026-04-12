@@ -34,4 +34,8 @@ def predict_points():
     playoff_minutes_low = 2.0
     playoff_minutes_high = 6.0
     
+    # Predição
+    pred_low = playoff_minutes_low * ppm
+    pred_high = playoff_minutes_high * ppm
+    
     
