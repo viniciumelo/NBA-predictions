@@ -38,4 +38,10 @@ def predict_points():
     pred_low = playoff_minutes_low * ppm
     pred_high = playoff_minutes_high * ppm
     
-    
+    print(f"--- Projeção de Playoffs 2026: Ariel Hukporti ---")
+    print(f"Média Regular 25-26: {pts/gp:.1f} PTS em {mins/gp:.1f} MIN")
+    print(f"Eficiência (PPM): {ppm:.3f}")
+    print("-" * 45)
+    print(f"Cenário de Rotação Curta: {pred_low:.1f} PTS")
+    print(f"Cenário de Garbage Time: {pred_high:.1f} PTS")
+    print(f"Teto (Caso jogue 12+ min): {12 * ppm:.1f} PTS")
