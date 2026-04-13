@@ -51,4 +51,7 @@ def prever_pontos_por_cenario():
         print(f"Eficiencia Projetada Playoff (PPM): {ppm_playoff:.3f}")
         print("-" * 45)
 
-        
+        # Iteração sobre cenários para gerar o range de predição
+        for cenario, minutos in cenarios_minutos.items():
+            predicao = minutos * ppm_playoff
+            print(f"{cenario:.<35}: {predicao:>5.1f} PTS")
