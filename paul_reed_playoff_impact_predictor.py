@@ -14,4 +14,9 @@ def obter_dados_analise():
         season='2025-26'
     ).get_data_frames()[0]
     
+    # Coleta de dados históricos de Playoffs para comparação de intensidade
+    career = playercareerstats.PlayerCareerStats(player_id=player_id)
+    df_playoffs_hist = career.get_data_frames()[2]
     
+    return current_season, df_playoffs_hist
+
