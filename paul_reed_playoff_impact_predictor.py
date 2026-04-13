@@ -58,3 +58,6 @@ def prever_pontos_por_cenario():
 
     except Exception as e:
         print(f"Erro na análise de dados: {e}")
+
+if __name__ == "__main__":
+    prever_pontos_por_cenario()
