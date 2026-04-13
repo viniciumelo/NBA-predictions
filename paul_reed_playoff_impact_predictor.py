@@ -46,4 +46,9 @@ def prever_pontos_por_cenario():
             "Cenário de Alta minutagem": 25.0
         }
 
+        print(f"=== ANALISE DE PREDICAO: PAUL REED (2026) ===")
+        print(f"Eficiencia Atual (PPM): {ppm_regular:.3f}")
+        print(f"Eficiencia Projetada Playoff (PPM): {ppm_playoff:.3f}")
+        print("-" * 45)
+
         
