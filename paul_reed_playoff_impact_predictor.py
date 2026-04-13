@@ -30,4 +30,12 @@ def prever_pontos_por_cenario():
         min_atual = current['MIN'].iloc[0]
         ppm_regular = pts_atual / min_atual
         
+        # Determinação do PPM de Playoff (Fator de Intensidade)
+        if not hist.empty:
+            # Se houver histórico, calculamos a eficiência real de pós-temporada
+            ppm_playoff = hist['PTS'].sum() / hist['MIN'].sum()
+        else:
+            # Caso contrário, aplica-se um acréscimo de 5% (ajuste de esforço defensivo/rebote)
+            ppm_playoff = ppm_regular * 1.05
+
         
