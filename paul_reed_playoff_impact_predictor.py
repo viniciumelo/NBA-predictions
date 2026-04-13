@@ -38,4 +38,12 @@ def prever_pontos_por_cenario():
             # Caso contrário, aplica-se um acréscimo de 5% (ajuste de esforço defensivo/rebote)
             ppm_playoff = ppm_regular * 1.05
 
+        # --- Definição de Cenários Estocásticos ---
+        # Em Python, usamos dicionários para mapear variáveis de ambiente (minutos)
+        cenarios_minutos = {
+            "Rotação Curta (Padrao)": 10.0,
+            "Problemas de Faltas do Titular": 18.0,
+            "Cenário de Alta minutagem": 25.0
+        }
+
         
