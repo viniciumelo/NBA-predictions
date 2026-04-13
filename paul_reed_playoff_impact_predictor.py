@@ -20,3 +20,14 @@ def obter_dados_analise():
     
     return current_season, df_playoffs_hist
 
+def prever_pontos_por_cenario():
+    try:
+        current, hist = obter_dados_analise()
+        
+        # --- Cálculo de Métricas de Eficiência ---
+        # PPM (Points Per Minute) é a métrica chave para jogadores de rotação
+        pts_atual = current['PTS'].iloc[0]
+        min_atual = current['MIN'].iloc[0]
+        ppm_regular = pts_atual / min_atual
+        
+        
