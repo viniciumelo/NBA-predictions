@@ -55,3 +55,6 @@ def prever_pontos_por_cenario():
         for cenario, minutos in cenarios_minutos.items():
             predicao = minutos * ppm_playoff
             print(f"{cenario:.<35}: {predicao:>5.1f} PTS")
+
+    except Exception as e:
+        print(f"Erro na análise de dados: {e}")
