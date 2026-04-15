@@ -28,4 +28,8 @@ def predict_harden_points():
     career_reg_avg = df_reg['PTS'].sum() / df_reg['GP'].sum()
     career_post_avg = df_post['PTS'].sum() / df_post['GP'].sum()
     
+    # Fator de Ajuste de Playoff (Ratio histórico)
+    # Geralmente em torno de 0.93 para o Harden
+    playoff_adjustment = career_post_avg / career_reg_avg
+    
     
