@@ -32,4 +32,8 @@ def predict_harden_points():
     # Geralmente em torno de 0.93 para o Harden
     playoff_adjustment = career_post_avg / career_reg_avg
     
+    # Dados da temporada 2025-26 (Média de ~23.6 PTS)
+    current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
+    current_ft_pct = current['FT_PCT'].iloc[0]
+    
     
