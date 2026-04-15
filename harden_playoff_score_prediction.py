@@ -36,4 +36,8 @@ def predict_harden_points():
     current_ppg = current['PTS'].iloc[0] / current['GP'].iloc[0]
     current_ft_pct = current['FT_PCT'].iloc[0]
     
+    # Predição baseada na média atual ajustada pelo comportamento histórico em playoffs
+    # Em 2026, ele joga mais como 'Point Guard', então o teto depende dos lances livres
+    predicted_points = current_ppg * playoff_adjustment
+    
     
