@@ -50,3 +50,6 @@ def predict_harden_points():
     print("-" * 50)
     print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
     print(f"Margem de Variância (Fator 'Clutch'): {predicted_points-5:.0f} a {predicted_points+8:.0f} PTS")
+
+if __name__ == "__main__":
+    predict_harden_points()
