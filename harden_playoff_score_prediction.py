@@ -23,4 +23,9 @@ def get_harden_data():
 def predict_harden_points():
     df_reg, df_post, current = get_harden_data()
     
+    # Médias de Carreira (Histórico de 'Playoff Harden')
+    # Historicamente, Harden tem médias de 24.0 (Reg) vs 22.5 (Playoffs)
+    career_reg_avg = df_reg['PTS'].sum() / df_reg['GP'].sum()
+    career_post_avg = df_post['PTS'].sum() / df_post['GP'].sum()
+    
     
