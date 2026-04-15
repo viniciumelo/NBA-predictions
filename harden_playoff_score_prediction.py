@@ -44,4 +44,9 @@ def predict_harden_points():
     if current_ft_pct > 0.85:
         predicted_points += 1.5
 
-    
+    print(f"--- Relatório de Predição: James Harden (Playoffs 2026) ---")
+    print(f"Média Regular 25-26: {current_ppg:.1f} PTS")
+    print(f"Fator de Ajuste Histórico: {playoff_adjustment:.2%}")
+    print("-" * 50)
+    print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
+    print(f"Margem de Variância (Fator 'Clutch'): {predicted_points-5:.0f} a {predicted_points+8:.0f} PTS")
