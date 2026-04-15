@@ -40,4 +40,8 @@ def predict_harden_points():
     # Em 2026, ele joga mais como 'Point Guard', então o teto depende dos lances livres
     predicted_points = current_ppg * playoff_adjustment
     
+    # Ajuste por eficiência de lance livre (se estiver acima da média, o teto sobe)
+    if current_ft_pct > 0.85:
+        predicted_points += 1.5
+
     
