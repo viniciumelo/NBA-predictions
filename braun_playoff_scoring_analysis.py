@@ -38,4 +38,9 @@ def predict_braun_points():
     # Predição Base
     predicted_points = avg_pts_reg * playoff_ratio
     
+    # Ajuste por aproveitamento de perímetro
+    # Se ele está chutando >38% de 3pt, ele se torna uma ameaça maior em quadra (mais minutos)
+    if fg3_pct > 0.38:
+        predicted_points += 2.0
+
     
