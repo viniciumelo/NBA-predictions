@@ -17,4 +17,9 @@ def get_braun_data():
     career = playercareerstats.PlayerCareerStats(player_id=player_id)
     df_post = career.get_data_frames()[2]
     
+    return current_season, df_post
+
+def predict_braun_points():
+    current, df_post = get_braun_data()
+    
    
