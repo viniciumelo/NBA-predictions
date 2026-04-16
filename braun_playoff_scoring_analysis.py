@@ -35,3 +35,7 @@ def predict_braun_points():
     else:
         playoff_ratio = 1.0
     
+    # Predição Base
+    predicted_points = avg_pts_reg * playoff_ratio
+    
+    
