@@ -43,4 +43,10 @@ def predict_braun_points():
     if fg3_pct > 0.38:
         predicted_points += 2.0
 
-    
+    print(f"--- Relatório de Análise: Christian Braun (2026) ---")
+    print(f"Média Regular Atual: {avg_pts_reg:.1f} PTS")
+    print(f"Aproveitamento 3PT: {fg3_pct:.1%}")
+    print("-" * 45)
+    print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
+    print(f"Cenário de Transição (Fastbreak): {predicted_points + 4:.1f} PTS")
+    print(f"Nota: A pontuação de Braun é altamente correlacionada às assistências de Jokic.")
