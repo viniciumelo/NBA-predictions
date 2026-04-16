@@ -13,4 +13,8 @@ def get_braun_data():
         season='2025-26'
     ).get_data_frames()[0]
     
+    # Histórico de Playoffs (incluindo a campanha do título de 2023)
+    career = playercareerstats.PlayerCareerStats(player_id=player_id)
+    df_post = career.get_data_frames()[2]
     
+   
