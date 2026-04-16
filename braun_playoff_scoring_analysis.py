@@ -50,3 +50,6 @@ def predict_braun_points():
     print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
     print(f"Cenário de Transição (Fastbreak): {predicted_points + 4:.1f} PTS")
     print(f"Nota: A pontuação de Braun é altamente correlacionada às assistências de Jokic.")
+
+if __name__ == "__main__":
+    predict_braun_points()
