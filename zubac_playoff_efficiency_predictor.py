@@ -39,4 +39,7 @@ def predict_zubac_points():
     # Zubac acima de 60% de FG indica que ele está dominando o garrafão
     efficiency_bonus = 1.10 if fg_pct > 0.60 else 1.0
     
+    # Predição Final
+    predicted_points = (avg_pts_reg * playoff_history_ratio) * efficiency_bonus
+
     
