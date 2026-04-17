@@ -50,3 +50,6 @@ def predict_zubac_points():
     print(f"Piso (Double-Double Thread): {predicted_points - 3:.0f} PTS")
     print(f"Teto (Aproveitamento em Faltas): {predicted_points + 4:.1f} PTS")
     print(f"Nota: A pontuação de Zubac depende 90% de pontos na tinta e lances livres.")
+
+if __name__ == "__main__":
+    predict_zubac_points()
