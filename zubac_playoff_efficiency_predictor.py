@@ -22,4 +22,9 @@ def get_zubac_data():
 def predict_zubac_points():
     current, df_post = get_zubac_data()
     
+    # Métricas da Temporada 2025-26
+    avg_pts_reg = current['PTS'].iloc[0] / current['GP'].iloc[0]
+    ft_pct = current['FT_PCT'].iloc[0]
+    fg_pct = current['FG_PCT'].iloc[0]
+    
     
