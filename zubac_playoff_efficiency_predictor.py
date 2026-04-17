@@ -13,4 +13,9 @@ def get_zubac_data():
         season='2025-26'
     ).get_data_frames()[0]
     
+    # Histórico de Playoffs (Zubac tem vasta experiência em pós-temporada)
+    career = playercareerstats.PlayerCareerStats(player_id=player_id)
+    df_post = career.get_data_frames()[2]
     
+    return current_season, df_post
+
