@@ -42,4 +42,11 @@ def predict_zubac_points():
     # Predição Final
     predicted_points = (avg_pts_reg * playoff_history_ratio) * efficiency_bonus
 
-    
+    print(f"--- Relatório de Análise: Ivica Zubac (2026) ---")
+    print(f"Média Regular Atual: {avg_pts_reg:.1f} PTS")
+    print(f"Aproveitamento de Quadra (FG%): {fg_pct:.1%}")
+    print("-" * 45)
+    print(f"PREDIÇÃO PARA O JOGO DE PLAYOFF: {predicted_points:.1f} PTS")
+    print(f"Piso (Double-Double Thread): {predicted_points - 3:.0f} PTS")
+    print(f"Teto (Aproveitamento em Faltas): {predicted_points + 4:.1f} PTS")
+    print(f"Nota: A pontuação de Zubac depende 90% de pontos na tinta e lances livres.")
