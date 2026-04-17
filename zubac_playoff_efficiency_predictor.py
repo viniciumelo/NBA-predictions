@@ -19,3 +19,7 @@ def get_zubac_data():
     
     return current_season, df_post
 
+def predict_zubac_points():
+    current, df_post = get_zubac_data()
+    
+    
