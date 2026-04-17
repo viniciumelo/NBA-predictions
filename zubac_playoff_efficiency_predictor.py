@@ -27,4 +27,12 @@ def predict_zubac_points():
     ft_pct = current['FT_PCT'].iloc[0]
     fg_pct = current['FG_PCT'].iloc[0]
     
+    # Fator Playoff: Zubac é um jogador de "piso alto"
+    # Nos playoffs, ele costuma jogar minutos mais físicos contra pivôs de elite
+    if not df_post.empty:
+        # Calculamos a relação histórica: Pontos Playoff / Pontos Regular
+        playoff_history_ratio = (df_post['PTS'].sum() / df_post['GP'].sum()) / (avg_pts_reg)
+    else:
+        playoff_history_ratio = 0.95 # Pequeno ajuste conservador se não houver dados
+    
     
