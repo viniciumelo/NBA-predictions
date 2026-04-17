@@ -35,4 +35,8 @@ def predict_zubac_points():
     else:
         playoff_history_ratio = 0.95 # Pequeno ajuste conservador se não houver dados
     
+    # Ajuste de Eficiência (Regra de Negócio)
+    # Zubac acima de 60% de FG indica que ele está dominando o garrafão
+    efficiency_bonus = 1.10 if fg_pct > 0.60 else 1.0
+    
     
