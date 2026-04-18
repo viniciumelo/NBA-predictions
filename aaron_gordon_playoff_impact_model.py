@@ -54,3 +54,6 @@ def predict_gordon_points():
 
     except Exception as e:
         print(f"Erro ao processar dados: {e}")
+
+if __name__ == "__main__":
+    predict_gordon_points()
