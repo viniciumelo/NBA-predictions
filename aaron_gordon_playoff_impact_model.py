@@ -51,3 +51,6 @@ def predict_gordon_points():
         print(f"Teto (Mismatch Ofensivo): {predicted_points + 5:.1f} PTS")
         print(f"Piso (Foco Defensivo): {predicted_points - 3.0:.1f} PTS")
         print(f"\nNota: A pontuacao de Gordon depende 70% de pontos na tinta (dunks/layups).")
+
+    except Exception as e:
+        print(f"Erro ao processar dados: {e}")
