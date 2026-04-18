@@ -13,4 +13,8 @@ def get_ag_stats():
         season='2025-26'
     ).get_data_frames()[0]
     
+    # Histórico de Playoffs (Essencial para analisar o "Playoff AG")
+    career = playercareerstats.PlayerCareerStats(player_id=player_id)
+    df_post = career.get_data_frames()[2]
     
+    return current_season, df_post
