@@ -27,3 +27,14 @@ def predict_gordon_points():
         avg_pts_reg = current['PTS'].iloc[0] / current['GP'].iloc[0]
         fg_pct = current['FG_PCT'].iloc[0]
         
+        # Fator de Elevação em Playoffs
+        # Gordon costuma manter ou subir a produção devido ao aumento de minutos
+        if not hist.empty:
+            # Pega as últimas 3 campanhas de playoffs para refletir o papel no Denver
+            recent_post = hist.tail(3)
+            post_avg = recent_post['PTS'].sum() / recent_post['GP'].sum()
+            playoff_factor = post_avg / (hist['PTS'].sum() / hist['GP'].sum())
+        else:
+            playoff_factor = 1.08 # Ajuste padrão para aumento de minutagem
+            
+        
