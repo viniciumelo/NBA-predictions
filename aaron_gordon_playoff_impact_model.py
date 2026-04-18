@@ -37,4 +37,10 @@ def predict_gordon_points():
         else:
             playoff_factor = 1.08 # Ajuste padrão para aumento de minutagem
             
+        # Predição Base
+        # O modelo adiciona um bônus se a eficiência de quadra (FG%) for alta (>55%)
+        # indicando que ele está ganhando as batalhas físicas no garrafão.
+        efficiency_multiplier = 1.05 if fg_pct > 0.55 else 1.0
+        predicted_points = (avg_pts_reg * playoff_factor) * efficiency_multiplier
+
         
