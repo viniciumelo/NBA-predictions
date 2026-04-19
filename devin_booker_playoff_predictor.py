@@ -35,4 +35,9 @@ def predict_booker_points():
         else:
             playoff_factor = 1.05 # Estimativa de aumento de volume
             
+        # O modelo aplica uma projeção de minutos: Estrelas como Booker
+        # tendem a jogar cerca de 38-40 minutos em jogos de playoff.
+        projected_min = 39.0
+        points_per_minute = avg_pts_reg / avg_min_reg
+        
         
