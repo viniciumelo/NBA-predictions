@@ -50,3 +50,9 @@ def predict_booker_points():
         print(f"Teto (Modo 'Suns System'): {predicted_points + 8:.1f} PTS")
         print(f"Piso (Defesa Ajustada): {predicted_points - 5:.1f} PTS")
         print(f"\nNota: Booker e um dos jogadores que mais tem variacao baseada em 'Shot Quality'.")
+
+    except Exception as e:
+        print(f"Erro ao processar dados: {e}")
+
+if __name__ == "__main__":
+    predict_booker_points()
