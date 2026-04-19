@@ -27,4 +27,12 @@ def predict_booker_points():
         avg_pts_reg = current['PTS'].iloc[0] / current['GP'].iloc[0]
         avg_min_reg = current['MIN'].iloc[0] / current['GP'].iloc[0]
         
+        # Fator de Playoff: Booker costuma aumentar o volume (FGA) nos playoffs
+        if not hist.empty:
+            recent_post = hist.tail(3) # Foca nas últimas 3 temporadas
+            post_avg = recent_post['PTS'].sum() / recent_post['GP'].sum()
+            playoff_factor = post_avg / (hist['PTS'].sum() / hist['GP'].sum())
+        else:
+            playoff_factor = 1.05 # Estimativa de aumento de volume
+            
         
