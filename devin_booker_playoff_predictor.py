@@ -42,4 +42,11 @@ def predict_booker_points():
         
         predicted_points = (points_per_minute * projected_min) * playoff_factor
 
-        
+        print(f"=== ANALISE DE PREDICAO: DEVIN BOOKER (2026) ===")
+        print(f"Media Regular Atual: {avg_pts_reg:.1f} PTS")
+        print(f"Media de Minutos (Regular): {avg_min_reg:.1f}")
+        print("-" * 45)
+        print(f"PROJECAO PARA JOGO DE PLAYOFF (40 min): {predicted_points:.1f} PTS")
+        print(f"Teto (Modo 'Suns System'): {predicted_points + 8:.1f} PTS")
+        print(f"Piso (Defesa Ajustada): {predicted_points - 5:.1f} PTS")
+        print(f"\nNota: Booker e um dos jogadores que mais tem variacao baseada em 'Shot Quality'.")
