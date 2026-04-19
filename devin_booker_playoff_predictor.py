@@ -40,4 +40,6 @@ def predict_booker_points():
         projected_min = 39.0
         points_per_minute = avg_pts_reg / avg_min_reg
         
+        predicted_points = (points_per_minute * projected_min) * playoff_factor
+
         
