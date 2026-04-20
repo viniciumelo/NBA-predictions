@@ -41,4 +41,6 @@ def predict_walker_points():
     print(f"Eficiência (PPM): {ppm:.3f}")
     print("-" * 50)
     
-   
+    for cenario, mins in cenarios.items():
+        pred = (mins * ppm) * playoff_intensity_factor
+        print(f"{cenario:.<35}: {pred:.1f} PTS")
