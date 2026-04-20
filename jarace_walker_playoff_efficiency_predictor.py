@@ -30,4 +30,9 @@ def predict_walker_points():
     # mas a intensidade defensiva aumenta. Projetamos uma manutenção da eficiência (1.0).
     playoff_intensity_factor = 1.0
     
+    # Cenários de Rotação (A minutagem em playoffs é volátil)
+    cenarios = {
+        "Rotação Rotineira (12 min)": 12.0,
+        "Cenário de Alta Rotação (18 min)": 18.0
+    }
     
