@@ -6,4 +6,12 @@ def calcular_score_mvp():
     # Pesos (importância relativa para o voto do MVP)
     # Win_Shares: 30%, Team_Wins: 30%, PER: 25%, PTS: 15%
     
+    data = {
+        'Jogador': ['Wembanyama', 'Jokic', 'SGA'],
+        'PTS': [25.5, 26.2, 30.5],
+        'PER': [28.5, 31.0, 29.5],
+        'Win_Shares': [12.0, 14.5, 13.0],
+        'Team_Wins': [52, 58, 55]
+    }
+    
     
