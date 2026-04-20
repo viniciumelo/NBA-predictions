@@ -18,4 +18,8 @@ def get_walker_data():
 def predict_walker_points():
     current = get_walker_data()
     
+    # Métricas Base (Temporada 2025-26)
+    pts_avg = current['PTS'].iloc[0] / current['GP'].iloc[0]
+    min_avg = current['MIN'].iloc[0] / current['GP'].iloc[0]
+    
     
