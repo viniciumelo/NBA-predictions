@@ -35,3 +35,5 @@ def calcular_score_mvp():
     for index, row in df.iterrows():
         print(f"{row['Jogador']}: {row['MVP_Score']:.2f} pontos de probabilidade")
     
+    print("-" * 45)
+    print(f"PREDICAÇÃO: O MVP é {df.iloc[0]['Jogador']}")
