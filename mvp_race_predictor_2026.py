@@ -14,4 +14,9 @@ def calcular_score_mvp():
         'Team_Wins': [52, 58, 55]
     }
     
+    df = pd.DataFrame(data)
+    
+    # Normalização simples (0 a 1) para comparar métricas com escalas diferentes
+    for col in ['PTS', 'PER', 'Win_Shares', 'Team_Wins']:
+        df[f'{col}_norm'] = df[col] / df[col].max()
     
