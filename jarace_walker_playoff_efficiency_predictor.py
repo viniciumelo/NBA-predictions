@@ -7,4 +7,11 @@ def get_walker_data():
     player = [p for p in players.get_players() if p['full_name'] == 'Jarace Walker'][0]
     player_id = player['id']
     
+    # Dados da temporada atual (2025-26)
+    current_season = playerdashboardbygeneralsplits.PlayerDashboardByGeneralSplits(
+        player_id=player_id, 
+        season='2025-26'
+    ).get_data_frames()[0]
     
+    return current_season
+
