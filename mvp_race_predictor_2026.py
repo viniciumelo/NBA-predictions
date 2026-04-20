@@ -28,4 +28,10 @@ def calcular_score_mvp():
         (df['PTS_norm'] * 0.15)
     ) * 100
     
+    # Ordenar por maior pontuação
+    df = df.sort_values(by='MVP_Score', ascending=False)
+    
+    print(f"=== ANÁLISE DE PREDICAÇÃO: MVP NBA 2026 ===")
+    for index, row in df.iterrows():
+        print(f"{row['Jogador']}: {row['MVP_Score']:.2f} pontos de probabilidade")
     
