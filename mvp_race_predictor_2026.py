@@ -20,3 +20,12 @@ def calcular_score_mvp():
     for col in ['PTS', 'PER', 'Win_Shares', 'Team_Wins']:
         df[f'{col}_norm'] = df[col] / df[col].max()
     
+    # Cálculo do Score Final com Pesos
+    df['MVP_Score'] = (
+        (df['Win_Shares_norm'] * 0.30) +
+        (df['Team_Wins_norm'] * 0.30) +
+        (df['PER_norm'] * 0.25) +
+        (df['PTS_norm'] * 0.15)
+    ) * 100
+    
+    
