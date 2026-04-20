@@ -36,3 +36,9 @@ def predict_walker_points():
         "Cenário de Alta Rotação (18 min)": 18.0
     }
     
+    print(f"=== ANALISE DE PREDICAO: JARACE WALKER (2026) ===")
+    print(f"Média Regular: {pts_avg:.1f} PTS | Minutos: {min_avg:.1f}")
+    print(f"Eficiência (PPM): {ppm:.3f}")
+    print("-" * 50)
+    
+   
