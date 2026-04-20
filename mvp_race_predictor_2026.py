@@ -37,3 +37,6 @@ def calcular_score_mvp():
     
     print("-" * 45)
     print(f"PREDICAÇÃO: O MVP é {df.iloc[0]['Jogador']}")
+
+if __name__ == "__main__":
+    calcular_score_mvp()
