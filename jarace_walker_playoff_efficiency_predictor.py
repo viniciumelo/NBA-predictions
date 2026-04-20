@@ -22,4 +22,7 @@ def predict_walker_points():
     pts_avg = current['PTS'].iloc[0] / current['GP'].iloc[0]
     min_avg = current['MIN'].iloc[0] / current['GP'].iloc[0]
     
+    # Métrica de Performance: Pontos por Minuto (PPM)
+    ppm = pts_avg / min_avg
+    
     
