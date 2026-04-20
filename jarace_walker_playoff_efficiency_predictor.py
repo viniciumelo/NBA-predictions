@@ -15,3 +15,7 @@ def get_walker_data():
     
     return current_season
 
+def predict_walker_points():
+    current = get_walker_data()
+    
+    
