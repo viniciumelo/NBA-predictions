@@ -44,3 +44,6 @@ def predict_walker_points():
     for cenario, mins in cenarios.items():
         pred = (mins * ppm) * playoff_intensity_factor
         print(f"{cenario:.<35}: {pred:.1f} PTS")
+
+if __name__ == "__main__":
+    predict_walker_points()
