@@ -25,4 +25,9 @@ def predict_walker_points():
     # Métrica de Performance: Pontos por Minuto (PPM)
     ppm = pts_avg / min_avg
     
+    # Fator de Playoff:
+    # Em séries de playoffs, o ritmo (Pace) tende a cair um pouco, 
+    # mas a intensidade defensiva aumenta. Projetamos uma manutenção da eficiência (1.0).
+    playoff_intensity_factor = 1.0
+    
     
