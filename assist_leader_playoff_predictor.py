@@ -23,4 +23,10 @@ def predict_assist_leader():
     print("2. Probabilidade de avançar de fase (Séries de 7 jogos).")
     print("3. Estabilidade do sistema ofensivo.")
     
-   
+    # Exemplo de lógica de predição:
+    # Lider = Max(AST_G * Numero_Estimado_de_Jogos_Playoff)
+    print("\nLíder provável (Cenário atual): Nikola Jokic ou Luka Doncic")
+    print("Motivo: Alta carga de posse de bola e probabilidade de séries longas.")
+
+if __name__ == "__main__":
+    predict_assist_leader()
