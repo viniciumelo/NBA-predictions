@@ -14,4 +14,7 @@ def get_playmaker_stats():
 def predict_assist_leader():
     top_players = get_playmaker_stats()
     
-   
+    print(f"--- Top Playmakers: Média de Assistências (2025-26) ---")
+    print(top_players[['PLAYER_NAME', 'AST', 'GP']].to_string(index=False))
+    
+    
