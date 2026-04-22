@@ -17,4 +17,10 @@ def predict_assist_leader():
     print(f"--- Top Playmakers: Média de Assistências (2025-26) ---")
     print(top_players[['PLAYER_NAME', 'AST', 'GP']].to_string(index=False))
     
+    print("\n--- Metodologia de Predição ---")
+    print("Para prever o líder total de assistências nos playoffs, consideramos:")
+    print("1. Média de AST/G na temporada regular.")
+    print("2. Probabilidade de avançar de fase (Séries de 7 jogos).")
+    print("3. Estabilidade do sistema ofensivo.")
     
+   
