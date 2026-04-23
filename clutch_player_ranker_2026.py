@@ -14,4 +14,8 @@ def identificar_jogador_mais_decisivo():
     # Como uma simplificação, filtramos jogadores de elite por Impacto
     df_clutch = stats[stats['MIN'] > 1000].copy()
     
+    # Criamos um índice hipotético de decisividade:
+    # Índice = (Pontos por Jogo * 0.4) + (Aproveitamento FG * 0.6)
+    df_clutch['DECISIVIDADE_SCORE'] = (df_clutch['PTS'] * 0.4) + (df_clutch['FG_PCT'] * 100 * 0.6)
+    
     
