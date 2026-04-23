@@ -18,4 +18,7 @@ def identificar_jogador_mais_decisivo():
     # Índice = (Pontos por Jogo * 0.4) + (Aproveitamento FG * 0.6)
     df_clutch['DECISIVIDADE_SCORE'] = (df_clutch['PTS'] * 0.4) + (df_clutch['FG_PCT'] * 100 * 0.6)
     
+    # Ordenamos pelos melhores
+    rank = df_clutch.sort_values(by='DECISIVIDADE_SCORE', ascending=False).head(5)
+    
     
