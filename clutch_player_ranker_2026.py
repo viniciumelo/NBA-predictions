@@ -24,3 +24,7 @@ def identificar_jogador_mais_decisivo():
     print(f"=== TOP 5 JOGADORES MAIS DECISIVOS (RANKING BASEADO EM EFICIÊNCIA) ===")
     print(rank[['PLAYER_NAME', 'PTS', 'FG_PCT', 'DECISIVIDADE_SCORE']].to_string(index=False))
     
+    print(f"\nO Jogador mais decisivo do ano (segundo o modelo): {rank.iloc[0]['PLAYER_NAME']}")
+
+if __name__ == "__main__":
+    identificar_jogador_mais_decisivo()
