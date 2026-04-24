@@ -16,4 +16,7 @@ def predict_assist_leader_2026():
     # Isso ajuda a prever quem manterá o volume até o fim da temporada
     df['PROJECTED_TOTAL_AST'] = df['AST'] * 82
     
+    # Ordena pelo maior volume projetado
+    rank = df.sort_values(by='PROJECTED_TOTAL_AST', ascending=False).head(5)
+    
     
