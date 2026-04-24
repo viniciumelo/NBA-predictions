@@ -12,4 +12,8 @@ def predict_assist_leader_2026():
     # e que possuem pelo menos 50 jogos (para garantir consistência estatística)
     df = stats[(stats['AST'] > 6.0) & (stats['GP'] > 50)].copy()
     
+    # Cálculo da projeção final: Média * Total de Jogos esperados (82)
+    # Isso ajuda a prever quem manterá o volume até o fim da temporada
+    df['PROJECTED_TOTAL_AST'] = df['AST'] * 82
+    
     
