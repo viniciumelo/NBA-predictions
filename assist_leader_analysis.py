@@ -19,4 +19,6 @@ def predict_assist_leader_2026():
     # Ordena pelo maior volume projetado
     rank = df.sort_values(by='PROJECTED_TOTAL_AST', ascending=False).head(5)
     
+    print(f"=== ANÁLISE DE PROJEÇÃO: LÍDER EM ASSISTÊNCIAS 2026 ===")
+    print(rank[['PLAYER_NAME', 'AST', 'GP', 'PROJECTED_TOTAL_AST']].to_string(index=False))
     
