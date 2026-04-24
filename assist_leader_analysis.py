@@ -24,3 +24,6 @@ def predict_assist_leader_2026():
     
     top = rank.iloc[0]
     print(f"\nPredição: {top['PLAYER_NAME']} deve encerrar como líder com aprox. {top['PROJECTED_TOTAL_AST']:.0f} assistências.")
+
+if __name__ == "__main__":
+    predict_assist_leader_2026()
