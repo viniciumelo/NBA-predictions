@@ -22,3 +22,5 @@ def predict_assist_leader_2026():
     print(f"=== ANÁLISE DE PROJEÇÃO: LÍDER EM ASSISTÊNCIAS 2026 ===")
     print(rank[['PLAYER_NAME', 'AST', 'GP', 'PROJECTED_TOTAL_AST']].to_string(index=False))
     
+    top = rank.iloc[0]
+    print(f"\nPredição: {top['PLAYER_NAME']} deve encerrar como líder com aprox. {top['PROJECTED_TOTAL_AST']:.0f} assistências.")
