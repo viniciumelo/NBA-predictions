@@ -8,3 +8,8 @@ def predict_rebound_leader():
         per_mode_detailed='PerGame'
     ).get_data_frames()[0]
     
+    # Filtramos jogadores que têm um volume alto de minutos para serem líderes
+    # (Jogadores que jogam menos de 25min/jogo raramente lideram a liga)
+    df = stats[stats['MIN'] > 25.0].copy()
+    
+    
