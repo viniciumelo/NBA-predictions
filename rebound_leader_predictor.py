@@ -12,4 +12,7 @@ def predict_rebound_leader():
     # (Jogadores que jogam menos de 25min/jogo raramente lideram a liga)
     df = stats[stats['MIN'] > 25.0].copy()
     
+    # Criamos o índice de rebote total projetado (Média * GP)
+    df['TOTAL_REB_PROJ'] = df['REB'] * df['GP']
+    
     
