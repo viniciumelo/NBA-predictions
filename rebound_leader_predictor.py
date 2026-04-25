@@ -18,4 +18,6 @@ def predict_rebound_leader():
     # Ordenamos pelos melhores
     leader_rank = df.sort_values(by='REB', ascending=False).head(5)
     
+    print(f"=== PREDICAÇÃO: LÍDER EM REBOTES 2026 ===")
+    print(leader_rank[['PLAYER_NAME', 'REB', 'GP', 'TOTAL_REB_PROJ']].to_string(index=False))
     
