@@ -24,3 +24,6 @@ def predict_rebound_leader():
     top_player = leader_rank.iloc[0]
     print(f"\nPredição: {top_player['PLAYER_NAME']} com média de {top_player['REB']} rebotes.")
     print("Nota: O volume (GP) é o fator que desempata os líderes no final da temporada.")
+
+if __name__ == "__main__":
+    predict_rebound_leader()
