@@ -21,3 +21,6 @@ def predict_rebound_leader():
     print(f"=== PREDICAÇÃO: LÍDER EM REBOTES 2026 ===")
     print(leader_rank[['PLAYER_NAME', 'REB', 'GP', 'TOTAL_REB_PROJ']].to_string(index=False))
     
+    top_player = leader_rank.iloc[0]
+    print(f"\nPredição: {top_player['PLAYER_NAME']} com média de {top_player['REB']} rebotes.")
+    print("Nota: O volume (GP) é o fator que desempata os líderes no final da temporada.")
