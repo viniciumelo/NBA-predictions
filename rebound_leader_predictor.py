@@ -15,4 +15,7 @@ def predict_rebound_leader():
     # Criamos o índice de rebote total projetado (Média * GP)
     df['TOTAL_REB_PROJ'] = df['REB'] * df['GP']
     
+    # Ordenamos pelos melhores
+    leader_rank = df.sort_values(by='REB', ascending=False).head(5)
+    
     
