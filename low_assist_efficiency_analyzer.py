@@ -22,4 +22,5 @@ def analisar_piores_passadores():
     print(f"=== ANÁLISE: JOGADORES COM MENOR EFICIÊNCIA DE PASSE (MIN > 25) ===")
     print(piores[['PLAYER_NAME', 'MIN', 'AST', 'AST_PER_MIN']].to_string(index=False))
     
-    
+    print(f"\nNota: Jogadores com menor AST_PER_MIN ocupam funções de finalização (Scoring)")
+    print(f"e não de armação. {piores.iloc[0]['PLAYER_NAME']} é o menos eficiente nesta métrica.")
