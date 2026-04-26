@@ -19,4 +19,7 @@ def analisar_piores_passadores():
     # Ordenamos pelos menores valores
     piores = df.sort_values(by='AST_PER_MIN', ascending=True).head(10)
     
-   
+    print(f"=== ANÁLISE: JOGADORES COM MENOR EFICIÊNCIA DE PASSE (MIN > 25) ===")
+    print(piores[['PLAYER_NAME', 'MIN', 'AST', 'AST_PER_MIN']].to_string(index=False))
+    
+    
