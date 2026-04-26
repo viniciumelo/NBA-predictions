@@ -13,4 +13,7 @@ def analisar_piores_passadores():
     # Jogadores que jogam muito mas distribuem pouco jogo têm o menor impacto de assistência.
     df = stats[stats['MIN'] > 25.0].copy()
     
+    # Cálculo de Assistências por Minuto (Métrica de eficiência de distribuição)
+    df['AST_PER_MIN'] = df['AST'] / df['MIN']
+    
     
