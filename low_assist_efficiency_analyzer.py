@@ -8,4 +8,9 @@ def analisar_piores_passadores():
         per_mode_detailed='PerGame'
     ).get_data_frames()[0]
     
+    # Critério Acadêmico: 
+    # Filtramos apenas jogadores com alta minutagem (> 25 min/jogo).
+    # Jogadores que jogam muito mas distribuem pouco jogo têm o menor impacto de assistência.
+    df = stats[stats['MIN'] > 25.0].copy()
+    
     
