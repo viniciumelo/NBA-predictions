@@ -24,3 +24,6 @@ def analisar_piores_passadores():
     
     print(f"\nNota: Jogadores com menor AST_PER_MIN ocupam funções de finalização (Scoring)")
     print(f"e não de armação. {piores.iloc[0]['PLAYER_NAME']} é o menos eficiente nesta métrica.")
+
+if __name__ == "__main__":
+    analisar_piores_passadores()
