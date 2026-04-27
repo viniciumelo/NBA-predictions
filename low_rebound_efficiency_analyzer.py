@@ -12,4 +12,7 @@ def analisar_piores_reboteiros():
     # Jogadores que jogam muito e pegam poucos rebotes são os "menos influentes" no vidro
     df = stats[stats['MIN'] > 25.0].copy()
     
+    # Cálculo de Rebotes por Minuto (Métrica de eficiência)
+    df['REB_PER_MIN'] = df['REB'] / df['MIN']
+    
     
