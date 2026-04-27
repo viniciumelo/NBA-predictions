@@ -21,4 +21,5 @@ def analisar_piores_reboteiros():
     print(f"=== ANÁLISE: JOGADORES COM MENOR EFICIÊNCIA DE REBOTE (MIN > 25) ===")
     print(piores[['PLAYER_NAME', 'MIN', 'REB', 'REB_PER_MIN']].to_string(index=False))
     
-   
+    print(f"\nNota: {piores.iloc[0]['PLAYER_NAME']} apresenta a menor taxa de rebotes por minuto")
+    print("entre jogadores de rotação principal nesta temporada.")
