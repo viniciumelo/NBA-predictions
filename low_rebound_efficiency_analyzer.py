@@ -8,4 +8,8 @@ def analisar_piores_reboteiros():
         per_mode_detailed='PerGame'
     ).get_data_frames()[0]
     
-   
+    # Filtro: Jogadores de alta minutagem (> 25 min/jogo)
+    # Jogadores que jogam muito e pegam poucos rebotes são os "menos influentes" no vidro
+    df = stats[stats['MIN'] > 25.0].copy()
+    
+    
