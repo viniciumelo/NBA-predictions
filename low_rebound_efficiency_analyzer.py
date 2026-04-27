@@ -15,4 +15,7 @@ def analisar_piores_reboteiros():
     # Cálculo de Rebotes por Minuto (Métrica de eficiência)
     df['REB_PER_MIN'] = df['REB'] / df['MIN']
     
+    # Ordenamos pelos menores valores
+    piores = df.sort_values(by='REB_PER_MIN', ascending=True).head(10)
+    
     
