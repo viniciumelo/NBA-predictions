@@ -23,3 +23,6 @@ def analisar_piores_reboteiros():
     
     print(f"\nNota: {piores.iloc[0]['PLAYER_NAME']} apresenta a menor taxa de rebotes por minuto")
     print("entre jogadores de rotação principal nesta temporada.")
+
+if __name__ == "__main__":
+    analisar_piores_reboteiros()
