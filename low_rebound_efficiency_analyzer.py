@@ -18,4 +18,7 @@ def analisar_piores_reboteiros():
     # Ordenamos pelos menores valores
     piores = df.sort_values(by='REB_PER_MIN', ascending=True).head(10)
     
+    print(f"=== ANÁLISE: JOGADORES COM MENOR EFICIÊNCIA DE REBOTE (MIN > 25) ===")
+    print(piores[['PLAYER_NAME', 'MIN', 'REB', 'REB_PER_MIN']].to_string(index=False))
     
+   
