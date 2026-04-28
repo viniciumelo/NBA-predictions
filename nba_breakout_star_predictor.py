@@ -23,3 +23,6 @@ def predizer_revelacao_ano():
     print(revelacoes[['PLAYER_NAME', 'MIN', 'PTS', 'IMPACTO_INDEX']].to_string(index=False))
     
     print(f"\nO jogador com maior impacto por minuto entre os jovens é: {revelacoes.iloc[0]['PLAYER_NAME']}")
+
+if __name__ == "__main__":
+    predizer_revelacao_ano()
