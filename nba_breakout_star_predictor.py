@@ -12,4 +12,8 @@ def predizer_revelacao_ano():
     # e alta minutagem para filtrar amostragem insuficiente
     df = stats[(stats['MIN'] > 20.0)].copy()
     
-   
+    # Criamos um "Índice de Impacto Juvenil"
+    # Foco: Pontos + Assistências + Rebotes normalizados por Minuto
+    df['IMPACTO_INDEX'] = (df['PTS'] + df['AST'] + df['REB']) / df['MIN']
+    
+    
