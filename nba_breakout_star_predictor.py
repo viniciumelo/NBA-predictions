@@ -8,4 +8,8 @@ def predizer_revelacao_ano():
         per_mode_detailed='PerGame'
     ).get_data_frames()[0]
     
+    # Filtramos jogadores com menos de 3 anos de liga (critério de 'revelação')
+    # e alta minutagem para filtrar amostragem insuficiente
+    df = stats[(stats['MIN'] > 20.0)].copy()
+    
    
