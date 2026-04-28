@@ -16,4 +16,7 @@ def predizer_revelacao_ano():
     # Foco: Pontos + Assistências + Rebotes normalizados por Minuto
     df['IMPACTO_INDEX'] = (df['PTS'] + df['AST'] + df['REB']) / df['MIN']
     
+    # Ordenamos pelos melhores índices
+    revelacoes = df.sort_values(by='IMPACTO_INDEX', ascending=False).head(10)
+    
     
