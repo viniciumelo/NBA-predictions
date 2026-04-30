@@ -23,4 +23,7 @@ def predict_best_playoff_coach():
         (df['Win_Percentage'] * 100 * 0.2)
     )
     
+    # Ordenação pelo impacto
+    rank = df.sort_values(by='Playoff_Impact_Score', ascending=False)
+    
     
