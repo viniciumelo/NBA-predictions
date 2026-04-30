@@ -19,4 +19,8 @@ def predict_coach_of_the_year():
     # Métrica: Win Percentage (O peso do sucesso absoluto)
     df['Win_Pct'] = (df['Wins'] / 82) * 100
     
-   
+    # Cálculo do COTY Score: (Surplus * 0.7) + (Win_Pct * 0.3)
+    # O prêmio valoriza mais superar expectativas do que apenas ter o melhor recorde.
+    df['COTY_Score'] = (df['Surplus_Wins'] * 0.7) + (df['Win_Pct'] * 0.3)
+    
+    
