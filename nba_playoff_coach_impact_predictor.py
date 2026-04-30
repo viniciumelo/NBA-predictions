@@ -32,3 +32,6 @@ def predict_best_playoff_coach():
     top_coach = rank.iloc[0]
     print(f"\nPROJEÇÃO: O técnico mais impactante nos Playoffs é {top_coach['Treinador']}.")
     print(f"Diferencial: Sua capacidade de 'Road Wins' e ajustes finos na rotação.")
+
+if __name__ == "__main__":
+    predict_best_playoff_coach()
