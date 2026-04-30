@@ -26,4 +26,7 @@ def predict_coach_of_the_year():
     # Ordenar pelos favoritos
     rank = df.sort_values(by='COTY_Score', ascending=False)
     
+    print(f"=== PREDICAÇÃO: COACH OF THE YEAR 2026 ===")
+    print(rank[['Treinador', 'Time', 'Wins', 'Surplus_Wins', 'COTY_Score']].to_string(index=False))
+    
     
