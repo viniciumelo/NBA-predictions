@@ -16,4 +16,7 @@ def predict_coach_of_the_year():
     # Quanto maior a diferença entre vitórias reais e esperadas, maior a chance do prêmio.
     df['Surplus_Wins'] = df['Wins'] - df['Expected_Wins']
     
+    # Métrica: Win Percentage (O peso do sucesso absoluto)
+    df['Win_Pct'] = (df['Wins'] / 82) * 100
     
+   
