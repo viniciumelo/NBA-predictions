@@ -23,4 +23,7 @@ def predict_coach_of_the_year():
     # O prêmio valoriza mais superar expectativas do que apenas ter o melhor recorde.
     df['COTY_Score'] = (df['Surplus_Wins'] * 0.7) + (df['Win_Pct'] * 0.3)
     
+    # Ordenar pelos favoritos
+    rank = df.sort_values(by='COTY_Score', ascending=False)
+    
     
