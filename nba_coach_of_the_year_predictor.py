@@ -29,4 +29,9 @@ def predict_coach_of_the_year():
     print(f"=== PREDICAÇÃO: COACH OF THE YEAR 2026 ===")
     print(rank[['Treinador', 'Time', 'Wins', 'Surplus_Wins', 'COTY_Score']].to_string(index=False))
     
-    
+    vencedor = rank.iloc[0]
+    print(f"\nFAVORITO: {vencedor['Treinador']} ({vencedor['Time']})")
+    print(f"Motivo: Superou a expectativa em {vencedor['Surplus_Wins']} vitórias.")
+
+if __name__ == "__main__":
+    predict_coach_of_the_year()
