@@ -26,4 +26,7 @@ def predict_best_playoff_coach():
     # Ordenação pelo impacto
     rank = df.sort_values(by='Playoff_Impact_Score', ascending=False)
     
+    print(f"=== PREDICAÇÃO: MELHOR TÉCNICO DOS PLAYOFFS 2026 ===")
+    print(rank[['Treinador', 'Time', 'Road_Wins', 'Tactical_Adjustments', 'Playoff_Impact_Score']].to_string(index=False))
+    
     
