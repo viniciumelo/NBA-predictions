@@ -13,4 +13,6 @@ def predict_best_playoff_coach():
         'Win_Percentage': [0.750, 0.640, 0.500, 0.550]
     }
     
+    df = pd.DataFrame(data)
+    
     
