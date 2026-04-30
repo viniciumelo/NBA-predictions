@@ -29,4 +29,6 @@ def predict_best_playoff_coach():
     print(f"=== PREDICAÇÃO: MELHOR TÉCNICO DOS PLAYOFFS 2026 ===")
     print(rank[['Treinador', 'Time', 'Road_Wins', 'Tactical_Adjustments', 'Playoff_Impact_Score']].to_string(index=False))
     
-    
+    top_coach = rank.iloc[0]
+    print(f"\nPROJEÇÃO: O técnico mais impactante nos Playoffs é {top_coach['Treinador']}.")
+    print(f"Diferencial: Sua capacidade de 'Road Wins' e ajustes finos na rotação.")
