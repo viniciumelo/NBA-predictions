@@ -12,4 +12,8 @@ def predict_coach_of_the_year():
     
     df = pd.DataFrame(data)
     
+    # Métrica: "Overachievement Score" (Quanto superou a expectativa)
+    # Quanto maior a diferença entre vitórias reais e esperadas, maior a chance do prêmio.
+    df['Surplus_Wins'] = df['Wins'] - df['Expected_Wins']
+    
     
