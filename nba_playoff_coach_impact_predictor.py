@@ -15,4 +15,12 @@ def predict_best_playoff_coach():
     
     df = pd.DataFrame(data)
     
+    # Cálculo do Playoff Impact Score (PIS)
+    # Peso 40% para vitórias fora de casa, 40% para ajustes táticos e 20% para % de vitórias
+    df['Playoff_Impact_Score'] = (
+        (df['Road_Wins'] * 4.0) + 
+        (df['Tactical_Adjustments'] * 4.0) + 
+        (df['Win_Percentage'] * 100 * 0.2)
+    )
+    
     
