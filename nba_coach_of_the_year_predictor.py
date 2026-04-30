@@ -10,4 +10,6 @@ def predict_coach_of_the_year():
         'Expected_Wins': [58, 35, 50, 52, 60]
     }
     
- 
+    df = pd.DataFrame(data)
+    
+    
