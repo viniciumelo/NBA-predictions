@@ -14,3 +14,9 @@ def predict_sweep_candidate():
     # 2. W_PCT: Consistência de vitória
     df = stats[['TEAM_NAME', 'W_PCT', 'NET_RATING']].copy()
     
+    # Criamos o Sweep Probability Index (SPI)
+    # SPI = (Net Rating * 0.7) + (Win % * 30)
+    # Um Net Rating acima de 8.0 indica uma equipe historicamente dominante
+    df['SWEEP_PROB_INDEX'] = (df['NET_RATING'] * 0.7) + (df['W_PCT'] * 30)
+    
+    
