@@ -32,3 +32,6 @@ def predict_seven_game_winner():
     print(f"PREDIÇÃO PARA SÉRIE DE 7 JOGOS: {top_team['TEAM_NAME']}")
     print(f"MOTIVO: O equilíbrio entre {top_team['OFF_RATING']} (OFF) e {top_team['DEF_RATING']} (DEF)")
     print("permite que a equipe sobreviva a variações táticas durante uma série longa.")
+
+if __name__ == "__main__":
+    predict_seven_game_winner()
