@@ -23,4 +23,8 @@ def predict_seven_game_winner():
     # Isso é o "DNA de Campeão" em séries de 7 jogos.
     df = df.sort_values(by='RESILIENCE_INDEX', ascending=False).head(5)
 
+    print(f"=== ANÁLISE DE RESILIÊNCIA: VENCEDOR DE SÉRIE LONGA (7 JOGOS) ===")
+    print("-" * 65)
+    print(df[['TEAM_NAME', 'NET_RATING', 'RESILIENCE_INDEX']].to_string(index=False))
+    
     
