@@ -9,4 +9,8 @@ def predict_sweep_candidate():
         measure_type_detailed_defense='Advanced'
     ).get_data_frames()[0]
     
+    # Selecionamos métricas que indicam potencial de "varrida"
+    # 1. NET_RATING: Dominância geral
+    # 2. W_PCT: Consistência de vitória
+    df = stats[['TEAM_NAME', 'W_PCT', 'NET_RATING']].copy()
     
