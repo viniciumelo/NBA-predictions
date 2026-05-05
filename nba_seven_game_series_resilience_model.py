@@ -27,4 +27,5 @@ def predict_seven_game_winner():
     print("-" * 65)
     print(df[['TEAM_NAME', 'NET_RATING', 'RESILIENCE_INDEX']].to_string(index=False))
     
-    
+    top_team = df.iloc[0]
+   
