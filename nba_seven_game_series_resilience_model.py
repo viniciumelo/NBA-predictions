@@ -19,4 +19,8 @@ def predict_seven_game_winner():
     # Equipes equilibradas (bons nos dois lados) têm RI maior que especialistas.
     df['RESILIENCE_INDEX'] = (df['NET_RATING'] * 0.5) + (df['W_PCT'] * 50)
     
+    # Fator de Ajuste: Equipes que estão no Top 10 tanto em Ofensiva quanto Defensiva
+    # Isso é o "DNA de Campeão" em séries de 7 jogos.
+    df = df.sort_values(by='RESILIENCE_INDEX', ascending=False).head(5)
+
     
