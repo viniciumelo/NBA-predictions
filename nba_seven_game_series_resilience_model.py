@@ -14,4 +14,9 @@ def predict_seven_game_winner():
     # Aqui, focamos no Net Rating e na consistência (W_PCT)
     df = stats[['TEAM_NAME', 'W_PCT', 'NET_RATING', 'OFF_RATING', 'DEF_RATING']].copy()
 
-   
+    # Cálculo do Resilience Index (RI)
+    # Séries longas premiam o equilíbrio. Multiplicamos Off e Def Rating.
+    # Equipes equilibradas (bons nos dois lados) têm RI maior que especialistas.
+    df['RESILIENCE_INDEX'] = (df['NET_RATING'] * 0.5) + (df['W_PCT'] * 50)
+    
+    
