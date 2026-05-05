@@ -22,4 +22,7 @@ def predict_sweep_candidate():
     # Ordenar pelos candidatos mais dominantes
     candidates = df.sort_values(by='SWEEP_PROB_INDEX', ascending=False).head(5)
     
+    print(f"=== ANÁLISE DE PROBABILIDADE DE VARRIDA (SWEEP) - PLAYOFFS 2026 ===")
+    print(candidates.to_string(index=False))
+    
    
