@@ -28,4 +28,7 @@ def predict_seven_game_winner():
     print(df[['TEAM_NAME', 'NET_RATING', 'RESILIENCE_INDEX']].to_string(index=False))
     
     top_team = df.iloc[0]
-   
+    print("-" * 65)
+    print(f"PREDIÇÃO PARA SÉRIE DE 7 JOGOS: {top_team['TEAM_NAME']}")
+    print(f"MOTIVO: O equilíbrio entre {top_team['OFF_RATING']} (OFF) e {top_team['DEF_RATING']} (DEF)")
+    print("permite que a equipe sobreviva a variações táticas durante uma série longa.")
