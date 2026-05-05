@@ -9,4 +9,9 @@ def predict_seven_game_winner():
         measure_type_detailed_defense='Advanced'
     ).get_data_frames()[0]
 
-    
+    # Simulando dados de Clutch (votação/performance em momentos decisivos)
+    # Em um cenário real, puxaríamos o endpoint 'LeagueDashPlayerClutch'
+    # Aqui, focamos no Net Rating e na consistência (W_PCT)
+    df = stats[['TEAM_NAME', 'W_PCT', 'NET_RATING', 'OFF_RATING', 'DEF_RATING']].copy()
+
+   
