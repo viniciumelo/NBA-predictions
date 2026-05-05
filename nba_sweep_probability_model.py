@@ -25,4 +25,7 @@ def predict_sweep_candidate():
     print(f"=== ANÁLISE DE PROBABILIDADE DE VARRIDA (SWEEP) - PLAYOFFS 2026 ===")
     print(candidates.to_string(index=False))
     
-   
+    top_team = candidates.iloc[0]
+    print(f"\nPREDIÇÃO DE DOMÍNIO:")
+    print(f"A equipe com maior chance de varrer seu oponente na 1ª rodada é o {top_team['TEAM_NAME']}.")
+    print(f"Fator Crítico: Net Rating de {top_team['NET_RATING']} indica que o time não dá chances de reação.")
