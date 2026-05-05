@@ -19,4 +19,7 @@ def predict_sweep_candidate():
     # Um Net Rating acima de 8.0 indica uma equipe historicamente dominante
     df['SWEEP_PROB_INDEX'] = (df['NET_RATING'] * 0.7) + (df['W_PCT'] * 30)
     
+    # Ordenar pelos candidatos mais dominantes
+    candidates = df.sort_values(by='SWEEP_PROB_INDEX', ascending=False).head(5)
     
+   
