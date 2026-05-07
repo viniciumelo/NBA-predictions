@@ -15,4 +15,9 @@ def predict_sga_scoring():
         print("Dados de SGA não encontrados.")
         return
 
-   
+    # Dados da Temporada Regular
+    reg_pts = sga_stats['PTS'].iloc[0]
+    reg_min = sga_stats['MIN'].iloc[0]
+    reg_fta = sga_stats['FTA'].iloc[0]  # Tentativas de Lance Livre
+    
+    
