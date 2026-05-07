@@ -14,3 +14,9 @@ def predict_wemby_blocks():
     if wemby_stats.empty:
         print("Dados de Wembanyama não encontrados para a temporada atual.")
         return
+
+    # Extrair médias atuais
+    avg_blocks = wemby_stats['BLK'].iloc[0]
+    avg_mins = wemby_stats['MIN'].iloc[0]
+    
+    
