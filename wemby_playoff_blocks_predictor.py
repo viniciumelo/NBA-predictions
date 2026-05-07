@@ -19,4 +19,7 @@ def predict_wemby_blocks():
     avg_blocks = wemby_stats['BLK'].iloc[0]
     avg_mins = wemby_stats['MIN'].iloc[0]
     
+    # Métrica de Eficiência: Tocos por Minuto
+    blk_per_min = avg_blocks / avg_mins
     
+   
