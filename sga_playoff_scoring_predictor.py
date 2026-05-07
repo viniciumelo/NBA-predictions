@@ -35,4 +35,11 @@ def predict_sga_scoring():
     # Projeção de total em uma série de 7 jogos
     series_total = projected_pts_game * 7
     
-    
+    print(f"=== PREDICAÇÃO DE SCORING: SGA NOS PLAYOFFS 2026 ===")
+    print(f"Média Temporada Regular: {reg_pts:.1f} PTS/G")
+    print(f"Minutos Projetados: {playoff_min_projection}")
+    print("-" * 50)
+    print(f"PONTUAÇÃO PROJETADA (PLAYOFFS): {projected_pts_game:.1f} PTS/G")
+    print(f"ESTIMATIVA TOTAL (Série 7 Jogos): {series_total:.0f} PONTOS")
+    print("-" * 50)
+    print("Nota: O modelo assume um aumento no Usage Rate e agressividade no 'drive'.")
