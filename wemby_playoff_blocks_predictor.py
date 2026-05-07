@@ -41,3 +41,6 @@ def predict_wemby_blocks():
     print(f"TOTAL PROJETADO (Série de 7 jogos): {total_series_blocks:.0f} tocos")
     print("-" * 45)
     print("Nota: A predição considera o aumento da minutagem e o 'Rim Protection Impact' em séries longas.")
+
+if __name__ == "__main__":
+    predict_wemby_blocks()
