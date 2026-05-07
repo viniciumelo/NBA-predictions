@@ -8,4 +8,11 @@ def predict_sga_scoring():
         per_mode_detailed='PerGame'
     ).get_data_frames()[0]
     
+    # Localizar SGA (Shai Gilgeous-Alexander)
+    sga_stats = stats[stats['PLAYER_NAME'].str.contains("Gilgeous-Alexander")]
     
+    if sga_stats.empty:
+        print("Dados de SGA não encontrados.")
+        return
+
+   
