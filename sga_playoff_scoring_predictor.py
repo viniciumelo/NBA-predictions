@@ -24,4 +24,8 @@ def predict_sga_scoring():
     # 1. Minutos: Em playoffs, estrelas do nível de SGA jogam cerca de 40-42 min.
     playoff_min_projection = 40.5
     
+    # 2. Fator de Uso (Usage): A posse de bola se concentra mais nele.
+    # Aplicamos um multiplicador de 1.08 (8% de aumento na carga ofensiva).
+    usage_multiplier = 1.08
+    
     
