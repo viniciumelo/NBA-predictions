@@ -28,4 +28,9 @@ def predict_wemby_blocks():
     playoff_mins = 38.0
     intensity_multiplier = 1.10
     
+    projected_blocks_per_game = (blk_per_min * playoff_mins) * intensity_multiplier
+    
+    # Estimativa para uma série de 7 jogos
+    total_series_blocks = projected_blocks_per_game * 7
+    
     
