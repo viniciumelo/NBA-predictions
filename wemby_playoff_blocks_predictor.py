@@ -33,4 +33,11 @@ def predict_wemby_blocks():
     # Estimativa para uma série de 7 jogos
     total_series_blocks = projected_blocks_per_game * 7
     
-    
+    print(f"=== PREDICAÇÃO DE TOCOS: WEMBY NOS PLAYOFFS 2026 ===")
+    print(f"Média Temporada Regular: {avg_blocks:.1f} BLK/G")
+    print(f"Minutos Projetados (Playoffs): {playoff_mins}")
+    print("-" * 45)
+    print(f"PREDIÇÃO POR JOGO: {projected_blocks_per_game:.2f} tocos")
+    print(f"TOTAL PROJETADO (Série de 7 jogos): {total_series_blocks:.0f} tocos")
+    print("-" * 45)
+    print("Nota: A predição considera o aumento da minutagem e o 'Rim Protection Impact' em séries longas.")
