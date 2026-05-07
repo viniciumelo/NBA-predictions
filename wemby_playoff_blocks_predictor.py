@@ -8,4 +8,9 @@ def predict_wemby_blocks():
         per_mode_detailed='PerGame'
     ).get_data_frames()[0]
     
+    # Filtrar dados do Wembanyama
+    wemby_stats = stats[stats['PLAYER_NAME'].str.contains("Wembanyama")]
     
+    if wemby_stats.empty:
+        print("Dados de Wembanyama não encontrados para a temporada atual.")
+        return
