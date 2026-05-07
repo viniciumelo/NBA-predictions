@@ -20,4 +20,8 @@ def predict_sga_scoring():
     reg_min = sga_stats['MIN'].iloc[0]
     reg_fta = sga_stats['FTA'].iloc[0]  # Tentativas de Lance Livre
     
+    # --- Ajustes Preditivos para Playoffs ---
+    # 1. Minutos: Em playoffs, estrelas do nível de SGA jogam cerca de 40-42 min.
+    playoff_min_projection = 40.5
+    
     
