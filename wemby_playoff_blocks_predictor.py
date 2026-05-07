@@ -22,4 +22,10 @@ def predict_wemby_blocks():
     # Métrica de Eficiência: Tocos por Minuto
     blk_per_min = avg_blocks / avg_mins
     
-   
+    # --- Premissas de Playoff ---
+    # 1. Minutos aumentam (Estrela joga mais tempo) -> Aprox 38 min
+    # 2. Fator de Intensidade Defensiva (Aumento de 10% na taxa de tocos)
+    playoff_mins = 38.0
+    intensity_multiplier = 1.10
+    
+    
