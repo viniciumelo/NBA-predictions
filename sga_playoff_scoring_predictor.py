@@ -28,4 +28,8 @@ def predict_sga_scoring():
     # Aplicamos um multiplicador de 1.08 (8% de aumento na carga ofensiva).
     usage_multiplier = 1.08
     
+    # Cálculo da Pontuação Projetada (Pontos por Minuto * Novos Minutos * Ajuste de Uso)
+    pts_per_min = reg_pts / reg_min
+    projected_pts_game = (pts_per_min * playoff_min_projection) * usage_multiplier
     
+   
