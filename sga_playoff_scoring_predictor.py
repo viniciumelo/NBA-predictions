@@ -43,3 +43,6 @@ def predict_sga_scoring():
     print(f"ESTIMATIVA TOTAL (Série 7 Jogos): {series_total:.0f} PONTOS")
     print("-" * 50)
     print("Nota: O modelo assume um aumento no Usage Rate e agressividade no 'drive'.")
+
+if __name__ == "__main__":
+    predict_sga_scoring()
