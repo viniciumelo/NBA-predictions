@@ -23,4 +23,9 @@ def predict_lebron_points():
     # 1. Minutos: Na temporada ele preserva o corpo, nos Playoffs o teto sobe.
     playoff_min_projection = 39.0
     
+    # 2. Fator de Intensidade (Efficiency Bump):
+    # LeBron costuma aumentar sua eficiência e volume de chutes convertidos.
+    # Aplicamos um multiplicador de 1.12 (12% de aumento no impacto ofensivo).
+    playoff_intensity_factor = 1.12
+    
     
