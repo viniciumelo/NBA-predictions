@@ -35,4 +35,11 @@ def predict_lebron_points():
     # Projeção para uma série de 7 jogos
     series_total = projected_pts_game * 7
     
-    
+    print(f"=== PREDICAÇÃO DE PERFORMANCE: LEBRON JAMES (PLAYOFFS 2026) ===")
+    print(f"Média Temporada Regular: {reg_pts:.1f} PTS/G")
+    print(f"Minutos Projetados: {playoff_min_projection}")
+    print("-" * 55)
+    print(f"PONTUAÇÃO PROJETADA (PLAYOFFS): {projected_pts_game:.1f} PTS/G")
+    print(f"TOTAL ESTIMADO (Série de 7 jogos): {series_total:.0f} PONTOS")
+    print("-" * 55)
+    print("Nota: O modelo considera o aumento histórico de uso e minutagem do atleta.")
