@@ -28,4 +28,7 @@ def predict_lebron_points():
     # Aplicamos um multiplicador de 1.12 (12% de aumento no impacto ofensivo).
     playoff_intensity_factor = 1.12
     
+    # Cálculo: (Pontos por Minuto na temporada) * (Minutos de Playoff) * (Fator de Intensidade)
+    pts_per_min = reg_pts / reg_min
+    projected_pts_game = (pts_per_min * playoff_min_projection) * playoff_intensity_factor
     
