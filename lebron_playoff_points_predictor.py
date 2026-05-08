@@ -19,4 +19,8 @@ def predict_lebron_points():
     reg_pts = lbj_stats['PTS'].iloc[0]
     reg_min = lbj_stats['MIN'].iloc[0]
     
+    # --- Ajustes Preditivos: O "Modo Playoff" ---
+    # 1. Minutos: Na temporada ele preserva o corpo, nos Playoffs o teto sobe.
+    playoff_min_projection = 39.0
+    
     
