@@ -43,3 +43,6 @@ def predict_lebron_points():
     print(f"TOTAL ESTIMADO (Série de 7 jogos): {series_total:.0f} PONTOS")
     print("-" * 55)
     print("Nota: O modelo considera o aumento histórico de uso e minutagem do atleta.")
+
+if __name__ == "__main__":
+    predict_lebron_points()
