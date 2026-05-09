@@ -30,4 +30,8 @@ def predict_antman_performance():
     # Aplicamos um multiplicador de eficiência ajustada de 1.15.
     alpha_boost_factor = 1.15
     
-   
+    # Cálculo: (Pontos por Minuto) * (Novos Minutos) * (Fator de Agressividade)
+    pts_per_min = reg_pts / reg_min
+    projected_pts_game = (pts_per_min * playoff_min_projection) * alpha_boost_factor
+    
+    
