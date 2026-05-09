@@ -9,4 +9,11 @@ def predict_antman_performance():
         per_mode_detailed='PerGame'
     ).get_data_frames()[0]
     
+    # Localizar Anthony Edwards
+    ant_stats = stats[stats['PLAYER_NAME'].str.contains("Anthony Edwards")]
     
+    if ant_stats.empty:
+        print("Dados de Anthony Edwards não encontrados. Verifique a conexão com a API.")
+        return
+
+   
