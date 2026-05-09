@@ -34,4 +34,7 @@ def predict_antman_performance():
     pts_per_min = reg_pts / reg_min
     projected_pts_game = (pts_per_min * playoff_min_projection) * alpha_boost_factor
     
+    # Projeção para uma série de 7 jogos
+    series_total = projected_pts_game * 7
     
+   
