@@ -37,4 +37,13 @@ def predict_antman_performance():
     # Projeção para uma série de 7 jogos
     series_total = projected_pts_game * 7
     
-   
+    print(f"=== PREDICAÇÃO DE PERFORMANCE: ANTHONY EDWARDS (PLAYOFFS 2026) ===")
+    print(f"Status: Líder Ofensivo - Minnesota Timberwolves")
+    print(f"Média Temporada Regular: {reg_pts:.1f} PTS/G")
+    print("-" * 55)
+    print(f"MINUTOS PROJETADOS: {playoff_min_projection}")
+    print(f"PONTUAÇÃO PROJETADA: {projected_pts_game:.1f} PTS/G")
+    print(f"TOTAL ESTIMADO NA SÉRIE (7 JOGOS): {series_total:.0f} PONTOS")
+    print("-" * 55)
+    print("Nota: O modelo baseia-se no histórico de 'Playoff Rise' do atleta,")
+    print("onde o Volume de Uso (Usage) cresce exponencialmente sob pressão.")
