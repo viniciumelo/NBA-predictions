@@ -21,4 +21,8 @@ def predict_antman_performance():
     reg_min = ant_stats['MIN'].iloc[0]
     reg_fga = ant_stats['FGA'].iloc[0] # Tentativas de arremesso
     
-   
+    # --- Parâmetros de Projeção Playoff (Modelo Ant-Man) ---
+    # 1. Minutos: Em jogos decisivos, Ant Man tende a jogar ~41 minutos.
+    playoff_min_projection = 41.0
+    
+    
