@@ -47,3 +47,6 @@ def predict_antman_performance():
     print("-" * 55)
     print("Nota: O modelo baseia-se no histórico de 'Playoff Rise' do atleta,")
     print("onde o Volume de Uso (Usage) cresce exponencialmente sob pressão.")
+
+if __name__ == "__main__":
+    predict_antman_performance()
