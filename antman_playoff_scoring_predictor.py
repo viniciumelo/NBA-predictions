@@ -25,4 +25,9 @@ def predict_antman_performance():
     # 1. Minutos: Em jogos decisivos, Ant Man tende a jogar ~41 minutos.
     playoff_min_projection = 41.0
     
+    # 2. Alpha Scorer Factor: 
+    # Edwards aumenta sua agressividade (FGA) em cerca de 15% nos Playoffs.
+    # Aplicamos um multiplicador de eficiência ajustada de 1.15.
+    alpha_boost_factor = 1.15
     
+   
