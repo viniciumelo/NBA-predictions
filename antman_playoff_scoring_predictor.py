@@ -16,4 +16,9 @@ def predict_antman_performance():
         print("Dados de Anthony Edwards não encontrados. Verifique a conexão com a API.")
         return
 
+    # Estatísticas de base na temporada regular
+    reg_pts = ant_stats['PTS'].iloc[0]
+    reg_min = ant_stats['MIN'].iloc[0]
+    reg_fga = ant_stats['FGA'].iloc[0] # Tentativas de arremesso
+    
    
