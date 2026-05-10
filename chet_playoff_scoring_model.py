@@ -35,4 +35,13 @@ def predict_chet_performance():
     # Estimativa para uma série de 7 jogos
     series_total = projected_pts_game * 7
     
-   
+    print(f"=== PREDICAÇÃO DE PONTOS: CHET HOLMGREN (PLAYOFFS 2026) ===")
+    print(f"Média Atual (Temporada): {reg_pts:.1f} PTS/G")
+    print(f"Minutos Projetados: {playoff_mins}")
+    print("-" * 50)
+    print(f"PONTUAÇÃO PROJETADA: {projected_pts_game:.1f} PTS/G")
+    print(f"TOTAL NA SÉRIE (7 JOGOS): {series_total:.0f} PONTOS")
+    print("-" * 50)
+    print("Nota: A projeção considera o papel de Chet como espaçador de quadra")
+    print("e o aumento de volume ofensivo em rotações mais curtas.")
+
