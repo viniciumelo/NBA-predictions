@@ -45,3 +45,5 @@ def predict_chet_performance():
     print("Nota: A projeção considera o papel de Chet como espaçador de quadra")
     print("e o aumento de volume ofensivo em rotações mais curtas.")
 
+if __name__ == "__main__":
+    predict_chet_performance()
