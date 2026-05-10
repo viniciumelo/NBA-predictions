@@ -19,4 +19,8 @@ def predict_chet_performance():
     reg_pts = chet_stats['PTS'].iloc[0]
     reg_min = chet_stats['MIN'].iloc[0]
     
+    # --- Premissas de Playoff ---
+    # 1. Minutos: Em playoffs, Chet deve subir de ~30-32 para ~37 min.
+    playoff_mins = 37.0
+    
     
