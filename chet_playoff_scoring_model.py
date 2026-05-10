@@ -8,4 +8,11 @@ def predict_chet_performance():
         per_mode_detailed='PerGame'
     ).get_data_frames()[0]
     
+    # Filtrar dados do Chet Holmgren
+    chet_stats = stats[stats['PLAYER_NAME'].str.contains("Holmgren")]
+    
+    if chet_stats.empty:
+        print("Dados de Chet Holmgren não encontrados.")
+        return
+
    
