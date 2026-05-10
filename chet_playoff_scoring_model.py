@@ -15,4 +15,8 @@ def predict_chet_performance():
         print("Dados de Chet Holmgren não encontrados.")
         return
 
-   
+    # Médias da Temporada Regular
+    reg_pts = chet_stats['PTS'].iloc[0]
+    reg_min = chet_stats['MIN'].iloc[0]
+    
+    
