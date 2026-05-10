@@ -28,4 +28,8 @@ def predict_chet_performance():
     # Aplicamos um multiplicador de 'Floor Spacer' de 1.05.
     spacing_multiplier = 1.05
     
+    # Cálculo: (Pontos por Minuto) * (Minutos de Playoff) * (Ajuste de Sistema)
+    pts_per_min = reg_pts / reg_min
+    projected_pts_game = (pts_per_min * playoff_mins) * spacing_multiplier
+    
     
