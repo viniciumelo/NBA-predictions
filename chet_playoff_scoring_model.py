@@ -23,4 +23,9 @@ def predict_chet_performance():
     # 1. Minutos: Em playoffs, Chet deve subir de ~30-32 para ~37 min.
     playoff_mins = 37.0
     
+    # 2. Shooting Volume: O sistema do OKC distribui bem a bola, 
+    # mas a eficiência do Chet (TS%) costuma se manter estável.
+    # Aplicamos um multiplicador de 'Floor Spacer' de 1.05.
+    spacing_multiplier = 1.05
+    
     
