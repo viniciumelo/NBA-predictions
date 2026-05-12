@@ -23,4 +23,8 @@ def predict_brunson_points():
     # 1. Minutos: Em Playoffs, Brunson raramente descansa, chegando a ~42 minutos.
     playoff_min_projection = 42.0
     
+    # 2. Volume de Arremessos (Usage Jump):
+    # Brunson assume a responsabilidade final e aumenta sua taxa de arremessos em ~18%.
+    usage_expansion_factor = 1.18
+    
     
