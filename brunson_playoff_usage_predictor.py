@@ -31,4 +31,7 @@ def predict_brunson_points():
     pts_per_min = reg_pts / reg_min
     projected_pts_game = (pts_per_min * playoff_min_projection) * usage_expansion_factor
     
+    # Projeção para uma série de 7 jogos
+    series_total = projected_pts_game * 7
+    
     
