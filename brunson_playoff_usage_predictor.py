@@ -19,4 +19,8 @@ def predict_brunson_points():
     reg_pts = jb_stats['PTS'].iloc[0]
     reg_min = jb_stats['MIN'].iloc[0]
     
+    # --- Ajustes de Playoff: O Modelo "Knicks Engine" ---
+    # 1. Minutos: Em Playoffs, Brunson raramente descansa, chegando a ~42 minutos.
+    playoff_min_projection = 42.0
+    
     
