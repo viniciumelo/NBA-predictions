@@ -27,4 +27,8 @@ def predict_brunson_points():
     # Brunson assume a responsabilidade final e aumenta sua taxa de arremessos em ~18%.
     usage_expansion_factor = 1.18
     
+    # Cálculo: (Pontos por Minuto) * (Novos Minutos) * (Fator de Volume)
+    pts_per_min = reg_pts / reg_min
+    projected_pts_game = (pts_per_min * playoff_min_projection) * usage_expansion_factor
+    
     
