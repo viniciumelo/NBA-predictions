@@ -15,4 +15,8 @@ def predict_brunson_points():
         print("Dados de Jalen Brunson não encontrados. Verifique a conexão com a API.")
         return
 
+    # Estatísticas base da temporada
+    reg_pts = jb_stats['PTS'].iloc[0]
+    reg_min = jb_stats['MIN'].iloc[0]
+    
     
