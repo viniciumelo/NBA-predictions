@@ -42,3 +42,6 @@ def predict_brunson_points():
     print(f"TOTAL ESTIMADO (Série de 7 jogos): {series_total:.0f} PONTOS")
     print("-" * 55)
     print("Nota: O modelo reflete a alta dependência ofensiva do sistema dos Knicks.")
+
+if __name__ == "__main__":
+    predict_brunson_points()
