@@ -36,4 +36,12 @@ def predict_caruso_assists():
     # Razão Assistência/Turnover Projetada
     ast_tov_ratio = projected_ast_game / reg_tov
     
-  
+    print(f"=== PREDICAÇÃO DE PLAYMAKING: ALEX CARUSO (PLAYOFFS 2026) ===")
+    print(f"Média Assistências (Regular): {reg_ast:.1f} AST/G")
+    print("-" * 55)
+    print(f"MINUTOS PROJETADOS: {playoff_min_projection}")
+    print(f"ASSISTÊNCIAS PROJETADAS: {projected_ast_game:.1f} AST/G")
+    print(f"RATIO AST/TOV ESTIMADO: {ast_tov_ratio:.2f}")
+    print("-" * 55)
+    print("Nota: O modelo assume que o aumento de tempo em quadra por")
+    print("necessidade defensiva gera mais oportunidades de passe extra.")
