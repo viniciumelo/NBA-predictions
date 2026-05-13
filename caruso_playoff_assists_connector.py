@@ -20,4 +20,8 @@ def predict_caruso_assists():
     reg_min = caruso_stats['MIN'].iloc[0]
     reg_tov = caruso_stats['TOV'].iloc[0] # Turnovers para cálculo de ratio
     
+    # --- Parâmetros de Projeção Playoff ---
+    # 1. Minutos: Caruso é vital na defesa e deve jogar ~34-36 minutos em Playoffs.
+    playoff_min_projection = 35.0
+    
     
