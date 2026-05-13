@@ -29,4 +29,8 @@ def predict_caruso_assists():
     # Caruso atua como o "segundo passador", o que eleva suas assistências em ~12%.
     connector_boost = 1.12
     
+    # Cálculo: (Assistências por Minuto) * (Minutos Projetados) * (Fator Conector)
+    ast_per_min = reg_ast / reg_min
+    projected_ast_game = (ast_per_min * playoff_min_projection) * connector_boost
+    
     
