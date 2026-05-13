@@ -45,3 +45,6 @@ def predict_caruso_assists():
     print("-" * 55)
     print("Nota: O modelo assume que o aumento de tempo em quadra por")
     print("necessidade defensiva gera mais oportunidades de passe extra.")
+
+if __name__ == "__main__":
+    predict_caruso_assists()
