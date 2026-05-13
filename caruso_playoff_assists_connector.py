@@ -24,4 +24,9 @@ def predict_caruso_assists():
     # 1. Minutos: Caruso é vital na defesa e deve jogar ~34-36 minutos em Playoffs.
     playoff_min_projection = 35.0
     
+    # 2. Connector Factor:
+    # Em Playoffs, a bola circula mais para fugir de dobras.
+    # Caruso atua como o "segundo passador", o que eleva suas assistências em ~12%.
+    connector_boost = 1.12
+    
     
