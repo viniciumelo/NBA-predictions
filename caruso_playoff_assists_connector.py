@@ -33,4 +33,7 @@ def predict_caruso_assists():
     ast_per_min = reg_ast / reg_min
     projected_ast_game = (ast_per_min * playoff_min_projection) * connector_boost
     
+    # Razão Assistência/Turnover Projetada
+    ast_tov_ratio = projected_ast_game / reg_tov
     
+  
