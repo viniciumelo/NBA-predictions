@@ -28,4 +28,8 @@ def predict_semifinalists():
     # Playoffs são decididos pela capacidade de parar o adversário e converter posses críticas
     df_sorted = df.sort_values(by='NET_RATING', ascending=False)
 
-    
+    print("\n" + "="*60)
+    print("PREDIÇÃO DE SEMIFINALISTAS (FINAIS DE CONFERÊNCIA 2026)")
+    print("="*60)
+
+  
