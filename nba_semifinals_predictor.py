@@ -14,4 +14,12 @@ def predict_semifinalists():
     cols = ['TEAM_NAME', 'TEAM_ID', 'NET_RATING', 'W_PCT', 'OFF_RATING', 'DEF_RATING']
     df = team_stats[cols]
 
-   
+    # Simular divisão por Conferência (Mapeamento manual necessário para precisão)
+    east_teams = [
+        "Boston Celtics", "Milwaukee Bucks", "New York Knicks", "Philadelphia 76ers",
+        "Cleveland Cavaliers", "Indiana Pacers", "Orlando Magic", "Miami Heat",
+        "Atlanta Hawks", "Brooklyn Nets", "Chicago Bulls", "Charlotte Hornets",
+        "Detroit Pistons", "Toronto Raptors", "Washington Wizards"
+    ]
+    
+    
