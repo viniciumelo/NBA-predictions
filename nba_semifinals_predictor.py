@@ -9,4 +9,9 @@ def predict_semifinalists():
         measure_type_detailed_defense='Advanced'
     ).get_data_frames()[0]
 
+    # Selecionar colunas essenciais para a predição
+    # Net Rating é o melhor indicador de domínio de uma equipe
+    cols = ['TEAM_NAME', 'TEAM_ID', 'NET_RATING', 'W_PCT', 'OFF_RATING', 'DEF_RATING']
+    df = team_stats[cols]
+
    
