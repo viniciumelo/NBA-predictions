@@ -14,4 +14,11 @@ def predict_nba_finalists():
     cols = ['TEAM_NAME', 'NET_RATING', 'PIE', 'W_PCT', 'TS_PCT']
     df = team_stats[cols]
 
+    # Mapeamento de Conferências
+    east_teams = [
+        "Boston Celtics", "Milwaukee Bucks", "New York Knicks", "Philadelphia 76ers",
+        "Cleveland Cavaliers", "Indiana Pacers", "Orlando Magic", "Miami Heat",
+        "Atlanta Hawks", "Brooklyn Nets", "Chicago Bulls", "Charlotte Hornets",
+        "Detroit Pistons", "Toronto Raptors", "Washington Wizards"
+    ]
     
