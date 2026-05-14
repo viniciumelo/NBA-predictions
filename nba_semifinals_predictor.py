@@ -22,4 +22,6 @@ def predict_semifinalists():
         "Detroit Pistons", "Toronto Raptors", "Washington Wizards"
     ]
     
+    df['CONFERENCE'] = df['TEAM_NAME'].apply(lambda x: 'East' if x in east_teams else 'West')
+
     
