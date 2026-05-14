@@ -28,4 +28,8 @@ def predict_nba_finalists():
     # Times que não conseguem pontuar com eficiência sob pressão não chegam às Finais.
     df['FINALIST_SCORE'] = (df['NET_RATING'] * 0.7) + (df['PIE'] * 100 * 0.3)
 
+    print("\n" + "="*65)
+    print("PREDIÇÃO DO CONFRONTO DAS FINAIS DA NBA 2026")
+    print("="*65)
+
     
