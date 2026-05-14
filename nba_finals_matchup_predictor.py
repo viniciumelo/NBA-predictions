@@ -42,4 +42,7 @@ def predict_nba_finalists():
         print(f"CAMPEÃO DO {conf.upper()}: {top_team['TEAM_NAME']}")
         print(f"└─ Score de Elite: {top_team['FINALIST_SCORE']:.2f} | Win %: {top_team['W_PCT']:.3f}")
 
-   
+    print("\n" + " VS ".join([f"[{f['TEAM_NAME']}]" for f in finalists]))
+    print("="*65)
+    print("ANÁLISE TÉCNICA:")
+    print(f"Favorito ao Título: {max(finalists, key=lambda x: x['FINALIST_SCORE'])['TEAM_NAME']}")
