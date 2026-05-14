@@ -34,4 +34,12 @@ def predict_nba_finalists():
 
     finalists = []
 
-    
+    for conf in ['East', 'West']:
+        # O melhor do ranking de cada conferência é o projetado para a Final
+        top_team = df[df['CONFERENCE'] == conf].sort_values(by='FINALIST_SCORE', ascending=False).iloc[0]
+        finalists.append(top_team)
+        
+        print(f"CAMPEÃO DO {conf.upper()}: {top_team['TEAM_NAME']}")
+        print(f"└─ Score de Elite: {top_team['FINALIST_SCORE']:.2f} | Win %: {top_team['W_PCT']:.3f}")
+
+   
