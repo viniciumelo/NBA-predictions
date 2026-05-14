@@ -24,4 +24,8 @@ def predict_nba_finalists():
     
     df['CONFERENCE'] = df['TEAM_NAME'].apply(lambda x: 'East' if x in east_teams else 'West')
 
+    # O "Finalist Score" combina Net Rating com eficiência de arremesso (True Shooting)
+    # Times que não conseguem pontuar com eficiência sob pressão não chegam às Finais.
+    df['FINALIST_SCORE'] = (df['NET_RATING'] * 0.7) + (df['PIE'] * 100 * 0.3)
+
     
