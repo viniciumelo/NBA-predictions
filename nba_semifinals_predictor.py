@@ -32,4 +32,9 @@ def predict_semifinalists():
     print("PREDIÇÃO DE SEMIFINALISTAS (FINAIS DE CONFERÊNCIA 2026)")
     print("="*60)
 
-  
+    for conf in ['East', 'West']:
+        print(f"\nCONFERÊNCIA {conf.upper()}:")
+        top_4 = df_sorted[df_sorted['CONFERENCE'] == conf].head(4)
+        
+       
+    predict_semifinalists()
