@@ -32,4 +32,6 @@ def predict_nba_finalists():
     print("PREDIÇÃO DO CONFRONTO DAS FINAIS DA NBA 2026")
     print("="*65)
 
+    finalists = []
+
     
