@@ -46,3 +46,6 @@ def predict_nba_finalists():
     print("="*65)
     print("ANÁLISE TÉCNICA:")
     print(f"Favorito ao Título: {max(finalists, key=lambda x: x['FINALIST_SCORE'])['TEAM_NAME']}")
+
+if __name__ == "__main__":
+    predict_nba_finalists()
