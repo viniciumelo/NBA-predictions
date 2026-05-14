@@ -36,5 +36,14 @@ def predict_semifinalists():
         print(f"\nCONFERÊNCIA {conf.upper()}:")
         top_4 = df_sorted[df_sorted['CONFERENCE'] == conf].head(4)
         
-       
+        # Simulando o cruzamento (Geralmente os 2 melhores Net Ratings se encontram na Final de Conf.)
+        semifinalists = top_4['TEAM_NAME'].iloc[:2].tolist()
+        
+        for i, team in enumerate(semifinalists, 1):
+            net_r = top_4[top_4['TEAM_NAME'] == team]['NET_RATING'].values[0]
+            print(f"{i}º Candidato: {team} (Net Rating: {net_r})")
+
+   
+
+if __name__ == "__main__":
     predict_semifinalists()
