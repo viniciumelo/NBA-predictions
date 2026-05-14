@@ -43,7 +43,9 @@ def predict_semifinalists():
             net_r = top_4[top_4['TEAM_NAME'] == team]['NET_RATING'].values[0]
             print(f"{i}º Candidato: {team} (Net Rating: {net_r})")
 
-   
+    print("\n" + "="*60)
+    print("Metodologia: Projeção baseada na Eficiência Líquida (Net Rating).")
+    print("Equipes com Net Rating > 5.0 são historicamente fortes candidatas.")
 
 if __name__ == "__main__":
     predict_semifinalists()
