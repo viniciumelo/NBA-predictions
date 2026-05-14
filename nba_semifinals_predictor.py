@@ -24,4 +24,8 @@ def predict_semifinalists():
     
     df['CONFERENCE'] = df['TEAM_NAME'].apply(lambda x: 'East' if x in east_teams else 'West')
 
+    # Ranking baseado em Net Rating (Equipes com melhor equilíbrio ataque/defesa)
+    # Playoffs são decididos pela capacidade de parar o adversário e converter posses críticas
+    df_sorted = df.sort_values(by='NET_RATING', ascending=False)
+
     
