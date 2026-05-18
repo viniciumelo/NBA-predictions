@@ -32,4 +32,9 @@ def predict_jokic_next_season():
     # Pesos: T-2 (20%), T-1 (30%), Temporada Atual (50%)
     weights = [0.2, 0.3, 0.5]
     
-   
+    projected_pts = sum(recent_seasons['PPG'] * weights)
+    projected_ast = sum(recent_seasons['APG'] * weights)
+    projected_reb = sum(recent_seasons['RPG'] * weights)
+    projected_min = sum(recent_seasons['MPG'] * weights)
+    
+    
