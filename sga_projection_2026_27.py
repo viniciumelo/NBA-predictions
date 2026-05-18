@@ -29,4 +29,7 @@ def predict_sga_next_season():
         print("Dados históricos insuficientes para calcular a tendência.")
         return
 
+    # Pesos para a média móvel (dando mais importância para a consistência mais recente)
+    weights = [0.2, 0.3, 0.5]
     
+   
