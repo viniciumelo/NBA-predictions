@@ -41,4 +41,8 @@ def predict_sga_next_season():
     # Como SGA já está no auge, aplicamos um fator de estabilização técnica (+1% de eficiência)
     prime_factor = 1.01
     
+    final_pts = projected_pts * prime_factor
+    final_ast = projected_ast * prime_factor
+    final_reb = projected_reb * prime_factor
+    
     
