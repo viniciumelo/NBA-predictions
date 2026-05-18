@@ -37,4 +37,8 @@ def predict_sga_next_season():
     projected_reb = sum(recent_seasons['RPG'] * weights)
     projected_min = sum(recent_seasons['MPG'] * weights)
     
+    # --- Fator de Ajuste de Maturidade (Prime Anos) ---
+    # Como SGA já está no auge, aplicamos um fator de estabilização técnica (+1% de eficiência)
+    prime_factor = 1.01
+    
     
