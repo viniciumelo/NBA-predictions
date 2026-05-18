@@ -37,4 +37,10 @@ def predict_jokic_next_season():
     projected_reb = sum(recent_seasons['RPG'] * weights)
     projected_min = sum(recent_seasons['MPG'] * weights)
     
+    # --- Fator de Ajuste de Longevidade (Gestão de Carga) ---
+    # Para preservar Jokić para os playoffs à medida que envelhece, 
+    # projetamos uma leve redução de 2% no ritmo de minutos, mas mantendo a eficiência.
+    longevity_factor_mins = 0.98
+    longevity_factor_stats = 0.99 # Redução marginal por ritmo
     
+   
