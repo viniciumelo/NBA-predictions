@@ -48,4 +48,15 @@ def predict_jokic_next_season():
     final_ast = projected_ast * longevity_factor_stats
     final_reb = projected_reb * longevity_factor_stats
     
-    
+    print("\n" + "="*60)
+    print("PROJEÇÃO DE DESEMPENHO: NIKOLA JOKIĆ (2026/27)")
+    print("="*60)
+    print(f"Minutos Projetados: {final_min:.1f} MPG")
+    print("-" * 60)
+    print(f"PONTOS:      {final_pts:.1f} PTS/G")
+    print(f"ASSISTÊNCIAS: {final_ast:.1f} AST/G")
+    print(f"REBOTES:     {final_reb:.1f} REB/G")
+    print("-" * 60)
+    print(f"Projeção de Triplos-Duplos: Quase uma média de Triple-Double!")
+    print("Metodologia: Média móvel ponderada com ajuste de longevidade.")
+    print("="*60)
