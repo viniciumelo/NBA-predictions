@@ -45,4 +45,18 @@ def predict_sga_next_season():
     final_ast = projected_ast * prime_factor
     final_reb = projected_reb * prime_factor
     
-    
+    print("\n" + "="*60)
+    print("PROJEÇÃO DE DESEMPENHO: SHAI GILGEOUS-ALEXANDER (2026/27)")
+    print("="*60)
+    print(f"Minutos Projetados: {projected_min:.1f} MPG")
+    print("-" * 60)
+    print(f"PONTOS:      {final_pts:.1f} PTS/G")
+    print(f"ASSISTÊNCIAS: {final_ast:.1f} AST/G")
+    print(f"REBOTES:     {final_reb:.1f} REB/G")
+    print("-" * 60)
+    print("Metodologia: Média móvel linear ponderada (últimos 3 anos)")
+    print("Ajustado com Fator de Maturidade de Atleta de Elite.")
+    print("="*60)
+
+if __name__ == "__main__":
+    predict_sga_next_season()
