@@ -24,4 +24,8 @@ def predict_jokic_next_season():
     # Pegar as últimas 3 temporadas para analisar o "padrão MVP" recente
     recent_seasons = df_reg.tail(3)
     
+    if len(recent_seasons) < 3:
+        print("Dados históricos insuficientes para calcular a tendência.")
+        return
+
     
