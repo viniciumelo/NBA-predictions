@@ -28,4 +28,8 @@ def predict_jokic_next_season():
         print("Dados históricos insuficientes para calcular a tendência.")
         return
 
+    # Pesos para a média móvel (dando maior importância à temporada mais recente)
+    # Pesos: T-2 (20%), T-1 (30%), Temporada Atual (50%)
+    weights = [0.2, 0.3, 0.5]
     
+   
