@@ -60,3 +60,6 @@ def predict_jokic_next_season():
     print(f"Projeção de Triplos-Duplos: Quase uma média de Triple-Double!")
     print("Metodologia: Média móvel ponderada com ajuste de longevidade.")
     print("="*60)
+
+if __name__ == "__main__":
+    predict_jokic_next_season()
