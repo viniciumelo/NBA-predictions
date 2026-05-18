@@ -16,4 +16,10 @@ def predict_sga_next_season():
         # Alternativa caso o filtro mude na API
         df_reg = df_totals
         
-   
+    # Calcular médias por jogo históricas
+    df_reg['PPG'] = df_reg['PTS'] / df_reg['GP']
+    df_reg['APG'] = df_reg['AST'] / df_reg['GP']
+    df_reg['RPG'] = df_reg['REB'] / df_reg['GP']
+    df_reg['MPG'] = df_reg['MIN'] / df_reg['GP']
+    
+    
