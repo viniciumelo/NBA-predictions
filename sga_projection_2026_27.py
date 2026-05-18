@@ -12,4 +12,8 @@ def predict_sga_next_season():
     # Filtrar apenas temporada regular
     df_reg = df_totals[df_totals['WHEN_MADE'] == 'Regular Season'].copy()
     
-    
+    if df_reg.empty:
+        # Alternativa caso o filtro mude na API
+        df_reg = df_totals
+        
+   
