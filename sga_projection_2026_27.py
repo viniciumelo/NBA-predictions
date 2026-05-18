@@ -5,4 +5,8 @@ def predict_sga_next_season():
     # ID fixo do Shai Gilgeous-Alexander na NBA API
     sga_id = 1628983
     
-   
+    print("Buscando histórico de carreira de SGA...")
+    career = playercareerstats.PlayerCareerStats(player_id=sga_id)
+    df_totals = career.get_data_frames()[0]
+    
+    
