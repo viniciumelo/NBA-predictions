@@ -43,4 +43,9 @@ def predict_jokic_next_season():
     longevity_factor_mins = 0.98
     longevity_factor_stats = 0.99 # Redução marginal por ritmo
     
-   
+    final_min = projected_min * longevity_factor_mins
+    final_pts = projected_pts * longevity_factor_stats
+    final_ast = projected_ast * longevity_factor_stats
+    final_reb = projected_reb * longevity_factor_stats
+    
+    
