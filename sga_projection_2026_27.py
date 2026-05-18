@@ -32,4 +32,9 @@ def predict_sga_next_season():
     # Pesos para a média móvel (dando mais importância para a consistência mais recente)
     weights = [0.2, 0.3, 0.5]
     
-   
+    projected_pts = sum(recent_seasons['PPG'] * weights)
+    projected_ast = sum(recent_seasons['APG'] * weights)
+    projected_reb = sum(recent_seasons['RPG'] * weights)
+    projected_min = sum(recent_seasons['MPG'] * weights)
+    
+    
