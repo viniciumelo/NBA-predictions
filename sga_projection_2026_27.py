@@ -22,4 +22,11 @@ def predict_sga_next_season():
     df_reg['RPG'] = df_reg['REB'] / df_reg['GP']
     df_reg['MPG'] = df_reg['MIN'] / df_reg['GP']
     
+    # Pegar as últimas 3 temporadas para analisar a tendência recente de elite
+    recent_seasons = df_reg.tail(3)
+    
+    if len(recent_seasons) < 3:
+        print("Dados históricos insuficientes para calcular a tendência.")
+        return
+
     
