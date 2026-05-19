@@ -25,4 +25,21 @@ def predict_wemby_next_season():
     # Analisar o histórico recente de evolução
     recent_seasons = df_reg.tail(3)
     
-    
+    # Definir pesos baseados na quantidade de dados disponíveis
+    # Como ele tem poucas temporadas, damos o maior peso para o ano mais recente
+    if len(recent_seasons) >= 2:
+        weights = [0.3, 0.7] if len(recent_seasons) == 2 else [0.1, 0.3, 0.6]
+        projected_pts = sum(recent_seasons['PPG'].tail(len(weights)) * weights)
+        projected_ast = sum(recent_seasons['APG'].tail(len(weights)) * weights)
+        projected_reb = sum(recent_seasons['RPG'].tail(len(weights)) * weights)
+        projected_blk = sum(recent_seasons['BPG'].tail(len(weights)) * weights)
+        projected_min = sum(recent_seasons['MPG'].tail(len(weights)) * weights)
+    else:
+        # Fallback caso só haja uma temporada registrada
+        projected_pts = recent_seasons['PPG'].iloc[0]
+        projected_ast = recent_seasons['APG'].iloc[0]
+        projected_reb = recent_seasons['RPG'].iloc[0]
+        projected_blk = recent_seasons['BPG'].iloc[0]
+        projected_min = recent_seasons['MPG'].iloc[0]
+
+   
