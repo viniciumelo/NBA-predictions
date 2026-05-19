@@ -42,4 +42,10 @@ def predict_wemby_next_season():
         projected_blk = recent_seasons['BPG'].iloc[0]
         projected_min = recent_seasons['MPG'].iloc[0]
 
-   
+    # --- Fator de Desenvolvimento de Unicórnio (Anos 4 e 5) ---
+    # Jogadores com o perfil físico e técnico do Wemby tendem a dar um salto de eficiência 
+    # à medida que o time adiciona armadores de elite.
+    growth_factor_scoring = 1.06  # +6% de evolução em pontos devido a melhor seleção de arremessos
+    growth_factor_defense = 1.02  # +2% em rebotes/tocos (estabilização por dominância natural)
+    
+    
