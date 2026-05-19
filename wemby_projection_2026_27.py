@@ -12,4 +12,7 @@ def predict_wemby_next_season():
     # Filtrar apenas temporada regular
     df_reg = df_totals[df_totals['WHEN_MADE'] == 'Regular Season'].copy()
     
+    if df_reg.empty:
+        df_reg = df_totals
+        
     
