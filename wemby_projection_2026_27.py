@@ -66,3 +66,6 @@ def predict_wemby_next_season():
     print("Metodologia: Média móvel ponderada com ajuste de curva de")
     print("crescimento exponencial para atletas na transição do Year 3 ao 4.")
     print("="*60)
+
+if __name__ == "__main__":
+    predict_wemby_next_season()
