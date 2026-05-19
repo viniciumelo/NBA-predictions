@@ -48,4 +48,9 @@ def predict_wemby_next_season():
     growth_factor_scoring = 1.06  # +6% de evolução em pontos devido a melhor seleção de arremessos
     growth_factor_defense = 1.02  # +2% em rebotes/tocos (estabilização por dominância natural)
     
+    final_pts = projected_pts * growth_factor_scoring
+    final_ast = projected_ast * growth_factor_scoring
+    final_reb = projected_reb * growth_factor_defense
+    final_blk = projected_blk * growth_factor_defense
+    
     
