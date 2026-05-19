@@ -22,4 +22,7 @@ def predict_wemby_next_season():
     df_reg['BPG'] = df_reg['BLK'] / df_reg['GP']
     df_reg['MPG'] = df_reg['MIN'] / df_reg['GP']
     
+    # Analisar o histórico recente de evolução
+    recent_seasons = df_reg.tail(3)
+    
     
