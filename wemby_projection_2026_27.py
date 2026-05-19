@@ -53,4 +53,16 @@ def predict_wemby_next_season():
     final_reb = projected_reb * growth_factor_defense
     final_blk = projected_blk * growth_factor_defense
     
-    
+    print("\n" + "="*60)
+    print("PROJEÇÃO DE DESEMPENHO: VICTOR WEMBANYAMA (2026/27)")
+    print("="*60)
+    print(f"Minutos Projetados: {projected_min:.1f} MPG")
+    print("-" * 60)
+    print(f"PONTOS:      {final_pts:.1f} PTS/G")
+    print(f"REBOTES:     {final_reb:.1f} REB/G")
+    print(f"ASSISTÊNCIAS: {final_ast:.1f} AST/G")
+    print(f"TOCOS (BLOCKS): {final_blk:.1f} BLK/G")
+    print("-" * 60)
+    print("Metodologia: Média móvel ponderada com ajuste de curva de")
+    print("crescimento exponencial para atletas na transição do Year 3 ao 4.")
+    print("="*60)
