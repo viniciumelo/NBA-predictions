@@ -47,4 +47,15 @@ def predict_doncic_next_season():
     final_ast = projected_ast * peak_passing_factor
     final_reb = projected_reb * 1.00 # Manutencao do posicionamento de rebote defensivo
     
-  
+    print("\n" + "="*60)
+    print("PROJECAO DE DESEMPENHO: LUKA DONCIC (2026/27)")
+    print("="*60)
+    print(f"Minutos Projetados: {projected_min:.1f} MPG")
+    print("-" * 60)
+    print(f"PONTOS:      {final_pts:.1f} PTS/G")
+    print(f"ASSISTENCIAS: {final_ast:.1f} AST/G")
+    print(f"REBOTES:     {final_reb:.1f} REB/G")
+    print("-" * 60)
+    print("Metodologia: Media movel linear ponderada (ultimos 3 anos)")
+    print("Ajustado com o Fator de Pico de Eficiencia Heliocentrica.")
+    print("="*60)
