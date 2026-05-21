@@ -43,4 +43,8 @@ def predict_doncic_next_season():
     peak_scoring_factor = 1.01   # Estabilizacao e refino de pontuacao (+1%)
     peak_passing_factor = 1.03   # Melhores leituras de dobra de defesa e passes no "pocket" (+3%)
     
-   
+    final_pts = projected_pts * peak_scoring_factor
+    final_ast = projected_ast * peak_passing_factor
+    final_reb = projected_reb * 1.00 # Manutencao do posicionamento de rebote defensivo
+    
+  
