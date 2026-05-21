@@ -32,4 +32,9 @@ def predict_doncic_next_season():
     # Dando prioridade para o estilo de jogo e ritmo mais recente (50% para a ultima temporada)
     weights = [0.2, 0.3, 0.5]
     
-   
+    projected_pts = sum(recent_seasons['PPG'] * weights)
+    projected_ast = sum(recent_seasons['APG'] * weights)
+    projected_reb = sum(recent_seasons['RPG'] * weights)
+    projected_min = sum(recent_seasons['MPG'] * weights)
+    
+    
