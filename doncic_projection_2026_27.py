@@ -9,4 +9,7 @@ def predict_doncic_next_season():
     career = playercareerstats.PlayerCareerStats(player_id=doncic_id)
     df_totals = career.get_data_frames()[0]
     
-   
+    # Filtrar apenas temporada regular
+    df_reg = df_totals[df_totals['WHEN_MADE'] == 'Regular Season'].copy()
+    
+    
