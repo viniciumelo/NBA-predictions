@@ -59,3 +59,6 @@ def predict_doncic_next_season():
     print("Metodologia: Media movel linear ponderada (ultimos 3 anos)")
     print("Ajustado com o Fator de Pico de Eficiencia Heliocentrica.")
     print("="*60)
+
+if __name__ == "__main__":
+    predict_doncic_next_season()
