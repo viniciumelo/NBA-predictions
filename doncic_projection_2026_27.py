@@ -15,4 +15,10 @@ def predict_doncic_next_season():
     if df_reg.empty:
         df_reg = df_totals
         
+    # Calcular medias por jogo historicas
+    df_reg['PPG'] = df_reg['PTS'] / df_reg['GP']
+    df_reg['APG'] = df_reg['AST'] / df_reg['GP']
+    df_reg['RPG'] = df_reg['REB'] / df_reg['GP']
+    df_reg['MPG'] = df_reg['MIN'] / df_reg['GP']
+    
     
