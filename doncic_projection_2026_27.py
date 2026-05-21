@@ -37,4 +37,10 @@ def predict_doncic_next_season():
     projected_reb = sum(recent_seasons['RPG'] * weights)
     projected_min = sum(recent_seasons['MPG'] * weights)
     
+    # --- Fator de Ajuste de Pico de Carreira (Peak Prime Factor) ---
+    # Na fase dos 27-28 anos, armadores heliocentricos (onde o ataque orbita em torno de um jogador)
+    # refinam a eficiencia de quadra (selecao de arremessos) sem perder volume de assistencias.
+    peak_scoring_factor = 1.01   # Estabilizacao e refino de pontuacao (+1%)
+    peak_passing_factor = 1.03   # Melhores leituras de dobra de defesa e passes no "pocket" (+3%)
     
+   
