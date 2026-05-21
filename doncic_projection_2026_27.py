@@ -28,4 +28,8 @@ def predict_doncic_next_season():
         print("Dados historicos insuficientes para calcular a tendencia.")
         return
 
+    # Pesos para a media movel ponderada
+    # Dando prioridade para o estilo de jogo e ritmo mais recente (50% para a ultima temporada)
+    weights = [0.2, 0.3, 0.5]
     
+   
