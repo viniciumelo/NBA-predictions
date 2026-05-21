@@ -21,4 +21,11 @@ def predict_doncic_next_season():
     df_reg['RPG'] = df_reg['REB'] / df_reg['GP']
     df_reg['MPG'] = df_reg['MIN'] / df_reg['GP']
     
+    # Selecionar as ultimas 3 temporadas (teto de volume e maturidade)
+    recent_seasons = df_reg.tail(3)
+    
+    if len(recent_seasons) < 3:
+        print("Dados historicos insuficientes para calcular a tendencia.")
+        return
+
     
