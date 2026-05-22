@@ -7,4 +7,8 @@ def simulate_okc_season(num_simulations=10000):
     okc_pts_avg = 119.0
     okc_opp_pts_avg = 107.9
     
+    # Desvio padrão estimado baseado na variação comum de pontuação da NBA
+    okc_sd = 11.5
+    opp_sd = 11.5
     
+   
