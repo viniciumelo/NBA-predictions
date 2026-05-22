@@ -36,4 +36,13 @@ def simulate_okc_season(num_simulations=10000):
     prob_60_plus = (sim_series >= 60).mean() * 100
     prob_55_plus = (sim_series >= 55).mean() * 100
     
-   
+    print("=" * 50)
+    print("  PREDIÇÃO DE TEMPORADA REGULAR - OKC THUNDER 2026/27  ")
+    print("=" * 50)
+    print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
+    print(f"Mediana / Moda de Vitórias: {median_wins:.0f} / {mode_wins:.0f}")
+    print(f"Intervalo de Confiança (95%): {ci_lower:.0f} a {ci_upper:.0f} vitórias")
+    print("-" * 50)
+    print(f"Probabilidade de vencer 55+ jogos: {prob_55_plus:.2f}%")
+    print(f"Probabilidade de vencer 60+ jogos: {prob_60_plus:.2f}%")
+    print("=" * 50)
