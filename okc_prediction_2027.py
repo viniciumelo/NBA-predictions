@@ -32,4 +32,8 @@ def simulate_okc_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
+    # Probabilidade de bater cenários de vitórias
+    prob_60_plus = (sim_series >= 60).mean() * 100
+    prob_55_plus = (sim_series >= 55).mean() * 100
     
+   
