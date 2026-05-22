@@ -22,4 +22,10 @@ def simulate_okc_season(num_simulations=10000):
         wins = np.sum(okc_scores > opp_scores)
         sim_results.append(wins)
         
+    # Processa os resultados estatísticos da simulação
+    sim_series = pd.Series(sim_results)
+    mean_wins = sim_series.mean()
+    median_wins = sim_series.median()
+    mode_wins = sim_series.mode()[0]
+    
     
