@@ -11,4 +11,6 @@ def simulate_okc_season(num_simulations=10000):
     okc_sd = 11.5
     opp_sd = 11.5
     
-   
+    sim_results = []
+    
+    
