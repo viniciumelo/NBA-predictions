@@ -18,4 +18,8 @@ def simulate_okc_season(num_simulations=10000):
         okc_scores = np.random.normal(okc_pts_avg, okc_sd, games_in_season)
         opp_scores = np.random.normal(opp_opp_pts_avg, opp_sd, games_in_season)
         
-       
+        # Calcula as vitórias (onde a pontuação do OKC foi maior)
+        wins = np.sum(okc_scores > opp_scores)
+        sim_results.append(wins)
+        
+    
