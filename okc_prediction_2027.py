@@ -28,4 +28,8 @@ def simulate_okc_season(num_simulations=10000):
     median_wins = sim_series.median()
     mode_wins = sim_series.mode()[0]
     
+    # Intervalo de confiança de 95% (percentis 2.5 e 97.5)
+    ci_lower = sim_series.quantile(0.025)
+    ci_upper = sim_series.quantile(0.975)
+    
     
