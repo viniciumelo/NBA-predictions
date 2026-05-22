@@ -13,4 +13,9 @@ def simulate_okc_season(num_simulations=10000):
     
     sim_results = []
     
-    
+    for _ in range(num_simulations):
+        # Simula a pontuação de todos os 82 jogos usando distribuição normal
+        okc_scores = np.random.normal(okc_pts_avg, okc_sd, games_in_season)
+        opp_scores = np.random.normal(opp_opp_pts_avg, opp_sd, games_in_season)
+        
+       
