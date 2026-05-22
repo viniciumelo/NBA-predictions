@@ -46,3 +46,8 @@ def simulate_okc_season(num_simulations=10000):
     print(f"Probabilidade de vencer 55+ jogos: {prob_55_plus:.2f}%")
     print(f"Probabilidade de vencer 60+ jogos: {prob_60_plus:.2f}%")
     print("=" * 50)
+
+if __name__ == "__main__":
+    # Garante reprodutibilidade nos testes de simulação
+    np.random.seed(42)
+    simulate_okc_season()
