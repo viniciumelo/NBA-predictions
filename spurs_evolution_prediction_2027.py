@@ -56,3 +56,7 @@ def simulate_spurs_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo incorpora o salto de eficiência defensiva esperado.")
 
+if __name__ == "__main__":
+    # Semente fixa para reprodutibilidade dos dados estatísticos
+    np.random.seed(21)
+    simulate_spurs_season()
