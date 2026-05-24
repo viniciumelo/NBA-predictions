@@ -34,4 +34,8 @@ def simulate_knicks_season(num_simulations=10000):
     median_wins = sim_series.median()
     mode_wins = sim_series.mode()[0]
     
+    # Intervalo de confiança de 95% (removendo os 2.5% extremos de cada lado)
+    ci_lower = sim_series.quantile(0.025)
+    ci_upper = sim_series.quantile(0.975)
+    
     
