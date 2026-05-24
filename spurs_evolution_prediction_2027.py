@@ -43,4 +43,16 @@ def simulate_spurs_season(num_simulations=10000):
     prob_playin = (sim_series >= 41).mean() * 100  # Aproveitamento de .500 (Briga por Play-In/Playoffs)
     prob_playoffs_direct = (sim_series >= 46).mean() * 100 # Vaga direta no Top 6
     
-   
+    print("\n" + "=" * 55)
+    print("  PREDIÇÃO DE TEMPORADA REGULAR - SA SPURS 2026/27  ")
+    print("=" * 55)
+    print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
+    print(f"Mediana de Vitórias:          {median_wins:.0f}")
+    print(f"Moda mais frequente:         {mode_wins:.0f}")
+    print(f"Intervalo de Confiança (95%): {ci_lower:.0f} a {ci_upper:.0f} vitórias")
+    print("-" * 55)
+    print(f"Probabilidade de campanha .500+ (Play-In/Playoffs): {prob_playin:.2f}%")
+    print(f"Probabilidade de Top 6 Direto (46+ vitórias):       {prob_playoffs_direct:.2f}%")
+    print("=" * 55)
+    print("Nota: O modelo incorpora o salto de eficiência defensiva esperado.")
+
