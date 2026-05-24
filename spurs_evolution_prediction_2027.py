@@ -16,4 +16,6 @@ def simulate_spurs_season(num_simulations=10000):
     spurs_sd = 12.2
     opp_sd = 11.8
     
+    sim_results = []
     
+   
