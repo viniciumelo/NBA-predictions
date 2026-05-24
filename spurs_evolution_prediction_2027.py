@@ -18,4 +18,6 @@ def simulate_spurs_season(num_simulations=10000):
     
     sim_results = []
     
-   
+    print("Executando simulações para a temporada do San Antonio Spurs...")
+    
+    
