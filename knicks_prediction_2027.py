@@ -28,4 +28,10 @@ def simulate_knicks_season(num_simulations=10000):
         wins = np.sum(knicks_scores > opp_scores)
         sim_results.append(wins)
         
+    # Análise de dados dos resultados gerados
+    sim_series = pd.Series(sim_results)
+    mean_wins = sim_series.mean()
+    median_wins = sim_series.median()
+    mode_wins = sim_series.mode()[0]
+    
     
