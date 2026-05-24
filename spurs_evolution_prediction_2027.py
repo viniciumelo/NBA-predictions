@@ -25,4 +25,8 @@ def simulate_spurs_season(num_simulations=10000):
         spurs_scores = np.random.normal(spurs_pts_avg, spurs_sd, games_in_season)
         opp_scores = np.random.normal(spurs_opp_pts_avg, opp_sd, games_in_season)
         
+        # Computa vitória quando o ataque supera a defesa adversária
+        wins = np.sum(spurs_scores > opp_scores)
+        sim_results.append(wins)
         
+   
