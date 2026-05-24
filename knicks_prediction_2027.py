@@ -55,3 +55,7 @@ def simulate_knicks_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo assume a manutenção do sistema defensivo de elite.")
 
+if __name__ == "__main__":
+    # Define o seed para que os resultados sejam consistentes em cada execução
+    np.random.seed(44)
+    simulate_knicks_season()
