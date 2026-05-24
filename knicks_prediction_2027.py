@@ -10,3 +10,9 @@ def simulate_knicks_season(num_simulations=10000):
     knicks_pts_avg = 115.5
     knicks_opp_pts_avg = 109.2
     
+    # Desvio padrão para simular a volatilidade de jogos da NBA (lesões, back-to-backs, etc.)
+    # Knicks costumam ser um time resiliente e de menor oscilação devido ao sistema rígido
+    knicks_sd = 10.8
+    opp_sd = 11.2
+    
+   
