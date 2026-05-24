@@ -15,4 +15,8 @@ def simulate_knicks_season(num_simulations=10000):
     knicks_sd = 10.8
     opp_sd = 11.2
     
-   
+    sim_results = []
+    
+    print("Iniciando Simulação de Monte Carlo para os Knicks...")
+    
+    
