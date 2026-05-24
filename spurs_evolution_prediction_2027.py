@@ -39,4 +39,8 @@ def simulate_spurs_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
+    # Probabilidade de atingir marcos competitivos importantes na Conferência Oeste
+    prob_playin = (sim_series >= 41).mean() * 100  # Aproveitamento de .500 (Briga por Play-In/Playoffs)
+    prob_playoffs_direct = (sim_series >= 46).mean() * 100 # Vaga direta no Top 6
     
+   
