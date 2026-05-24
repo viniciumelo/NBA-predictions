@@ -20,4 +20,9 @@ def simulate_spurs_season(num_simulations=10000):
     
     print("Executando simulações para a temporada do San Antonio Spurs...")
     
-    
+    for _ in range(num_simulations):
+        # Geração de pontuações baseada em distribuição normal para os 82 confrontos
+        spurs_scores = np.random.normal(spurs_pts_avg, spurs_sd, games_in_season)
+        opp_scores = np.random.normal(spurs_opp_pts_avg, opp_sd, games_in_season)
+        
+        
