@@ -11,4 +11,9 @@ def simulate_spurs_season(num_simulations=10000):
     spurs_pts_avg = 114.8
     spurs_opp_pts_avg = 111.2
     
+    # Desvio padrão ligeiramente maior (12.2) para representar a volatilidade natural 
+    # de elencos jovens (picos de grande desempenho misturados com oscilações de experiência)
+    spurs_sd = 12.2
+    opp_sd = 11.8
+    
     
