@@ -38,4 +38,8 @@ def simulate_knicks_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
+    # Probabilidades de atingir metas de elite na Conferência Leste
+    prob_50_plus = (sim_series >= 50).mean() * 100
+    prob_55_plus = (sim_series >= 55).mean() * 100
+    
     
