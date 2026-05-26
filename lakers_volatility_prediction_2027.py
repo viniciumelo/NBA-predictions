@@ -56,3 +56,8 @@ def simulate_lakers_season(num_simulations=10000):
     print(f"Probabilidade de Vaga Direta Top 6 (47+ vitórias):  {prob_playoffs_direct:.2f}%")
     print("=" * 55)
     print("Nota: O modelo incorpora a volatilidade por fatores de desgaste físico.")
+
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(23)
+    simulate_lakers_season()
