@@ -19,4 +19,6 @@ def simulate_lakers_season(num_simulations=10000):
     
     sim_results = []
     
+    print("Executando análises estatísticas para o Los Angeles Lakers...")
     
+   
