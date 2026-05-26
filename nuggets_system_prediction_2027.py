@@ -56,3 +56,7 @@ def simulate_nuggets_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo reflete a alta eficiência e consistência do quinteto titular.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos resultados matemáticos
+    np.random.seed(15)
+    simulate_nuggets_season()
