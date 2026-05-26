@@ -26,4 +26,8 @@ def simulate_lakers_season(num_simulations=10000):
         lakers_scores = np.random.normal(lakers_pts_avg, lakers_sd, games_in_season)
         opp_scores = np.random.normal(lakers_opp_pts_avg, opp_sd, games_in_season)
         
+        # Computa vitória quando o ataque do Lakers supera a defesa adversária
+        wins = np.sum(lakers_scores > opp_scores)
+        sim_results.append(wins)
         
+    
