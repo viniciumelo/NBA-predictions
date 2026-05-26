@@ -25,4 +25,8 @@ def simulate_nuggets_season(num_simulations=10000):
         nuggets_scores = np.random.normal(nuggets_pts_avg, nuggets_sd, games_in_season)
         opp_scores = np.random.normal(nuggets_opp_pts_avg, opp_sd, games_in_season)
         
-       
+        # Vitória computada se o ataque de Denver superar a defesa adversária
+        wins = np.sum(nuggets_scores > opp_scores)
+        sim_results.append(wins)
+        
+    
