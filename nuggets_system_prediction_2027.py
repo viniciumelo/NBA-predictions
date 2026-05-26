@@ -18,4 +18,6 @@ def simulate_nuggets_season(num_simulations=10000):
     
     sim_results = []
     
+    print("Calculando projeções probabilísticas para o Denver Nuggets...")
+    
     
