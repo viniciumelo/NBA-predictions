@@ -20,4 +20,9 @@ def simulate_nuggets_season(num_simulations=10000):
     
     print("Calculando projeções probabilísticas para o Denver Nuggets...")
     
-    
+    for _ in range(num_simulations):
+        # Simulação por amostragem de distribuição normal para os 82 jogos
+        nuggets_scores = np.random.normal(nuggets_pts_avg, nuggets_sd, games_in_season)
+        opp_scores = np.random.normal(nuggets_opp_pts_avg, opp_sd, games_in_season)
+        
+       
