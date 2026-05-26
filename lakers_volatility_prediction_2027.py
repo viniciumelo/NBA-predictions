@@ -21,4 +21,9 @@ def simulate_lakers_season(num_simulations=10000):
     
     print("Executando análises estatísticas para o Los Angeles Lakers...")
     
-   
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        lakers_scores = np.random.normal(lakers_pts_avg, lakers_sd, games_in_season)
+        opp_scores = np.random.normal(lakers_opp_pts_avg, opp_sd, games_in_season)
+        
+        
