@@ -39,4 +39,8 @@ def simulate_nuggets_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
-   
+    # Probabilidade de atingir metas de mando de quadra no acirrado Oeste
+    prob_50_plus = (sim_series >= 50).mean() * 100
+    prob_55_plus = (sim_series >= 55).mean() * 100
+    
+    
