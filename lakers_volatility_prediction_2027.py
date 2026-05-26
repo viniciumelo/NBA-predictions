@@ -17,4 +17,6 @@ def simulate_lakers_season(num_simulations=10000):
     lakers_sd = 12.8
     opp_sd = 12.2
     
-   
+    sim_results = []
+    
+    
