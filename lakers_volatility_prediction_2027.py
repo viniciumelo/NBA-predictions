@@ -11,3 +11,10 @@ def simulate_lakers_season(num_simulations=10000):
     lakers_pts_avg = 116.4
     lakers_opp_pts_avg = 113.8
     
+    # Desvio padrão elevado para 12.8.
+    # Reflete a volatilidade de jogos onde estrelas podem ser poupadas (back-to-backs)
+    # ou oscilações na rotação de suporte do perímetro.
+    lakers_sd = 12.8
+    opp_sd = 12.2
+    
+   
