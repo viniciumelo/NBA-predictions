@@ -26,3 +26,8 @@ def simulate_celtics_season(num_simulations=10000):
         celtics_scores = np.random.normal(celtics_pts_avg, celtics_sd, games_in_season)
         opp_scores = np.random.normal(celtics_opp_pts_avg, opp_sd, games_in_season)
         
+        # Computa vitória quando o ataque de Boston supera a defesa adversária
+        wins = np.sum(celtics_scores > opp_scores)
+        sim_results.append(wins)
+        
+  
