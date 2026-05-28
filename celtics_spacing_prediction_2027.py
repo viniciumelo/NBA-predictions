@@ -40,4 +40,8 @@ def simulate_celtics_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
-   
+    # Probabilidade de atingir marcas históricas na Conferência Leste
+    prob_55_plus = (sim_series >= 55).mean() * 100
+    prob_60_plus = (sim_series >= 60).mean() * 100
+    
+    
