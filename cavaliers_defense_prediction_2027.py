@@ -20,4 +20,9 @@ def simulate_cavaliers_season(num_simulations=10000):
     
     print("Processando dados e simulando cenários para o Cleveland Cavaliers...")
     
-    
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        cavs_scores = np.random.normal(cavs_pts_avg, cavs_sd, games_in_season)
+        opp_scores = np.random.normal(cavs_opp_pts_avg, opp_sd, games_in_season)
+        
+        
