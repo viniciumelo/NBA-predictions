@@ -11,4 +11,9 @@ def simulate_cavaliers_season(num_simulations=10000):
     cavs_pts_avg = 115.8
     cavs_opp_pts_avg = 110.2
     
+    # Desvio padrão calibrado em 10.9 para representar a previsibilidade defensiva,
+    # balanceando oscilações pontuais no aproveitamento do perímetro.
+    cavs_sd = 10.9
+    opp_sd = 11.3
+    
     
