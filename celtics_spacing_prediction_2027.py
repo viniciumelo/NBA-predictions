@@ -57,3 +57,7 @@ def simulate_celtics_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo assume a manutenção da alta eficiência do perímetro.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(18)
+    simulate_celtics_season()
