@@ -16,4 +16,6 @@ def simulate_cavaliers_season(num_simulations=10000):
     cavs_sd = 10.9
     opp_sd = 11.3
     
+    sim_results = []
+    
     
