@@ -19,4 +19,6 @@ def simulate_celtics_season(num_simulations=10000):
     
     sim_results = []
     
+    print("Processando dados e simulando cenários para o Boston Celtics...")
     
+   
