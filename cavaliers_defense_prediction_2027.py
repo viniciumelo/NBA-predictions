@@ -56,3 +56,7 @@ def simulate_cavaliers_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo assume a manutenção do forte controle de garrafão.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(31)
+    simulate_cavaliers_season()
