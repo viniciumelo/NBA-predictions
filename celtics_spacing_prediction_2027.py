@@ -21,4 +21,8 @@ def simulate_celtics_season(num_simulations=10000):
     
     print("Processando dados e simulando cenários para o Boston Celtics...")
     
-   
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        celtics_scores = np.random.normal(celtics_pts_avg, celtics_sd, games_in_season)
+        opp_scores = np.random.normal(celtics_opp_pts_avg, opp_sd, games_in_season)
+        
