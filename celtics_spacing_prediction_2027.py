@@ -17,4 +17,6 @@ def simulate_celtics_season(num_simulations=10000):
     celtics_sd = 10.2
     opp_sd = 10.8
     
-  
+    sim_results = []
+    
+    
