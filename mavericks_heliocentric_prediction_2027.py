@@ -20,4 +20,7 @@ def simulate_mavericks_season(num_simulations=10000):
     
     print("Processando dados e simulando cenários para o Dallas Mavericks...")
     
-    
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        mvs_scores = np.random.normal(mvs_pts_avg, mvs_sd, games_in_season)
+        
