@@ -51,4 +51,8 @@ def simulate_mavericks_season(num_simulations=10000):
     print(f"Moda mais frequente:         {mode_wins:.0f}")
     print(f"Intervalo de Confiança (95%): {ci_lower:.0f} a {ci_upper:.0f} vitórias")
     print("-" * 55)
-    
+    print(f"Probabilidade de vencer 50+ jogos (Vaga Direta): {prob_50_plus:.2f}%")
+    print(f"Probabilidade de vencer 55+ jogos (Elite do Oeste): {prob_55_plus:.2f}%")
+    print("=" * 55)
+    print("Nota: O modelo assume a alta eficiência ofensiva gerada pelo espaçamento de quadra.")
+
