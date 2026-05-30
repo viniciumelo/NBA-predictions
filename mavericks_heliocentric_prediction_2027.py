@@ -11,4 +11,9 @@ def simulate_mavericks_season(num_simulations=10000):
     mvs_pts_avg = 118.5
     mvs_opp_pts_avg = 113.2
     
+    # Desvio padrão calibrado em 11.8 para representar o teto explosivo do ataque
+    # (noites com alto volume de bolas de 3) combinada com a dependência do núcleo principal.
+    mvs_sd = 11.8
+    opp_sd = 11.4
+    
     
