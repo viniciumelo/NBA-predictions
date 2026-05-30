@@ -43,4 +43,12 @@ def simulate_mavericks_season(num_simulations=10000):
     prob_50_plus = (sim_series >= 50).mean() * 100         # Vaga sólida nos Playoffs
     prob_55_plus = (sim_series >= 55).mean() * 100         # Briga pelo Top 2 do Oeste
     
-   
+    print("\n" + "=" * 55)
+    print("  PREDIÇÃO DE TEMPORADA REGULAR - DALLAS MAVS 2026/27  ")
+    print("=" * 55)
+    print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
+    print(f"Mediana de Vitórias:          {median_wins:.0f}")
+    print(f"Moda mais frequente:         {mode_wins:.0f}")
+    print(f"Intervalo de Confiança (95%): {ci_lower:.0f} a {ci_upper:.0f} vitórias")
+    print("-" * 55)
+    
