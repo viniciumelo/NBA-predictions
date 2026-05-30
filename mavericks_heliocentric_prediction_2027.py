@@ -25,4 +25,6 @@ def simulate_mavericks_season(num_simulations=10000):
         mvs_scores = np.random.normal(mvs_pts_avg, mvs_sd, games_in_season)
         opp_scores = np.random.normal(mvs_opp_pts_avg, opp_sd, games_in_season)
         
+        # Computa vitória quando o ataque de Dallas supera a defesa adversária
+        wins = np.sum(mvs_scores > opp_scores)
        
