@@ -27,4 +27,6 @@ def simulate_mavericks_season(num_simulations=10000):
         
         # Computa vitória quando o ataque de Dallas supera a defesa adversária
         wins = np.sum(mvs_scores > opp_scores)
-       
+        sim_results.append(wins)
+        
+    
