@@ -56,3 +56,7 @@ def simulate_mavericks_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo assume a alta eficiência ofensiva gerada pelo espaçamento de quadra.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(77)
+    simulate_mavericks_season()
