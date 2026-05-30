@@ -16,4 +16,6 @@ def simulate_mavericks_season(num_simulations=10000):
     mvs_sd = 11.8
     opp_sd = 11.4
     
+    sim_results = []
     
+   
