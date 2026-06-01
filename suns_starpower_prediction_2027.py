@@ -11,4 +11,7 @@ def simulate_suns_season(num_simulations=10000):
     suns_pts_avg = 117.2
     suns_opp_pts_avg = 113.5
     
+    # Desvio padrão calibrado em 12.1 para representar a variância de times 
+    # dependentes de arremessos de meia-distância e perímetro, além do fator desgaste.
+    suns_sd = 12.1
    
