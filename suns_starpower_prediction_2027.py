@@ -56,3 +56,7 @@ def simulate_suns_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo incorpora o teto técnico dos criadores de jogadas.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(35)
+    simulate_suns_season()
