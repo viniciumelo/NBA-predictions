@@ -39,4 +39,8 @@ def simulate_suns_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
+    # Probabilidade de atingir metas competitivas na Conferência Oeste
+    prob_45_plus = (sim_series >= 45).mean() * 100         # Vaga direta/Briga no Top 6
+    prob_50_plus = (sim_series >= 50).mean() * 100         # Campanha de elite com mando de quadra
     
+   
