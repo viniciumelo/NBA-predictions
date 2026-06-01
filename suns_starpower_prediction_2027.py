@@ -50,4 +50,9 @@ def simulate_suns_season(num_simulations=10000):
     print(f"Mediana de Vitórias:          {median_wins:.0f}")
     print(f"Moda mais frequente:         {mode_wins:.0f}")
     print(f"Intervalo de Confiança (95%): {ci_lower:.0f} a {ci_upper:.0f} vitórias")
-    
+    print("-" * 55)
+    print(f"Probabilidade de vencer 45+ jogos (Briga por Top 6): {prob_45_plus:.2f}%")
+    print(f"Probabilidade de vencer 50+ jogos (Mando de Quadra):  {prob_50_plus:.2f}%")
+    print("=" * 55)
+    print("Nota: O modelo incorpora o teto técnico dos criadores de jogadas.")
+
