@@ -25,4 +25,8 @@ def simulate_suns_season(num_simulations=10000):
         suns_scores = np.random.normal(suns_pts_avg, suns_sd, games_in_season)
         opp_scores = np.random.normal(suns_opp_pts_avg, opp_sd, games_in_season)
         
+        # Computa vitória quando o ataque de Phoenix supera a defesa adversária
+        wins = np.sum(suns_scores > opp_scores)
+        sim_results.append(wins)
         
+    
