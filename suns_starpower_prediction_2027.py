@@ -9,4 +9,6 @@ def simulate_suns_season(num_simulations=10000):
     # Phoenix opera com alta eficiência ofensiva focada em arremessos de elite,
     # mantendo uma média de pontuação robusta e uma defesa competitiva.
     suns_pts_avg = 117.2
+    suns_opp_pts_avg = 113.5
     
+   
