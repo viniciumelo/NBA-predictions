@@ -14,4 +14,6 @@ def simulate_suns_season(num_simulations=10000):
     # Desvio padrão calibrado em 12.1 para representar a variância de times 
     # dependentes de arremessos de meia-distância e perímetro, além do fator desgaste.
     suns_sd = 12.1
-   
+    opp_sd = 11.6
+    
+   x
