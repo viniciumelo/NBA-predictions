@@ -20,4 +20,9 @@ def simulate_suns_season(num_simulations=10000):
     
     print("Processando dados e simulando cenários para o Phoenix Suns...")
     
-    
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        suns_scores = np.random.normal(suns_pts_avg, suns_sd, games_in_season)
+        opp_scores = np.random.normal(suns_opp_pts_avg, opp_sd, games_in_season)
+        
+        
