@@ -55,3 +55,8 @@ def simulate_heat_season(num_simulations=10000):
     print(f"Probabilidade de Mando de Quadra (48+ vitórias):   {prob_mando_quadra:.2f}%")
     print("=" * 55)
     print("Nota: O modelo assume a manutenção da identidade de forte ajuste defensivo.")
+
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(30)
+    simulate_heat_season()
