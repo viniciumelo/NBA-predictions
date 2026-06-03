@@ -9,4 +9,6 @@ def simulate_heat_season(num_simulations=10000):
     # Miami dita um ritmo físico e amarra o ataque adversário, 
     # o que mantém as médias de pontos dos dois lados mais baixas.
     heat_pts_avg = 113.8
-   
+    heat_opp_pts_avg = 110.5
+    
+    
