@@ -14,4 +14,6 @@ def simulate_heat_season(num_simulations=10000):
     # Desvio padrão calibrado em 11.2 para refletir um time muito disciplinado,
     # que raramente sofre goleadas, mantendo os jogos parelhos e competitivos.
     heat_sd = 11.2
+    opp_sd = 11.5
+    
     
