@@ -39,4 +39,8 @@ def simulate_heat_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
+    # Probabilidade de atingir metas competitivas na Conferência Leste
+    prob_playin_safety = (sim_series >= 44).mean() * 100   # Evitar o Play-In (Top 6 garantido)
+    prob_mando_quadra = (sim_series >= 48).mean() * 100     # Mando de quadra nos Playoffs
     
+   
