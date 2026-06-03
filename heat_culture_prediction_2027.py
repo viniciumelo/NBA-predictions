@@ -16,4 +16,6 @@ def simulate_heat_season(num_simulations=10000):
     heat_sd = 11.2
     opp_sd = 11.5
     
+    sim_results = []
+    
     
