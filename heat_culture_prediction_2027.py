@@ -25,4 +25,8 @@ def simulate_heat_season(num_simulations=10000):
         heat_scores = np.random.normal(heat_pts_avg, heat_sd, games_in_season)
         opp_scores = np.random.normal(heat_opp_pts_avg, opp_sd, games_in_season)
         
-       
+        # Computa vitória quando o ataque de Miami supera a defesa adversária
+        wins = np.sum(heat_scores > opp_scores)
+        sim_results.append(wins)
+        
+    
