@@ -11,4 +11,7 @@ def simulate_heat_season(num_simulations=10000):
     heat_pts_avg = 113.8
     heat_opp_pts_avg = 110.5
     
+    # Desvio padrão calibrado em 11.2 para refletir um time muito disciplinado,
+    # que raramente sofre goleadas, mantendo os jogos parelhos e competitivos.
+    heat_sd = 11.2
     
