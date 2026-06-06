@@ -20,4 +20,8 @@ def simulate_timberwolves_season(num_simulations=10000):
     
     print("Processando dados e simulando cenários para o Minnesota Timberwolves...")
     
-    
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        twolves_scores = np.random.normal(twolves_pts_avg, twolves_sd, games_in_season)
+        opp_scores = np.random.normal(twolves_opp_pts_avg, opp_sd, games_in_season)
+        
