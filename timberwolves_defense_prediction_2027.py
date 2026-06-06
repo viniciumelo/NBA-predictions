@@ -16,4 +16,6 @@ def simulate_timberwolves_season(num_simulations=10000):
     twolves_sd = 11.0
     opp_sd = 11.4
     
+    sim_results = []
     
+   
