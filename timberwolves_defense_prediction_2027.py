@@ -39,4 +39,6 @@ def simulate_timberwolves_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
-   
+    # Probabilidade de atingir marcas de elite na disputada Conferência Oeste
+    prob_50_plus = (sim_series >= 50).mean() * 100         # Mando de quadra garantido nos Playoffs
+    
