@@ -14,4 +14,6 @@ def simulate_timberwolves_season(num_simulations=10000):
     # Desvio padrão calibrado em 11.0 para representar um sistema defensivo sólido,
     # que garante estabilidade e regularidade durante os 82 jogos da temporada.
     twolves_sd = 11.0
-   
+    opp_sd = 11.4
+    
+    
