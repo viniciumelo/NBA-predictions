@@ -5,3 +5,8 @@ def simulate_timberwolves_season(num_simulations=10000):
     # Calendário padrão da temporada regular da NBA
     games_in_season = 82
     
+    # --- Parâmetros de Desempenho (Minnesota Timberwolves) ---
+    # Minnesota se destaca por travar o ataque adversário com uma defesa sufocante,
+    # gerando um dos melhores ratings defensivos da liga e vencendo pelo equilíbrio lá atrás.
+    twolves_pts_avg = 116.5
+    
