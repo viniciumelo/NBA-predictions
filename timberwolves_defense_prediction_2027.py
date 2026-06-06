@@ -25,3 +25,6 @@ def simulate_timberwolves_season(num_simulations=10000):
         twolves_scores = np.random.normal(twolves_pts_avg, twolves_sd, games_in_season)
         opp_scores = np.random.normal(twolves_opp_pts_avg, opp_sd, games_in_season)
         
+        # Computa vitória quando o ataque de Minnesota supera a defesa adversária
+        wins = np.sum(twolves_scores > opp_scores)
+        
