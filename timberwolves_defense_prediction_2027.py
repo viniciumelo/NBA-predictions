@@ -55,3 +55,8 @@ def simulate_timberwolves_season(num_simulations=10000):
     print(f"Probabilidade de vencer 55+ jogos (Contender Top 2): {prob_55_plus:.2f}%")
     print("=" * 55)
     print("Nota: O modelo assume o impacto contínuo da identidade defensiva de elite.")
+
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(32)
+    simulate_timberwolves_season()
