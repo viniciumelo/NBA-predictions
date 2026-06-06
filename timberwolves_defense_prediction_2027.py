@@ -41,4 +41,6 @@ def simulate_timberwolves_season(num_simulations=10000):
     
     # Probabilidade de atingir marcas de elite na disputada Conferência Oeste
     prob_50_plus = (sim_series >= 50).mean() * 100         # Mando de quadra garantido nos Playoffs
+    prob_55_plus = (sim_series >= 55).mean() * 100         # Briga pelo topo absoluto do Oeste
     
+   
