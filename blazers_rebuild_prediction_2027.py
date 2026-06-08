@@ -11,4 +11,8 @@ def simulate_blazers_season(num_simulations=10000):
     blazers_pts_avg = 111.4
     blazers_opp_pts_avg = 117.8
     
-    
+    # Desvio padrão calibrado em 12.4 para representar a alta volatilidade.
+    # Times jovens podem surpreender candidatos ao título em noites inspiradas,
+    # mas também oscilar bastante em sequências de jogos fora de casa (road trips).
+    blazers_sd = 12.4
+   
