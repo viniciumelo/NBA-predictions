@@ -9,4 +9,6 @@ def simulate_blazers_season(num_simulations=10000):
     # Como uma equipe jovem em desenvolvimento, as médias projetadas refletem
     # um ataque veloz e talentoso, mas que ainda cede pontos devido a ajustes defensivos.
     blazers_pts_avg = 111.4
-   
+    blazers_opp_pts_avg = 117.8
+    
+    
