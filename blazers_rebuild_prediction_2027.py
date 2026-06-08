@@ -15,4 +15,6 @@ def simulate_blazers_season(num_simulations=10000):
     # Times jovens podem surpreender candidatos ao título em noites inspiradas,
     # mas também oscilar bastante em sequências de jogos fora de casa (road trips).
     blazers_sd = 12.4
+    opp_sd = 11.9
+    
    
