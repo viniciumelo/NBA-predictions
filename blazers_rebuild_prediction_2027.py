@@ -30,4 +30,7 @@ def simulate_blazers_season(num_simulations=10000):
         wins = np.sum(blazers_scores > opp_scores)
         sim_results.append(wins)
         
-   
+    # Análise descritiva da distribuição gerada
+    sim_series = pd.Series(sim_results)
+    mean_wins = sim_series.mean()
+    
