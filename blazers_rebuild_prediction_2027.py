@@ -17,4 +17,6 @@ def simulate_blazers_season(num_simulations=10000):
     blazers_sd = 12.4
     opp_sd = 11.9
     
-   
+   sim_results = []
+    
+    
