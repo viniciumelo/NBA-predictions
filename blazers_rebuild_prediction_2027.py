@@ -44,4 +44,10 @@ def simulate_blazers_season(num_simulations=10000):
     prob_evolution_goal = (sim_series >= 30).mean() * 100   # Bater a marca de 30 vitórias (evolução sólida)
     prob_playin_fringe = (sim_series >= 38).mean() * 100    # Briga na linha de corte do Play-In
     
-    
+    print("\n" + "=" * 55)
+    print("  PREDIÇÃO DE TEMPORADA REGULAR - PORTLAND BLAZERS 2026/27  ")
+    print("=" * 55)
+    print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
+    print(f"Mediana de Vitórias:          {median_wins:.0f}")
+    print(f"Moda mais frequente:         {mode_wins:.0f}")
+   
