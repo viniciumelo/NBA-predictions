@@ -40,4 +40,8 @@ def simulate_blazers_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
+    # Probabilidade de atingir metas de crescimento e briga por vagas no Oeste
+    prob_evolution_goal = (sim_series >= 30).mean() * 100   # Bater a marca de 30 vitórias (evolução sólida)
+    prob_playin_fringe = (sim_series >= 38).mean() * 100    # Briga na linha de corte do Play-In
+    
     
