@@ -21,4 +21,9 @@ def simulate_blazers_season(num_simulations=10000):
     
     print("Processando dados e simulando cenários para o Portland Trail Blazers...")
     
-    
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        blazers_scores = np.random.normal(blazers_pts_avg, blazers_sd, games_in_season)
+        opp_scores = np.random.normal(blazers_opp_pts_avg, opp_sd, games_in_season)
+        
+       
