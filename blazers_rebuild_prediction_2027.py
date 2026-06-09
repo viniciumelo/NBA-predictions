@@ -57,3 +57,7 @@ def simulate_blazers_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo incorpora a curva de aprendizado e oscilação de atletas jovens.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(0)
+    simulate_blazers_season()
