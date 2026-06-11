@@ -9,4 +9,6 @@ def simulate_hornets_season(num_simulations=10000):
     # Hornets operam em ritmo acelerado, gerando boas médias de ataque,
     # enquanto buscam consolidação e consistência no sistema defensivo.
     hornets_pts_avg = 114.2
+    hornets_opp_pts_avg = 117.5
+    
    
