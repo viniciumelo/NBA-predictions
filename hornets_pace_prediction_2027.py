@@ -14,4 +14,6 @@ def simulate_hornets_season(num_simulations=10000):
     # Desvio padrão calibrado em 12.0 para representar a volatilidade natural
     # de equipes velozes de transição, suscetíveis a sequências de rachas de pontos.
     hornets_sd = 12.0
+    opp_sd = 11.6
+    
    
