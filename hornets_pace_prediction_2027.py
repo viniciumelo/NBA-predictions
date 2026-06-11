@@ -20,4 +20,9 @@ def simulate_hornets_season(num_simulations=10000):
     
     print("Processando dados e simulando cenários para o Charlotte Hornets...")
     
-   
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        hornets_scores = np.random.normal(hornets_pts_avg, hornets_sd, games_in_season)
+        opp_scores = np.random.normal(hornets_opp_pts_avg, opp_sd, games_in_season)
+        
+        
