@@ -43,4 +43,9 @@ def simulate_hornets_season(num_simulations=10000):
     prob_growth_goal = (sim_series >= 35).mean() * 100     # Alcançar 35+ vitórias (evolução clara)
     prob_playin_spot = (sim_series >= 40).mean() * 100     # Briga direta por vaga no Play-In
     
-    
+    print("\n" + "=" * 55)
+    print("  PREDIÇÃO DE TEMPORADA REGULAR - CHARLOTTE HORNETS 2026/27  ")
+    print("=" * 55)
+    print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
+    print(f"Mediana de Vitórias:          {median_wins:.0f}")
+   
