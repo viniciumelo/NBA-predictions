@@ -5,4 +5,8 @@ def simulate_hornets_season(num_simulations=10000):
     # Calendário padrão da temporada regular da NBA
     games_in_season = 82
     
-    
+    # --- Parâmetros de Desempenho (Charlotte Hornets) ---
+    # Hornets operam em ritmo acelerado, gerando boas médias de ataque,
+    # enquanto buscam consolidação e consistência no sistema defensivo.
+    hornets_pts_avg = 114.2
+   
