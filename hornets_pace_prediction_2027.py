@@ -56,3 +56,7 @@ def simulate_hornets_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo incorpora o ritmo acelerado e o impacto dos criadores do perímetro.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(11)
+    simulate_hornets_season()
