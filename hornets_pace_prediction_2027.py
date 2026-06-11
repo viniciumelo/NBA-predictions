@@ -39,4 +39,8 @@ def simulate_hornets_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
-   
+    # Probabilidade de atingir metas competitivas e brigar por pós-temporada no Leste
+    prob_growth_goal = (sim_series >= 35).mean() * 100     # Alcançar 35+ vitórias (evolução clara)
+    prob_playin_spot = (sim_series >= 40).mean() * 100     # Briga direta por vaga no Play-In
+    
+    
