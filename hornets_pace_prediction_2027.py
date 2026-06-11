@@ -16,4 +16,6 @@ def simulate_hornets_season(num_simulations=10000):
     hornets_sd = 12.0
     opp_sd = 11.6
     
-   
+   sim_results = []
+    
+    
