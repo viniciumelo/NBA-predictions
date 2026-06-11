@@ -25,4 +25,8 @@ def simulate_hornets_season(num_simulations=10000):
         hornets_scores = np.random.normal(hornets_pts_avg, hornets_sd, games_in_season)
         opp_scores = np.random.normal(hornets_opp_pts_avg, opp_sd, games_in_season)
         
+        # Computa vitória quando o ataque de Charlotte supera a defesa adversária
+        wins = np.sum(hornets_scores > opp_scores)
+        sim_results.append(wins)
         
+    
