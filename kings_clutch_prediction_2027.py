@@ -9,4 +9,6 @@ def simulate_kings_season(num_simulations=10000):
     # Sacramento mantém um ataque de alto volume e movimentação de bola fluida,
     # enquanto a defesa busca consistência física para segurar placares.
     kings_pts_avg = 117.5
+    kings_opp_pts_avg = 114.2
     
+   
