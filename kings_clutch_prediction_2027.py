@@ -20,4 +20,9 @@ def simulate_kings_season(num_simulations=10000):
     
     print("Processando dados e simulando cenários para o Sacramento Kings...")
     
-    
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        kings_scores = np.random.normal(kings_pts_avg, kings_sd, games_in_season)
+        opp_scores = np.random.normal(kings_opp_pts_avg, opp_sd, games_in_season)
+        
+        
