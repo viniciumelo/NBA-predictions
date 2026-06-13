@@ -14,4 +14,6 @@ def simulate_kings_season(num_simulations=10000):
     # Desvio padrão calibrado em 11.5 para representar o teto ofensivo sólido,
     # balanceado pelas flutuações comuns em jogos decididos nos minutos finais (clutch).
     kings_sd = 11.5
+    opp_sd = 11.2
+    
    
