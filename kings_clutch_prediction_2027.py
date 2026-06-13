@@ -16,4 +16,6 @@ def simulate_kings_season(num_simulations=10000):
     kings_sd = 11.5
     opp_sd = 11.2
     
-   
+   sim_results = []
+    
+    
