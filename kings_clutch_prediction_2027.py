@@ -5,4 +5,8 @@ def simulate_kings_season(num_simulations=10000):
     # Calendário regulamentar da NBA
     games_in_season = 82
     
+    # --- Parâmetros de Desempenho (Sacramento Kings) ---
+    # Sacramento mantém um ataque de alto volume e movimentação de bola fluida,
+    # enquanto a defesa busca consistência física para segurar placares.
+    kings_pts_avg = 117.5
     
