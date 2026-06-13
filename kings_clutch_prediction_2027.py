@@ -56,3 +56,7 @@ def simulate_kings_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo incorpora o equilíbrio gerado pela alta taxa de assistências.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(5)
+    simulate_kings_season()
