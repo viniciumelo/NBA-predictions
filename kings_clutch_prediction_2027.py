@@ -25,4 +25,8 @@ def simulate_kings_season(num_simulations=10000):
         kings_scores = np.random.normal(kings_pts_avg, kings_sd, games_in_season)
         opp_scores = np.random.normal(kings_opp_pts_avg, opp_sd, games_in_season)
         
+        # Computa vitória quando o ataque de Sacramento supera a defesa adversária
+        wins = np.sum(kings_scores > opp_scores)
+        sim_results.append(wins)
         
+   
