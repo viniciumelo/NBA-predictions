@@ -11,4 +11,8 @@ def simulate_jazz_season(num_simulations=10000):
     jazz_pts_avg = 113.5
     jazz_opp_pts_avg = 118.2
     
-    
+    # Desvio padrão calibrado em 12.2 para capturar a alta volatilidade de elencos jovens.
+    # O fator altitude em casa costuma gerar picos de grande desempenho ofensivo,
+    # enquanto a juventude da rotação introduz variações em jogos parelhos.
+    jazz_sd = 12.2
+   
