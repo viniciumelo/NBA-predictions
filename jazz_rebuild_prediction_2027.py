@@ -15,4 +15,6 @@ def simulate_jazz_season(num_simulations=10000):
     # O fator altitude em casa costuma gerar picos de grande desempenho ofensivo,
     # enquanto a juventude da rotação introduz variações em jogos parelhos.
     jazz_sd = 12.2
-   
+    opp_sd = 11.7
+    
+    
