@@ -9,4 +9,6 @@ def simulate_jazz_season(num_simulations=10000):
     # O Jazz costuma manter um ataque com bom aproveitamento de arremessos de fora,
     # balanceado por ajustes e busca por consistência no sistema defensivo.
     jazz_pts_avg = 113.5
-   
+    jazz_opp_pts_avg = 118.2
+    
+    
