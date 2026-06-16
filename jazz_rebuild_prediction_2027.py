@@ -26,4 +26,8 @@ def simulate_jazz_season(num_simulations=10000):
         jazz_scores = np.random.normal(jazz_pts_avg, jazz_sd, games_in_season)
         opp_scores = np.random.normal(jazz_opp_pts_avg, opp_sd, games_in_season)
         
+        # Computa vitória quando o ataque de Utah supera a defesa adversária
+        wins = np.sum(jazz_scores > opp_scores)
+        sim_results.append(wins)
         
+   
