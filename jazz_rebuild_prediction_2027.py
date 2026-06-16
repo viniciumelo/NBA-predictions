@@ -49,4 +49,10 @@ def simulate_jazz_season(num_simulations=10000):
     print("=" * 55)
     print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
     print(f"Mediana de Vitórias:          {median_wins:.0f}")
-   
+    print(f"Moda mais frequente:         {mode_wins:.0f}")
+    print(f"Intervalo de Confiança (95%): {ci_lower:.0f} a {ci_upper:.0f} vitórias")
+    print("-" * 55)
+    print(f"Probabilidade de 32+ vitórias (Crescimento Sólido): {prob_evolution_goal:.2f}%")
+    print(f"Probabilidade de surpreender no Play-In (38+ vitórias): {prob_playin_fringe:.2f}%")
+    print("=" * 55)
+    print("Nota: O modelo incorpora o fator de desenvolvimento de atletas e rotação ativa.")
