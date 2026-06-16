@@ -40,4 +40,8 @@ def simulate_jazz_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
+    # Probabilidade de atingir metas de maturação na Conferência Oeste
+    prob_evolution_goal = (sim_series >= 32).mean() * 100   # Alcançar 32+ vitórias (salto de patamar)
+    prob_playin_fringe = (sim_series >= 38).mean() * 100    # Beliscar a zona de corte do Play-In
+    
     
