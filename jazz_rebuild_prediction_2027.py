@@ -17,4 +17,6 @@ def simulate_jazz_season(num_simulations=10000):
     jazz_sd = 12.2
     opp_sd = 11.7
     
+    sim_results = []
+    
     
