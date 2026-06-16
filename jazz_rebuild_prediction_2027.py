@@ -56,3 +56,8 @@ def simulate_jazz_season(num_simulations=10000):
     print(f"Probabilidade de surpreender no Play-In (38+ vitórias): {prob_playin_fringe:.2f}%")
     print("=" * 55)
     print("Nota: O modelo incorpora o fator de desenvolvimento de atletas e rotação ativa.")
+
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(8)
+    simulate_jazz_season()
