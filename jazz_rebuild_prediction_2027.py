@@ -44,4 +44,9 @@ def simulate_jazz_season(num_simulations=10000):
     prob_evolution_goal = (sim_series >= 32).mean() * 100   # Alcançar 32+ vitórias (salto de patamar)
     prob_playin_fringe = (sim_series >= 38).mean() * 100    # Beliscar a zona de corte do Play-In
     
-    
+    print("\n" + "=" * 55)
+    print("  PREDIÇÃO DE TEMPORADA REGULAR - UTAH JAZZ 2026/27  ")
+    print("=" * 55)
+    print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
+    print(f"Mediana de Vitórias:          {median_wins:.0f}")
+   
