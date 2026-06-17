@@ -14,3 +14,4 @@ def simulate_bulls_season(num_simulations=10000):
     # Desvio padrão calibrado em 11.9 para representar a volatilidade natural
     # de times que jogam em ritmo veloz e dependem do aproveitamento de arremessos externos.
     bulls_sd = 11.9
+    opp_sd = 11.5
