@@ -18,4 +18,6 @@ def simulate_bulls_season(num_simulations=10000):
 
     sim_results = []
     
-   
+    print("Processando dados e simulando cenários para o Chicago Bulls...")
+    
+    
