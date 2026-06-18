@@ -25,4 +25,8 @@ def simulate_bulls_season(num_simulations=10000):
         bulls_scores = np.random.normal(bulls_pts_avg, bulls_sd, games_in_season)
         opp_scores = np.random.normal(bulls_opp_pts_avg, opp_sd, games_in_season)
         
+        # Computa vitória quando o ataque de Chicago supera a defesa adversária
+        wins = np.sum(bulls_scores > opp_scores)
+        sim_results.append(wins)
         
+    
