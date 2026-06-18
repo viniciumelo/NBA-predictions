@@ -20,4 +20,9 @@ def simulate_bulls_season(num_simulations=10000):
     
     print("Processando dados e simulando cenários para o Chicago Bulls...")
     
-    
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        bulls_scores = np.random.normal(bulls_pts_avg, bulls_sd, games_in_season)
+        opp_scores = np.random.normal(bulls_opp_pts_avg, opp_sd, games_in_season)
+        
+        
