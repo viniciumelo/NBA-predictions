@@ -41,4 +41,6 @@ def simulate_bulls_season(num_simulations=10000):
     
     # Probabilidade de atingir metas competitivas e brigar por pós-temporada no Leste
     prob_evolution_goal = (sim_series >= 36).mean() * 100   # Alcançar 36+ vitórias (salto de consistência)
-   
+    prob_playin_spot = (sim_series >= 41).mean() * 100      # Briga direta por aproveitamento de .500 (Play-In)
+    
+    
