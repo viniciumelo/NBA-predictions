@@ -56,3 +56,7 @@ def simulate_bulls_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo incorpora o ritmo dinâmico e o aproveitamento de contra-ataques.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(24)
+    simulate_bulls_season()  
