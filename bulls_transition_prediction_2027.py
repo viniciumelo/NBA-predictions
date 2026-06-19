@@ -37,4 +37,6 @@ def simulate_bulls_season(num_simulations=10000):
     
   # Intervalo de confiança bicaudal de 95%
     ci_lower = sim_series.quantile(0.025)
-   
+    ci_upper = sim_series.quantile(0.975)
+    
+    
