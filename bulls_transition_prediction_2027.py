@@ -39,4 +39,6 @@ def simulate_bulls_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
-    
+    # Probabilidade de atingir metas competitivas e brigar por pós-temporada no Leste
+    prob_evolution_goal = (sim_series >= 36).mean() * 100   # Alcançar 36+ vitórias (salto de consistência)
+   
