@@ -50,4 +50,9 @@ def simulate_bulls_season(num_simulations=10000):
     print(f"Mediana de Vitórias:          {median_wins:.0f}")
     print(f"Moda mais frequente:         {mode_wins:.0f}")
     print(f"Intervalo de Confiança (95%): {ci_lower:.0f} a {ci_upper:.0f} vitórias")
-     
+    print("-" * 55)
+    print(f"Probabilidade de 36+ vitórias (Crescimento Sólido): {prob_evolution_goal:.2f}%")
+    print(f"Probabilidade de vaga na zona de Play-In (41+ vitórias): {prob_playin_spot:.2f}%")
+    print("=" * 55)
+    print("Nota: O modelo incorpora o ritmo dinâmico e o aproveitamento de contra-ataques.")
+
