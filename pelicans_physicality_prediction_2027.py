@@ -4,4 +4,9 @@ import pandas as pd
 def simulate_pelicans_season(num_simulations=10000):
     # Calendário padrão da temporada regular da NBA
     games_in_season = 82
-   
+    
+    # --- Parâmetros de Desempenho (New Orleans Pelicans) ---
+    # New Orleans apresenta um ataque eficiente punindo o garrafão adversário,
+    # mantendo um saldo positivo seguro quando a rotação principal está saudável.
+    pelicans_pts_avg = 116.8
+    
