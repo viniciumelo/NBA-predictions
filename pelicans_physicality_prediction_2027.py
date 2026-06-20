@@ -15,4 +15,4 @@ def simulate_pelicans_season(num_simulations=10000):
     # Reflete a volatilidade natural gerada por fatores de gerenciamento de carga,
     # desgaste físico ao longo de 82 jogos e mudanças pontuais no quinteto titular.
     pelicans_sd = 12.5
-   
+    opp_sd = 11.9
