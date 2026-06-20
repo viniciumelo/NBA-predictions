@@ -11,4 +11,8 @@ def simulate_pelicans_season(num_simulations=10000):
     pelicans_pts_avg = 116.8
     pelicans_opp_pts_avg = 113.2
     
-    
+    # Desvio padrão elevado para 12.5.
+    # Reflete a volatilidade natural gerada por fatores de gerenciamento de carga,
+    # desgaste físico ao longo de 82 jogos e mudanças pontuais no quinteto titular.
+    pelicans_sd = 12.5
+   
