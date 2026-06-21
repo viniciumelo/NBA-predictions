@@ -33,4 +33,5 @@ def simulate_pelicans_season(num_simulations=10000):
     # Análise descritiva da distribuição gerada
     sim_series = pd.Series(sim_results)
     mean_wins = sim_series.mean()
-   
+    median_wins = sim_series.median()
+    mode_wins = sim_series.mode()[0]
