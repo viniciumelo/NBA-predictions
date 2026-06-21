@@ -21,4 +21,7 @@ def simulate_pelicans_season(num_simulations=10000):
     
     print("Processando dados e simulando cenários para o New Orleans Pelicans...")
     
-    
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        pelicans_scores = np.random.normal(pelicans_pts_avg, pelicans_sd, games_in_season)
+        
