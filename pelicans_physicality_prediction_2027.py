@@ -26,4 +26,6 @@ def simulate_pelicans_season(num_simulations=10000):
         pelicans_scores = np.random.normal(pelicans_pts_avg, pelicans_sd, games_in_season)
         opp_scores = np.random.normal(pelicans_opp_pts_avg, opp_sd, games_in_season)
         
-       
+        # Computa vitória quando o ataque de New Orleans supera a defesa adversária
+        wins = np.sum(pelicans_scores > opp_scores)
+        
