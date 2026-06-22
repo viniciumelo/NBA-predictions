@@ -40,4 +40,6 @@ def simulate_pelicans_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
-    
+    # Probabilidade de garantir vaga direta ou passar pelo Play-In no acirrado Oeste
+    prob_playin_safety = (sim_series >= 45).mean() * 100   # Briga direta por vaga no Top 6
+   
