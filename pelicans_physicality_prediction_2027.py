@@ -42,4 +42,6 @@ def simulate_pelicans_season(num_simulations=10000):
     
     # Probabilidade de garantir vaga direta ou passar pelo Play-In no acirrado Oeste
     prob_playin_safety = (sim_series >= 45).mean() * 100   # Briga direta por vaga no Top 6
-   
+    prob_mando_quadra = (sim_series >= 50).mean() * 100     # Mando de quadra nos Playoffs
+    
+    
