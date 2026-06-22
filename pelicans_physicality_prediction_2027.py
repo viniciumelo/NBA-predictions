@@ -50,4 +50,10 @@ def simulate_pelicans_season(num_simulations=10000):
     print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
     print(f"Mediana de Vitórias:          {median_wins:.0f}")
     print(f"Moda mais frequente:         {mode_wins:.0f}")
-   
+    print(f"Intervalo de Confiança (95%): {ci_lower:.0f} a {ci_upper:.0f} vitórias")
+    print("-" * 55)
+    print(f"Probabilidade de Vaga Direta Top 6 (45+ vitórias): {prob_playin_safety:.2f}%")
+    print(f"Probabilidade de Mando de Quadra (50+ vitórias):   {prob_mando_quadra:.2f}%")
+    print("=" * 55)
+    print("Nota: O modelo incorpora a volatilidade associada à profundidade do elenco.")
+
