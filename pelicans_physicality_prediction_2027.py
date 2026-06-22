@@ -44,4 +44,10 @@ def simulate_pelicans_season(num_simulations=10000):
     prob_playin_safety = (sim_series >= 45).mean() * 100   # Briga direta por vaga no Top 6
     prob_mando_quadra = (sim_series >= 50).mean() * 100     # Mando de quadra nos Playoffs
     
-    
+    print("\n" + "=" * 55)
+    print("  PREDIÇÃO DE TEMPORADA REGULAR - NO PELICANS 2026/27  ")
+    print("=" * 55)
+    print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
+    print(f"Mediana de Vitórias:          {median_wins:.0f}")
+    print(f"Moda mais frequente:         {mode_wins:.0f}")
+   
