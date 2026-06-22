@@ -57,3 +57,7 @@ def simulate_pelicans_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo incorpora a volatilidade associada à profundidade do elenco.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(14)
+    simulate_pelicans_season()
