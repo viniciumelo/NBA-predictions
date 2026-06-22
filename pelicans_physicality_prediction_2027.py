@@ -35,3 +35,7 @@ def simulate_pelicans_season(num_simulations=10000):
     mean_wins = sim_series.mean()
     median_wins = sim_series.median()
     mode_wins = sim_series.mode()[0]
+
+    # Intervalo de confiança bicaudal de 95%
+    ci_lower = sim_series.quantile(0.025)
+    
