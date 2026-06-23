@@ -11,4 +11,7 @@ def simulate_magic_season(num_simulations=10000):
     magic_pts_avg = 114.8
     magic_opp_pts_avg = 109.5
     
-    
+    # Desvio padrão calibrado em 10.7 para representar a previsibilidade da defesa.
+    # Como a intensidade defensiva do Magic é consistente e viaja bem (funciona fora de casa),
+    # o time sofre menos apagões estatísticos severos.
+    magic_sd = 10.7
