@@ -15,3 +15,4 @@ def simulate_magic_season(num_simulations=10000):
     # Como a intensidade defensiva do Magic é consistente e viaja bem (funciona fora de casa),
     # o time sofre menos apagões estatísticos severos.
     magic_sd = 10.7
+    opp_sd = 11.1
