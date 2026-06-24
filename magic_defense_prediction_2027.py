@@ -16,3 +16,7 @@ def simulate_magic_season(num_simulations=10000):
     # o time sofre menos apagões estatísticos severos.
     magic_sd = 10.7
     opp_sd = 11.1
+
+    sim_results = []
+    
+    
