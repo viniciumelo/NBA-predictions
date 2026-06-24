@@ -26,4 +26,6 @@ def simulate_magic_season(num_simulations=10000):
         magic_scores = np.random.normal(magic_pts_avg, magic_sd, games_in_season)
         opp_scores = np.random.normal(magic_opp_pts_avg, opp_sd, games_in_season)
         
-       
+        # Computa vitória se o ataque de Orlando superar a defesa adversária
+        wins = np.sum(magic_scores > opp_scores)
+      
