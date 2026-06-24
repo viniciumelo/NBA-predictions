@@ -19,4 +19,6 @@ def simulate_magic_season(num_simulations=10000):
 
     sim_results = []
     
+    print("Processando dados e calculando projeções para o Orlando Magic...")
+    
     
