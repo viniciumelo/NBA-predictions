@@ -21,4 +21,7 @@ def simulate_magic_season(num_simulations=10000):
     
     print("Processando dados e calculando projeções para o Orlando Magic...")
     
-    
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        magic_scores = np.random.normal(magic_pts_avg, magic_sd, games_in_season)
+       
