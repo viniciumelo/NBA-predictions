@@ -44,4 +44,9 @@ def simulate_magic_season(num_simulations=10000):
     prob_48_plus = (sim_series >= 48).mean() * 100         # Briga forte por mando de quadra (Top 4)
     prob_53_plus = (sim_series >= 53).mean() * 100         # Prateleira de elite absoluta do Leste
     
+    print("\n" + "=" * 55)
+    print("  PREDIÇÃO DE TEMPORADA REGULAR - ORLANDO MAGIC 2026/27  ")
+    print("=" * 55)
+    print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
+    print(f"Mediana de Vitórias:          {median_wins:.0f}")
     
