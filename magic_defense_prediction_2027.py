@@ -40,4 +40,8 @@ def simulate_magic_season(num_simulations=10000):
     ci_lower = sim_series.quantile(0.025)
     ci_upper = sim_series.quantile(0.975)
     
+    # Probabilidade de atingir metas competitivas no topo da Conferência Leste
+    prob_48_plus = (sim_series >= 48).mean() * 100         # Briga forte por mando de quadra (Top 4)
+    prob_53_plus = (sim_series >= 53).mean() * 100         # Prateleira de elite absoluta do Leste
+    
     
