@@ -57,3 +57,7 @@ def simulate_magic_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo reflete a sustentabilidade baseada no rating defensivo.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos resultados estatísticos
+    np.random.seed(48)
+    simulate_magic_season()
