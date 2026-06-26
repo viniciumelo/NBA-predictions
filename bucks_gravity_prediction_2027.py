@@ -9,4 +9,6 @@ def simulate_bucks_season(num_simulations=10000):
     # Milwaukee mantém um teto ofensivo muito forte devido à eficiência na área pintada
     # e volume de arremessos, operando com um sólido diferencial positivo.
     bucks_pts_avg = 118.2
+    bucks_opp_pts_avg = 114.0
+    
     
