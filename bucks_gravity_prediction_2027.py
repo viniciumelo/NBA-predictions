@@ -11,4 +11,6 @@ def simulate_bucks_season(num_simulations=10000):
     bucks_pts_avg = 118.2
     bucks_opp_pts_avg = 114.0
     
-    
+    # Desvio padrão calibrado em 12.0 para modelar noites de preservação (back-to-backs)
+    # ou oscilações normais na rotação defensiva de suporte do perímetro.
+    bucks_sd = 12.0
