@@ -14,3 +14,4 @@ def simulate_bucks_season(num_simulations=10000):
     # Desvio padrão calibrado em 12.0 para modelar noites de preservação (back-to-backs)
     # ou oscilações normais na rotação defensiva de suporte do perímetro.
     bucks_sd = 12.0
+    opp_sd = 11.5
