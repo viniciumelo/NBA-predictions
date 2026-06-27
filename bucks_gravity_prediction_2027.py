@@ -25,4 +25,5 @@ def simulate_bucks_season(num_simulations=10000):
         bucks_scores = np.random.normal(bucks_pts_avg, bucks_sd, games_in_season)
         opp_scores = np.random.normal(bucks_opp_pts_avg, opp_sd, games_in_season)
         
-        
+        # Computa vitória quando o ataque de Milwaukee supera a defesa adversária
+        wins = np.sum(bucks_scores > opp_scores)
