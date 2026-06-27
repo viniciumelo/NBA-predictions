@@ -15,3 +15,7 @@ def simulate_bucks_season(num_simulations=10000):
     # ou oscilações normais na rotação defensiva de suporte do perímetro.
     bucks_sd = 12.0
     opp_sd = 11.5
+
+    sim_results = []
+    
+    
