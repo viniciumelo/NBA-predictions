@@ -20,4 +20,7 @@ def simulate_bucks_season(num_simulations=10000):
     
     print("Processando dados e computando simulações para o Milwaukee Bucks...")
     
-    
+    for _ in range(num_simulations):
+        # Geração de pontuações via distribuição normal para os 82 jogos
+        bucks_scores = np.random.normal(bucks_pts_avg, bucks_sd, games_in_season)
+        
