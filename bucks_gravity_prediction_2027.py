@@ -18,4 +18,6 @@ def simulate_bucks_season(num_simulations=10000):
 
     sim_results = []
     
+    print("Processando dados e computando simulações para o Milwaukee Bucks...")
+    
     
