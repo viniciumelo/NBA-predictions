@@ -28,3 +28,7 @@ def simulate_bucks_season(num_simulations=10000):
         # Computa vitória quando o ataque de Milwaukee supera a defesa adversária
         wins = np.sum(bucks_scores > opp_scores)
         sim_results.append(wins)
+        
+    # Análise descritiva da distribuição gerada
+    sim_series = pd.Series(sim_results)
+    
