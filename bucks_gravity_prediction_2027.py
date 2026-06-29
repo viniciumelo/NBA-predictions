@@ -56,3 +56,6 @@ def simulate_bucks_season(num_simulations=10000):
     print("=" * 55)
     print("Nota: O modelo incorpora o fator de desgaste físico e profundidade de elenco.")
 
+if __name__ == "__main__":
+    # Semente aleatória para consistência dos cálculos matemáticos
+    np.random.seed(34)
