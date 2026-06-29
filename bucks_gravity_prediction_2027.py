@@ -59,3 +59,4 @@ def simulate_bucks_season(num_simulations=10000):
 if __name__ == "__main__":
     # Semente aleatória para consistência dos cálculos matemáticos
     np.random.seed(34)
+    simulate_bucks_season()
