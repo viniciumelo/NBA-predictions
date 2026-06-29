@@ -47,4 +47,7 @@ def simulate_bucks_season(num_simulations=10000):
     print("  PREDIÇÃO DE TEMPORADA REGULAR - MILWAUKEE BUCKS 2026/27  ")
     print("=" * 55)
     print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
+    print(f"Mediana de Vitórias:          {median_wins:.0f}")
+    print(f"Moda mais frequente:         {mode_wins:.0f}")
+    print(f"Intervalo de Confiança (95%): {ci_lower:.0f} a {ci_upper:.0f} vitórias")
    
