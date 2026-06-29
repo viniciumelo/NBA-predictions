@@ -50,4 +50,7 @@ def simulate_bucks_season(num_simulations=10000):
     print(f"Mediana de Vitórias:          {median_wins:.0f}")
     print(f"Moda mais frequente:         {mode_wins:.0f}")
     print(f"Intervalo de Confiança (95%): {ci_lower:.0f} a {ci_upper:.0f} vitórias")
+    print("-" * 55)
+    print(f"Probabilidade de Vaga Direta Top 6 (46+ vitórias): {prob_46_plus:.2f}%")
+    print(f"Probabilidade de Mando de Quadra (52+ vitórias):   {prob_52_plus:.2f}%")
    
