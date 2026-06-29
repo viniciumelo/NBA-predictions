@@ -43,4 +43,8 @@ def simulate_bucks_season(num_simulations=10000):
     prob_46_plus = (sim_series >= 46).mean() * 100         # Vaga direta garantida no Top 6
     prob_52_plus = (sim_series >= 52).mean() * 100         # Briga direta por Mando de Quadra/Top 3
     
-    
+    print("\n" + "=" * 55)
+    print("  PREDIÇÃO DE TEMPORADA REGULAR - MILWAUKEE BUCKS 2026/27  ")
+    print("=" * 55)
+    print(f"Média de Vitórias Projetada: {mean_wins:.1f} - {games_in_season - mean_wins:.1f}")
+   
