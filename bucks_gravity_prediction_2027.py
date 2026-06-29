@@ -53,4 +53,6 @@ def simulate_bucks_season(num_simulations=10000):
     print("-" * 55)
     print(f"Probabilidade de Vaga Direta Top 6 (46+ vitórias): {prob_46_plus:.2f}%")
     print(f"Probabilidade de Mando de Quadra (52+ vitórias):   {prob_52_plus:.2f}%")
-   
+    print("=" * 55)
+    print("Nota: O modelo incorpora o fator de desgaste físico e profundidade de elenco.")
+
