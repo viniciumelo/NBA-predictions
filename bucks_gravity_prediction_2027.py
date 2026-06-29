@@ -41,4 +41,6 @@ def simulate_bucks_season(num_simulations=10000):
 
     # Probabilidade de atingir metas de elite na Conferência Leste
     prob_46_plus = (sim_series >= 46).mean() * 100         # Vaga direta garantida no Top 6
-   
+    prob_52_plus = (sim_series >= 52).mean() * 100         # Briga direta por Mando de Quadra/Top 3
+    
+    
